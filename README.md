@@ -17,7 +17,7 @@ Alte opțiuni și idei sunt binevenite.
 
 
 
-##Colaboratori: 
+## Colaboratori: 
 * Hristea Ionut-Alexandru
 * Neculau Tudor
 * Benchea Laura-Malina
