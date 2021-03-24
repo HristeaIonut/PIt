@@ -4,11 +4,9 @@ html{
     font-size: 25px;;
     font-weight: 400;
     src: url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
-
-}
-html{
     height: 100%;
     width: 100%;
+
 }
 body{
     background-color: rgb(45, 45, 45);
@@ -16,7 +14,7 @@ body{
 }
 a{
     text-decoration: none;
-    color: white;
+    color: #ffffff;
     border-radius: 25px;
     padding-left: 10px;
     padding-right: 10px;
@@ -30,21 +28,30 @@ a:hover{
     content: "\1F4CB \ ";
     display: inline;
 }
-
-.header-left{
-    display:inline;
+.header{
+    overflow: hidden;
+    width: 90%;
+    margin-right: 10%;
     margin-left: 10%;
-    margin-right: 50%;
+}
+.header-left{
+    width: 50%;
+    display: inline;
+    float:left;
 }
 .header-right{
-    display:inline;
-
+    width: 23%;
+    display: inline;
+    float:right;
 }
 .home{
     font-size: 30px;
     margin-right: 2%;
 }
 .contact{
+    margin-right: 2%;
+}
+.how-to{
     margin-right: 2%;
 }
 .textarea-container{
@@ -57,6 +64,8 @@ a:hover{
     width: 80%;
 }
 .textarea{
+
+    resize: none;
     color: white;
     border: none;
     overflow: auto;
@@ -69,6 +78,6 @@ a:hover{
 .textarea:focus{
     outline: rgb(45, 45, 45);
 }
-.login, .register{
+.login{
     margin-right: 2%;
 }
