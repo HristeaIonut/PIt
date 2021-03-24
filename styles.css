@@ -36,12 +36,10 @@ a:hover{
 }
 .header-left{
     width: 50%;
-    display: inline;
     float:left;
 }
 .header-right{
     width: 23%;
-    display: inline;
     float:right;
 }
 .home{
