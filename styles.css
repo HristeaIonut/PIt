@@ -1,0 +1,78 @@
+*{
+    font-family: 'Bebas Neue', cursive;
+    font-style: normal;
+    font: size 25px;;
+    font-weight: 400;
+    src: url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap") format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+
+}
+html{
+    height: 100%;
+    width: 100%;
+}
+body{
+    background-color: rgb(45, 45, 45);
+    height: 80%;
+}
+a{
+    text-decoration: none;
+    color: white;
+    border-radius: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+
+}
+a:hover{
+    background-color: #03DAC5;
+}
+.home::before{
+    content: "\1F4CB \ ";
+    margin: 0px ;
+    display: inline;
+    height: auto;
+    width: 50px;
+
+}
+
+.header-left{
+    display:inline;
+    margin-left: 10%;
+    margin-right: 50%;
+}
+.header-right{
+    display:inline;
+
+}
+.home{
+    font-size: 30px;
+    margin-right: 2%;
+}
+.contact{
+    margin-right: 2%;
+}
+.textarea-container{
+    padding-left: 1%;
+    background-color: rgb(40, 40, 40);
+    color: rgb(209, 206, 206);
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 20%;
+    height: 80%;
+    width: 80%;
+}
+.textarea{
+    color: white;
+    border: none;
+    outline: none;
+    overflow: auto;
+    margin-top: 3%;
+    margin-left: 2%;
+    height: 50%;
+    width: 50%;
+    background-color:rgb(45, 45, 45);
+}
+.login, .register{
+    margin-right: 2%;
+}
