@@ -1,5 +1,5 @@
 
-##PasteIt
+## PasteIt
 
 Acesta este repo-ul proiectului **PIt**
 
