@@ -104,7 +104,6 @@ ol {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 8px;
-
   border: 1px solid #778899;
 }
 .form-style-report:focus, ul:focus, li:focus, .field-style:focus{
