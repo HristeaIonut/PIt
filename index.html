@@ -34,23 +34,26 @@
             <textarea class="textarea">
             </textarea>
         </label>
-        <input type="button" value="Create Paste" />
+        <input type="button" class ="create-paste" value="Create Paste"/>
 
-        <br><label for="syntax">Syntax Highlighting:</label>
-        <select name="syntax" id="syntax">
-            <option value="C">C</option>
-            <option value="C#">C#</option>
-            <option value="C++">C++</option>
-            <option value="HTML">HTML</option>
-            <option value="CSS">CSS</option>
-            <option value="JSON">JSON</option>
-            <option value="Java">Java</option>
-            <option value="JavaScript">JavaScript</option>
-            <option value="Python">Python</option>
-            <option value="Bash">Bash</option>
-        </select>
-        <br><label for="expiration">Expiration time:</label>
-        <select name="expiration" id="expiration">
+           <br> <label>Syntax Highlighting:</label>
+
+            <select class=syntax" name="syntax">
+                <option value="C">C</option>
+                <option value="C#">C#</option>
+                <option value="C++">C++</option>
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="JSON">JSON</option>
+                <option value="Java">Java</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="Python">Python</option>
+                <option value="Bash">Bash</option>
+            </select>
+
+
+        <br><label>Expiration time:</label>
+        <select class="expiration" name="expiration">
             <option value="Disabled">Disabled</option>
             <option value="5">5 minutes</option>
             <option value="10">10 minutes</option>
@@ -60,13 +63,31 @@
             <option value="1week">1 week</option>
             <option value="1month">1 month</option>
         </select>
-        <br><label for="privacy">Privacy:</label>
-        <select name="privacy" id="privacy">
-            <option value="Public">Public</option>
-            <option value="Private">Private(requires password)</option>
-        </select>
+        <br><label>Public:</label>
+        <input type="checkbox" onclick="myFunction()" class="private-checkbox">
+        <br><label id="insert-label">Insert password here:</label>
+        <input type="text" id="field-password" placeholder="Password" />
+
+
 
     </div>
 
+        <script>
+            function myFunction() {
+                const x = document.getElementById("insert-label");
+                const y = document.getElementById("field-password");
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                    y.style.display = "block";
+                } else {
+                    x.style.display = "none";
+                    y.style.display = "none";
+                }
+            }
+        </script>
+
+
 </body>
 </html>
+
+
