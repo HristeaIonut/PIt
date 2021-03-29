@@ -3,7 +3,8 @@
 <head>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="https://icons-for-free.com/iconfiles/png/512/clipboard+paste+task+icon-1320161389075402003.png">
+    <link rel="icon"
+          href="https://icons-for-free.com/iconfiles/png/512/clipboard+paste+task+icon-1320161389075402003.png">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,48 +12,49 @@
 </head>
 
 <body>
-        <div class="header">
-            <div class="header-left">
-                <a class="home" href="index.html">PasteIt</a>
-                <a class="contact" href="contact.html">Contact</a>
-                <a class="how-to" href="how-to.html">How to use</a>
-                <a class="report" href="report.html">Report</a>
-            </div>
-            <div class="header-right">
-                <a class="login" href="login.html">Login</a>
-                <a class="register" href="register.html">Register</a>
-            </div>
-        <div class="footer">
-            <a class=reportContent href="reportContent.html"> Report a post</a>
-        </div>
-        </div>
+<div class="header">
+    <div class="header-left">
+        <a class="home" href="index.html">PasteIt</a>
+        <a class="contact" href="contact.html">Contact</a>
+        <a class="how-to" href="how-to.html">How to use</a>
+        <a class="report" href="report.html">Report</a>
+    </div>
+    <div class="header-right">
+        <a class="login" href="login.html">Login</a>
+        <a class="register" href="register.html">Register</a>
+    </div>
 
-    <div class="textarea-container">
-        <br>
-        Paste here the code!<br>
-        <label>
+</div>
+<div class="footer">
+    <a class=reportContent href="reportContent.html"> Report a post</a>
+</div>
+
+<div class="textarea-container">
+    <br>
+    Paste here the code!<br>
+
+        <label class="left">
             <textarea class="textarea">
             </textarea>
         </label>
-        <input type="button" class ="create-paste" value="Create Paste"/>
 
-           <br> <label>Syntax Highlighting:</label>
+    <div class="right">
+        <br> <label class=syntax">Syntax Highlighting:
+        <select name="syntax">
+            <option value="C">C</option>
+            <option value="C#">C#</option>
+            <option value="C++">C++</option>
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+            <option value="JSON">JSON</option>
+            <option value="Java">Java</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="Python">Python</option>
+            <option value="Bash">Bash</option>
+        </select>
+    </label>
 
-            <select class=syntax" name="syntax">
-                <option value="C">C</option>
-                <option value="C#">C#</option>
-                <option value="C++">C++</option>
-                <option value="HTML">HTML</option>
-                <option value="CSS">CSS</option>
-                <option value="JSON">JSON</option>
-                <option value="Java">Java</option>
-                <option value="JavaScript">JavaScript</option>
-                <option value="Python">Python</option>
-                <option value="Bash">Bash</option>
-            </select>
-
-
-        <br><label>Expiration time:</label>
+        <br><label class="expiration">Expiration time:
         <select class="expiration" name="expiration">
             <option value="Disabled">Disabled</option>
             <option value="5">5 minutes</option>
@@ -63,30 +65,34 @@
             <option value="1week">1 week</option>
             <option value="1month">1 month</option>
         </select>
-        <br><label>Public:</label>
+    </label>
+        <br><label>Public:
         <input type="checkbox" onclick="myFunction()" class="private-checkbox">
+
         <br><label id="insert-label">Insert password here:</label>
-        <input type="text" id="field-password" placeholder="Password" />
 
-
-
+        <label for="field-password">
+            <input type="text" id="field-password" placeholder="Password"/>
+        </label>
+    </label>
     </div>
+    <br>
+    <input type="button" class="create-paste" value="Create Paste"/>
+</div>
 
-        <script>
-            function myFunction() {
-                const x = document.getElementById("insert-label");
-                const y = document.getElementById("field-password");
-                if (x.style.display === "none") {
-                    x.style.display = "block";
-                    y.style.display = "block";
-                } else {
-                    x.style.display = "none";
-                    y.style.display = "none";
-                }
-            }
-        </script>
-
-
+<script>
+    function myFunction() {
+        const x = document.getElementById("insert-label");
+        const y = document.getElementById("field-password");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+            y.style.display = "block";
+        } else {
+            x.style.display = "none";
+            y.style.display = "none";
+        }
+    }
+</script>
 </body>
 </html>
 
