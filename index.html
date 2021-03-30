@@ -33,49 +33,58 @@
     <br>
     Paste here the code!<br>
 
-        <label class="left">
+    <label class="left">
             <textarea class="textarea">
             </textarea>
-        </label>
-
-    <div class="right">
-        <br> <label class=syntax">Syntax Highlighting:
-        <select name="syntax">
-            <option value="C">C</option>
-            <option value="C#">C#</option>
-            <option value="C++">C++</option>
-            <option value="HTML">HTML</option>
-            <option value="CSS">CSS</option>
-            <option value="JSON">JSON</option>
-            <option value="Java">Java</option>
-            <option value="JavaScript">JavaScript</option>
-            <option value="Python">Python</option>
-            <option value="Bash">Bash</option>
-        </select>
     </label>
+    <table class="tabel">
+        <tr>
+            <td><label class="syntax">Syntax Highlighting:</label></td>
+            <td><label>
+                <select name="syntax" class="right-select">
+                    <option value="C">C</option>
+                    <option value="C#">C#</option>
+                    <option value="C++">C++</option>
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                    <option value="JSON">JSON</option>
+                    <option value="Java">Java</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="Python">Python</option>
+                    <option value="Bash">Bash</option>
+                </select>
+            </label></td>
+        </tr>
+        <tr>
+            <td><label class="expiration">Expiration time:</label></td>
+            <td><label>
+                <select class="right-select" name="expiration">
+                    <option value="Disabled">Disabled</option>
+                    <option value="5">5 minutes</option>
+                    <option value="10">10 minutes</option>
+                    <option value="30">30 minutes</option>
+                    <option value="1hr">1 hour</option>
+                    <option value="1day">1 day</option>
+                    <option value="1week">1 week</option>
+                    <option value="1month">1 month</option>
+                </select>
+            </label></td>
+        </tr>
+        <tr>
+            <td><label class="privacy">Public:</label></td>
+            <td><label>
+                <input type="checkbox" class="right-select" onclick="myFunction()">
+            </label></td>
+        </tr>
+        <tr>
+            <td><label id="insert-label" class="password">Insert password here:</label></td>
 
-        <br><label class="expiration">Expiration time:
-        <select class="expiration" name="expiration">
-            <option value="Disabled">Disabled</option>
-            <option value="5">5 minutes</option>
-            <option value="10">10 minutes</option>
-            <option value="30">30 minutes</option>
-            <option value="1hr">1 hour</option>
-            <option value="1day">1 day</option>
-            <option value="1week">1 week</option>
-            <option value="1month">1 month</option>
-        </select>
-    </label>
-        <br><label>Public:
-        <input type="checkbox" onclick="myFunction()" class="private-checkbox">
+            <td> <label for="field-password">
+                <input class="right-select" type="password" id="field-password" placeholder="Password"/>
+            </label></td>
+        </tr>
+    </table>
 
-        <br><label id="insert-label">Insert password here:</label>
-
-        <label for="field-password">
-            <input type="text" id="field-password" placeholder="Password"/>
-        </label>
-    </label>
-    </div>
     <br>
     <input type="button" class="create-paste" value="Create Paste"/>
 </div>

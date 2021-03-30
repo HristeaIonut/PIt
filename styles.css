@@ -119,6 +119,8 @@ ol {
   width: auto;
 }
 .create-paste{
+  color: rgb(206,206,206);
+  background-color: rgb(45, 45, 45) ;
   height: 40px;
   width: 150px;
   margin-top: 30px;
@@ -127,7 +129,22 @@ ol {
   font-size: 18px;
 }
 .create-paste:hover{
-
   outline: 5px solid #03dac5;
 }
+.right-select{
+  float:right;
+  margin-left: 10px;
+}
+.tabel{
+  float: right;
+  margin-top: 30px;
+  margin-right: 50px;
+}
+select, input{
+  color: rgb(206,206,206);
+  background-color: rgb(45, 45, 45);
 
+}
+select:focus, input:focus{
+  outline: rgb(45, 45, 45);
+}

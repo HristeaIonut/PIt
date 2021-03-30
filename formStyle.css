@@ -23,7 +23,7 @@ a:hover {
   background-color: #03dac5;
 }
 p {
-  background-color: rgb(45, 45, 45);
+  background-color: rgb(29, 29, 29);
   height: 50%;
   color: white;
 }
@@ -149,6 +149,9 @@ ol {
 }
 .form-style-report ul li input[type="button"]:hover,
 .form-style-report ul li input[type="submit"]:hover {
-  background: linear-gradient(to bottom, #2d77a2 5%, #337da8 100%);
-  background-color: #28739e;
+  background: #28739e linear-gradient(to bottom, #2d77a2 5%, #337da8 100%);
+}
+.button{
+  margin-top: 10px;
+  float: right;
 }
