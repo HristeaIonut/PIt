@@ -71,40 +71,52 @@
         </li>
     </ol>
 
-    <dl>
-        <dt>Authors</dt>
-        <dd>
-            <ol>
-                <li property="schema:author" typeof="sa:ContributorRole">
-                    <a property="schema:author" href="https://github.com/HristeaIonut" typeof="schema:Person">
-                        <span property="schema:familyName">Hristea</span>
-                        <span property="schema:givenName">Ionut-Alexandru</span>
-                    </a>
-                    <sup property="sa:roleContactPoint" typeof="schema:ContactPoint">
-                        <a property="schema:email" href="mailto:hristeaionut72@gmail.com" title="Mail">Mail</a>
-                    </sup>
+        <section typeof="sa:AuthorsList">
+            <h2>Authors</h2>
+            <ul>
+                <li typeof="sa:ContributorRole" property="schema:author">
+                    <span typeof="schema:Person" property="schema:author" resource="https://github.com/HristeaIonut" >
+                        <a property="sa:roleAffiliation" href="https://github.com/HristeaIonut">
+                            <meta property="schema:givenName" content="Ionut">
+                            <meta property="schema:additionalName" content="Alexandru">
+                            <meta property="schema:familyName" content="Hristea">
+                            <span property="schema:name">Ionut A. Hristea</span>
+                        </a>
+                    </span>
                 </li>
-                <li property="schema:author" typeof="sa:ContributorRole">
-                    <a property="schema:author" href="https://github.com/LauraMalinaBenchea" typeof="schema:Person">
-                        <span property="schema:familyName">Benchea</span>
-                        <span property="schema:givenName">Laura-Malina</span>
-                    </a>
-                    <sup property="sa:roleContactPoint" typeof="schema:ContactPoint">
-                        <a property="schema:email" href="mailto:malina16fnl@gmail.com" title="Mail">Mail</a>
-                    </sup>
+                <li property="schema:roleContactPoint" typeof="schema:ContactPoint">Mail:
+                        <a href="mailto:hristeaionut72@gmail.com" property="schema:email">hristeaionut72@gmail.com</a>
+                    </li>
+
+                <li typeof="sa:ContributorRole" property="schema:author">
+                    <span typeof="schema:Person" property="schema:author" resource="https://github.com/LauraMalinaBenchea" >
+                        <a property="sa:roleAffiliation" href="https://github.com/LauraMalinaBenchea">
+                            <meta property="schema:givenName" content="Malina">
+                            <meta property="schema:additionalName" content="Laura">
+                            <meta property="schema:familyName" content="Benchea">
+                            <span property="schema:name">Malina L. Benchea</span>
+                        </a>
+                    </span>
                 </li>
-                <li property="schema:author" typeof="sa:ContributorRole">
-                    <a property="schema:author" href="https://github.com/neculautudor" typeof="schema:Person">
-                        <span property="schema:familyName">Neculau</span>
-                        <span property="schema:givenName">Tudor</span>
-                    </a>
-                    <sup property="sa:roleContactPoint" typeof="schema:ContactPoint">
-                        <a property="schema:email" href="mailto:neculautudor02@gmail.com" title="Mail">Mail</a>
-                    </sup>
+                    <li property="schema:roleContactPoint" typeof="schema:ContactPoint">Mail:
+                        <a property="schema:email" href="mailto:malina16fnl@gmail.com" title="Mail">malina16fnl@gmail.com</a>
+                    </li>
+
+                <li typeof="sa:ContributorRole" property="schema:author">
+                    <span typeof="schema:Person" property="schema:author" resource="https://github.com/neculautudor" >
+                        <a property="sa:roleAffiliation" href="https://github.com/neculautudor">
+                            <meta property="schema:givenName" content="Tudor">
+                            <meta property="schema:familyName" content="Neculau">
+                            <span property="schema:name">Tudor Neculau</span>
+                        </a>
+                    </span>
                 </li>
-            </ol>
-        </dd>
-    </dl>
+                <li property="schema:roleContactPoint" typeof="schema:ContactPoint">Mail:
+                        <a property="schema:email" href="mailto:neculautudor02@gmail.com" title="Mail">neculautudor02@gmail.com</a>
+                    </li>
+            </ul>
+        </section>
+
 </div>
 <section typeof="sa:Abstract" id="abstract" role="doc-prologue">
     <h2><span>1 </span>Abstract</h2>
