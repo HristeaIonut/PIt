@@ -147,3 +147,6 @@ select:focus,
 input:focus {
   outline: rgb(45, 45, 45);
 }
+dd, dt{
+  color: burlywood;
+}
