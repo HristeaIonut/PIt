@@ -16,7 +16,7 @@
 <body prefix="schema: http://schema.org">
     <div class="header">
         <div class="header-left">
-            <a class="home" href="index.html">PasteIt</a>
+            <a class="home" href="../index.php">PasteIt</a>
         </div>
     </div>
     <div role="contentinfo">
@@ -52,11 +52,6 @@
                         <a href="#structure">
                             <span>3.2 </span>Structure
                         </a>
-                    </li>
-                    <li>
-                    <a href="#design">
-                        <span>3.3 </span>Design
-                    </a>
                     </li>
                 </ol>
             </li>
@@ -127,7 +122,7 @@
     <section typeof="sa:Abstract" id="abstract" role="doc-prologue">
         <h2><span>1 </span>Abstract</h2>
         <p>
-        PasteIt is a Web application that allows users to upload and share text online. The most common use is for sharing
+        A PasteIt is a Web application that allows users to upload and share text online. The most common use is for sharing
         source code or configuration information. There are thousands of pastebins online, often geared towards particular
         groups or focuses. Once text has been uploaded to a pastebin, other users can edit.
         </p>
@@ -188,12 +183,7 @@
     <section typeof="sa:MaterialsAndMethods" id="functionalities" role="document">
         <h2><span>3.1 </span>Functionalities</h2>
         <p>
-            The main menu contains multiple customizations for the code / data.
-            Firstly, the user can choose the preferred syntax highlighting that offers a variety of languages, for making the code more eligible.
-            In the case of needing limited time availability of the paste, it can be set to be deleted in any time between 5 minutes and 1 month.
-            The last and most important feature is the ability to encrypt the created paste and only allow visibility by entering a password set by the creator of the paste.
-            Additionally, users can opt for creating an account and log in afterwards, to see a history of their pastes.
-            For keeping the website clean and friendly, reporting an offensive paste is not only possible, but recommended.
+            TODO
         </p>
     </section>
 
@@ -212,18 +202,10 @@
 
     </section>
 
-    <section typeof="sa:MaterialsAndMethods" id="design" role="document">
-        <h2><span>3.2 </span>Design</h2>
-        <p>
-            The dark background was chosen for not reflecting too much light onto the eyes of the user, combined with an arctic blue that fits the theme.
-            The buttons are clean and intuitive, providing a simple experience for the users.
-        </p>
-    </section>
-
     <section typeof="sa:Conclusion" id="conclusion" role="doc-conclusion">
         <h2><span>4 </span>Conclusion</h2>
         <p>
-            In conclusion, this website solves the issue of sending chunks of code to one another through inefficient apps with ineligible lines and other issues such as a bad format or missing parts of the code.
+            TODO
         </p>
     </section>
 
