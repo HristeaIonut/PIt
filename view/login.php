@@ -1,3 +1,46 @@
+<?php
+session_start();
+
+    include("connection.php");
+    include("functions.php");
+
+    $user_data = check_login($con);
+
+    if($_SERVER['REQUEST_METHOD'] == "POST"){
+            //something was posted
+            $user_name = $_POST['user_name'];
+            $password = $_POST['password'];
+
+            if(empty($user_name) || is_numeric($user_name)){
+                echo "Please, insert a valid username..";
+            }
+            if(empty($password)){
+                echo "You forgot to type a password.";
+            }
+
+            else {
+                //read from database
+                $query = "select * from users where user_name = '$user_name' limit = 1";
+                $result = mysqli_query($con, $query);
+                if($result && mysqli_num_rows($result) > 1){
+                    $user_data = mysqli_fetch_assoc($result);
+                    if($user_data['password'] == $password){
+                        $_SESSION['user_id'] = $user_data['user_id'];
+                        header("Location: index.php");
+                        die;
+                    }
+                    else{
+                        echo "The password you have entered is wrong.";
+                    }
+                }
+                header("Location: index.php");
+                die;
+
+            }
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,7 +71,7 @@
     <div class="footer">
         <a class=reportContent href="reportContent.php"> Report a post</a>
     </div>
-    <form class="form-style-report">
+    <form method="post" class="form-style-report">
         <p>Login to your account!</p>
         <ul>
             <li>
@@ -42,8 +85,10 @@
                 </label>
             </li>
             <li>
-                <input type="submit" value="Submit" class="button" />
+                <input type="submit" value="Login" class="field-style field-split align-left" />
+                <a href="register.php" class="field-style field-split align-right">Click to Signup</a>
             </li>
+            
         </ul>
     </form>
 
