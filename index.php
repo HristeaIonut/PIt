@@ -13,6 +13,7 @@ require_once ROOT.SLASH."util".SLASH."autoload.php";
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
     <link rel="stylesheet" href="view/styles.css">
     <script src="controller/script.js"></script>
+    <script src="controller/emptyCode.js"></script>
     <link rel="icon"
           href="https://icons-for-free.com/iconfiles/png/512/clipboard+paste+task+icon-1320161389075402003.png">
     <meta charset="UTF-8">
@@ -95,7 +96,7 @@ require_once ROOT.SLASH."util".SLASH."autoload.php";
             </tr>
         </table>
         <br>
-        <input type="submit" class="create-paste" name="submitCode" value="Create Paste"/>
+        <input type="submit" class="create-paste" name="submitCode" value="Create Paste" onclick="return emptyCode();"/>
     </form>
 </div>
 </body>
