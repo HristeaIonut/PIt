@@ -1,10 +1,10 @@
+
 <?php
 
 define('SLASH', DIRECTORY_SEPARATOR);
 define('ROOT', dirname(__FILE__));
 
 require_once ROOT.SLASH."util".SLASH."autoload.php";
-require_once ROOT.SLASH."view".SLASH."connection.php";
 
 ?>
 
@@ -27,13 +27,13 @@ require_once ROOT.SLASH."view".SLASH."connection.php";
 <div class="header">
     <div class="header-left">
         <a class="home" href="index.php">PasteIt</a>
-        <a class="contact" href="view/contact.html">Contact</a>
-        <a class="how-to" href="view/how-to.html">How to use</a>
-        <a class="report" href="view/report.html">Report</a>
+        <a class="contact" href="view/contact.php">Contact</a>
+        <a class="how-to" href="view/how-to.php">How to use</a>
+        <a class="report" href="view/report.php">Report</a>
     </div>
     <div class="header-right">
-        <a class="login" href="view/login.html">Login</a>
-        <a class="register" href="view/register.html">Register</a>
+        <a class="login" href="view/login.php">Login</a>
+        <a class="register" href="view/register.php">Register</a>
     </div>
 
 </div>
@@ -102,5 +102,3 @@ require_once ROOT.SLASH."view".SLASH."connection.php";
 </div>
 </body>
 </html>
-
-
