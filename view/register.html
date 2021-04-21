@@ -13,15 +13,7 @@
 </head>
 
 <body>
-    <script>
-        function validate_form() {
-            var p1 = document.forms["form"]["password"].value;
-            var p2 = document.forms["form"]["password2"].value;
-            if (p1 !== p2) alert("The two passwords don't match!");
-            return (p1 === p2);
-        }
-
-    </script>
+    
 <div class="header">
     <div class="header-left">
         <a class="home" href="../index.php">PasteIt</a>
@@ -37,45 +29,45 @@
 <div class="footer">
     <a class=reportContent href="reportContent.html"> Report a post</a>
 </div>
-<form class="form-style-report" name="form" action="register.php" method="POST">
-    <ul>
-        <li>
-            <p>Join our community!</p>
-            <label id="first_name">First Name:
-                <input type="text" name="first_name" class="field-style field-split align-right" placeholder="First Name" />
-            </label>
-        </li>
-        <li>
-            <label id="last_name">Last Name:
-                <input type="text" name="last_name" class="field-style field-split align-right" placeholder="Last Name" />
-            </label>
-        </li>
+    <form class="form-style-report" name="form" action="register.php" method="POST">
+        <ul>
+            <li>
+                <p>Join our community!</p>
+                <label id="first_name">First Name:
+                    <input type="text" name="first_name" class="field-style field-split align-right" placeholder="First Name" />
+                </label>
+            </li>
+            <li>
+                <label id="last_name">Last Name:
+                    <input type="text" name="last_name" class="field-style field-split align-right" placeholder="Last Name" />
+                </label>
+            </li>
 
-        <li>
-            <label id="email">Email Adress:
-                <input type="email" name="email" class="field-style field-split align-right" placeholder="email" />
-            </label>
-        </li>
-        <li>
-            <label id="user_name"> Choose a username:
-                <input type="text" name="user_name" class="field-style field-split align-right" placeholder="Username" />
-            </label>
-        </li>
-        <li>
-            <label id="password"> Type your password:
-                <input type="password" name="password" class="field-style field-split align-right" placeholder="Password" />
-            </label>
-        </li>
-        <li>
-            <label id="password2">Re-type your password:
-                <input type="password" name="password2" class="field-style field-split align-right" placeholder="Password" />
-            </label>
-        </li>
-        <li>
-            <input type="submit" value="Submit" class="button"/>
-        </li>
-    </ul>
-</form>
+            <li>
+                <label id="email">Email Adress:
+                    <input type="email" name="email" class="field-style field-split align-right" placeholder="email" />
+                </label>
+            </li>
+            <li>
+                <label id="user_name"> Choose a username:
+                    <input type="text" name="user_name" class="field-style field-split align-right" placeholder="Username" />
+                </label>
+            </li>
+            <li>
+                <label id="password"> Type your password:
+                    <input type="password" name="password" class="field-style field-split align-right" placeholder="Password" />
+                </label>
+            </li>
+            <li>
+                <label id="password2">Re-type your password:
+                    <input type="password" name="password2" class="field-style field-split align-right" placeholder="Password" />
+                </label>
+            </li>
+            <li>
+                <input type="submit" value="Submit" class="button"/>
+            </li>
+        </ul>
+    </form>
 </body>
 
 </html>
