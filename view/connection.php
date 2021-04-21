@@ -1,13 +1,22 @@
 <?php
+$servername = "localhost";
+$username = "Malina";
+$password = "malina123";
+$database = 'WT';
 
-$dbhost = "localhost";
-$dbuser = "root";
-$dbpassword = "";
-$dbname = "login_db";
+// Create connection
+$conn = new mysqli($servername, $username, $password, $database);
 
-if(!$con = mysqli_connect($dbhost, $dbuser, $dbpassword, $dbname))
-{
-    die("failed to connect");
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
 }
 
+
 ?>
+
+
+
+
+
+

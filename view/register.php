@@ -1,72 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+    include 'connection.php';
 
-<head>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
-    <link rel="stylesheet" href="formStyle.css">
-    <link rel="icon"
-          href="https://icons-for-free.com/iconfiles/png/512/clipboard+paste+task+icon-1320161389075402003.png">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PIt</title>
-</head>
+   $first_name = $_POST['first_name'];
+// $last_name = $_POST['last_name'];
+// $user_name = $_POST['user_name'];
+// $email = $_POST['email'];
+// $password = $_POST['password'];
+// $password2 = $_POST['password2'];
+// echo $first_name;
+//     if(isset($first_name) && $first_name !='' &&
+//         isset($last_name) && $last_name!='' &&
+//         isset($user_name) && $user_name !='' &&
+//         isset($email) && $email!='' &&
+//         isset($password) && $password!=''){
 
-<body>
-<div class="header">
-    <div class="header-left">
-        <a class="home" href="../index.php">PasteIt</a>
-        <a class="contact" href="contact.php">Contact</a>
-        <a class="how-to" href="how-to.php">How to use</a>
-        <a class="report" href="report.php">Report</a>
-    </div>
-    <div class="header-right">
-        <a class="login" href="login.php">Login</a>
-        <a class="register" href="register.php">Register</a>
-    </div>
-</div>
-<div class="footer">
-    <a class=reportContent href="reportContent.php"> Report a post</a>
-</div>
-<form class="form-style-report">
-    <ul>
-        <li>
-            <p>Join our community!</p>
-            <label id="field1">First Name:
-                <input type="text" name="field1" class="field-style field-split align-right" placeholder="First Name" />
-            </label>
-        </li>
-        <li>
-            <label id="field2">Last Name:
-                <input type="text" name="field2" class="field-style field-split align-right" placeholder="Last Name" />
-            </label>
-        </li>
+//             // $sql = "INSERT INTO users (first_name, last_name, user_name, email, password)
+//             // VALUES ('$first_name', '$last_name', '$user_name', '$email', '$password' )";
 
-        <li>
-            <label id="field3">Email Adress:
-                <input type="email" name="field3" class="field-style field-split align-right" placeholder="email" />
-            </label>
-        </li>
-        <li>
-            <label id="field4"> Choose a username:
-                <input type="text" name="field4" class="field-style field-split align-right" placeholder="Username" />
-            </label>
-        </li>
-        <li>
-            <label id="field5"> Type your password:
-                <input type="password" name="field5" class="field-style field-split align-right" placeholder="Password" />
-            </label>
-        </li>
-        <li>
-            <label id="field6">Re-type your password:
-                <input type="password" name="field6" class="field-style field-split align-right" placeholder="Password" />
-            </label>
-        </li>
-        <li>
-            <input type="submit" value="Submit" class="button"/>
-        </li>
-    </ul>
-</form>
-</body>
+//             // if ($conn->query($sql) === TRUE) {
+//             // echo "New record created successfully";
 
-</html>
+//             // } else {
+//             // echo "Error: " . $sql . "<br>" . $conn->error;
+//             // }
+//         }
+    
+    
+
+?>

@@ -1,5 +1,10 @@
 <?php
 if (isset($_POST)) {
+
+    if(!strlen(trim($_POST['codeArea']))){
+        header("Location: ../");
+        exit();
+    }
     if ($_POST['submitCode'] == "Create Paste") {
         $filename = '../Pastes/'.uniqid(rand(), true) . '.html';
         if (!file_exists($filename)) {

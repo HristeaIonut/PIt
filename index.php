@@ -4,6 +4,7 @@ define('SLASH', DIRECTORY_SEPARATOR);
 define('ROOT', dirname(__FILE__));
 
 require_once ROOT.SLASH."util".SLASH."autoload.php";
+require_once ROOT.SLASH."view".SLASH."connection.php";
 
 ?>
 
@@ -13,6 +14,7 @@ require_once ROOT.SLASH."util".SLASH."autoload.php";
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
     <link rel="stylesheet" href="view/styles.css">
     <script src="controller/script.js"></script>
+    <script src="controller/emptyCode.js"></script>
     <link rel="icon"
           href="https://icons-for-free.com/iconfiles/png/512/clipboard+paste+task+icon-1320161389075402003.png">
     <meta charset="UTF-8">
@@ -25,13 +27,13 @@ require_once ROOT.SLASH."util".SLASH."autoload.php";
 <div class="header">
     <div class="header-left">
         <a class="home" href="index.php">PasteIt</a>
-        <a class="contact" href="view/contact.php">Contact</a>
-        <a class="how-to" href="view/how-to.php">How to use</a>
-        <a class="report" href="view/report.php">Report</a>
+        <a class="contact" href="view/contact.html">Contact</a>
+        <a class="how-to" href="view/how-to.html">How to use</a>
+        <a class="report" href="view/report.html">Report</a>
     </div>
     <div class="header-right">
-        <a class="login" href="view/login.php">Login</a>
-        <a class="register" href="view/register.php">Register</a>
+        <a class="login" href="view/login.html">Login</a>
+        <a class="register" href="view/register.html">Register</a>
     </div>
 
 </div>
@@ -95,7 +97,7 @@ require_once ROOT.SLASH."util".SLASH."autoload.php";
             </tr>
         </table>
         <br>
-        <input type="submit" class="create-paste" name="submitCode" value="Create Paste"/>
+        <input type="submit" class="create-paste" name="submitCode" value="Create Paste" onclick="return emptyCode();"/>
     </form>
 </div>
 </body>
