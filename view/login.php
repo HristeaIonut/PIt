@@ -1,52 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+    session_start();
+    include 'connection.php';
+    $email = $_POST['email'];
+    $password = $_POST['password'];
 
-<head>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
-    <link rel="stylesheet" href="formStyle.css">
-    <link rel="icon"
-        href="https://icons-for-free.com/iconfiles/png/512/clipboard+paste+task+icon-1320161389075402003.png">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PIt</title>
-</head>
+    if(empty($email)){
+        echo "You haven't inserted an email, please do so.";
+        //header("Location: login.html");
+    }
+    if(empty($password)){
+        echo "You haven't inserted a password, please do so.";
+        //header("Location: login.html");
+    }
+    $sql = "SELECT * FROM users where email='$email' AND password='$password' ";
+    $result = $conn->query($sql);
 
-<body>
-    <div class="header">
-        <div class="header-left">
-            <a class="home" href="../index.php">PasteIt</a>
-            <a class="contact" href="contact.php">Contact</a>
-            <a class="how-to" href="how-to.php">How to use</a>
-            <a class="report" href="report.php">Report</a>
-        </div>
-        <div class="header-right">
-            <a class="login" href="login.php">Login</a>
-            <a class="register" href="register.php">Register</a>
-        </div>
-    </div>
-    <div class="footer">
-        <a class=reportContent href="reportContent.php"> Report a post</a>
-    </div>
-    <form class="form-style-report">
-        <p>Login to your account!</p>
-        <ul>
-            <li>
-                <label id="field4"> Insert your username:
-                <input type="text" name="field4" class="field-style field-split align-right" placeholder="Username" />
-                </label>
-            </li>
-            <li>
-                <label id="field5"> Insert your password:
-                <input type="password" name="field5" class="field-style field-split align-right" placeholder="Password" />
-                </label>
-            </li>
-            <li>
-                <input type="submit" value="Submit" class="button" />
-            </li>
-        </ul>
-    </form>
+    if ($result->num_rows == 1) {
+        $row = $result->fetch_assoc();
+        echo "id: " . $row["user_id"]. " - Name: " . $row["first_name"]. " " . $row["last_name"]. "<br>";
+        $_SESSION['user'] = $email;
+        header("Location: ../index.php");
+    }
+     else {
+        header("Location: login.html");
+    }
+    
 
-</body>
+    
+          
 
-</html>
+?>

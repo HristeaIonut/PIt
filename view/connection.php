@@ -1,12 +1,23 @@
-<?php
 
-$dbhost = "localhost";
-$dbuser = "root";
-$dbpassword = "";
-$dbname = "login_db";
-if(!($con = mysqli_connect($dbhost, $dbuser, $dbpassword, $dbname)))
-{
-    die("failed to connect");
+<?php
+$servername = "localhost";
+$username = "Malina";
+$password = "malina123";
+$database = 'WT';
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $database);
+
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
 }
 
+
 ?>
+
+
+
+
+
+

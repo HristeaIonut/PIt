@@ -1,3 +1,4 @@
+
 function emptyCode() {
     let code = document.getElementById("textarea");
     if(code.value.trim() === '')
