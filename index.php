@@ -1,6 +1,5 @@
 
 <?php
-
 define('SLASH', DIRECTORY_SEPARATOR);
 define('ROOT', dirname(__FILE__));
 
@@ -13,8 +12,8 @@ require_once ROOT.SLASH."util".SLASH."autoload.php";
 <head>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
     <link rel="stylesheet" href="view/styles.css">
-    <script src="controller/script.js"></script>
-    <script src="controller/emptyCode.js"></script>
+    <script src="controller/scripts/script.js"></script>
+    <script src="controller/scripts/emptyCode.js"></script>
     <link rel="icon"
           href="https://icons-for-free.com/iconfiles/png/512/clipboard+paste+task+icon-1320161389075402003.png">
     <meta charset="UTF-8">

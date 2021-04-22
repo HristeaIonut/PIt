@@ -23,7 +23,7 @@ if (isset($_POST)) {
         $text = str_replace("<", '&lt;', $text);
         $text = str_replace(">", '&gt;', $text);
         $text = $text."</code></pre>";
-        $text = $text. "<script src=\"../controller/syntaxHighlight.js\"></script>";
+        $text = $text. "<script src=\"../controller/scripts/syntaxHighlight.js\"></script>";
         file_put_contents($filename, $templateContent.$text);
         fclose($file);
         header("Location: ../Pastes/" . $filename);

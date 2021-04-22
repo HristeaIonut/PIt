@@ -1,32 +1,52 @@
-<?php
-    session_start();
-    include 'connection.php';
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+<!DOCTYPE html>
+<html lang="en">
 
-    if(empty($email)){
-        echo "You haven't inserted an email, please do so.";
-        //header("Location: login.html");
-    }
-    if(empty($password)){
-        echo "You haven't inserted a password, please do so.";
-        //header("Location: login.html");
-    }
-    $sql = "SELECT * FROM users where email='$email' AND password='$password' ";
-    $result = $conn->query($sql);
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="stylesheet" href="formStyle.css">
+    <link rel="icon"
+        href="https://icons-for-free.com/iconfiles/png/512/clipboard+paste+task+icon-1320161389075402003.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIt</title>
+</head>
 
-    if ($result->num_rows == 1) {
-        $row = $result->fetch_assoc();
-        echo "id: " . $row["user_id"]. " - Name: " . $row["first_name"]. " " . $row["last_name"]. "<br>";
-        $_SESSION['user'] = $email;
-        header("Location: ../index.php");
-    }
-     else {
-        header("Location: login.html");
-    }
-    
+<body>
+    <div class="header">
+        <div class="header-left">
+            <a class="home" href="../index.php">PasteIt</a>
+            <a class="contact" href="contact.html">Contact</a>
+            <a class="how-to" href="how-to.html">How to use</a>
+            <a class="report" href="report.html">Report</a>
+        </div>
+        <div class="header-right">
+            <a class="login" href="login.php">Login</a>
+            <a class="register" href="register.php">Register</a>
+        </div>
+    </div>
+    <div class="footer">
+        <a class=reportContent href="reportContent.html"> Report a post</a>
+    </div>
+    <form class="form-style-report" name="form" action="../controller/connection/loginAccount.php" method="POST">
+        <p>Login to your account!</p>
+        <ul>
+            <li>
+                <label id="email"> Insert your email:
+                <input type="email" name="email" class="field-style field-split align-right" placeholder="Email" />
+                </label>
+            </li>
+            <li>
+                <label id="password"> Insert your password:
+                <input type="password" name="password" class="field-style field-split align-right" placeholder="Password" />
+                </label>
+            </li>
+            <li>
+                <input type="submit" value="Submit" class="button" />
+            </li>
+        </ul>
+    </form>
 
-    
-          
+</body>
 
-?>
+</html>

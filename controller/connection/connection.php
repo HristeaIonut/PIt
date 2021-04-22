@@ -1,8 +1,8 @@
 
 <?php
 $servername = "localhost";
-$username = "Malina";
-$password = "malina123";
+$username = "root";
+$password = "";
 $database = 'WT';
 
 // Create connection

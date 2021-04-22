@@ -21,8 +21,8 @@
                 <a class="report" href="report.php">Report</a>
             </div>
             <div class="header-right">
-                <a class="login" href="login.php">Login</a>
-                <a class="register" href="register.php">Register</a>
+                <a class="login" href="../controller/connection/loginAccount.php">Login</a>
+                <a class="register" href="../controller/connection/createAccount.php">Register</a>
             </div>
         </div>
         <div class="footer">
