@@ -24,7 +24,8 @@
             isset($user_name) && $user_name!='' &&
             isset($email) && $email!='' &&
             isset($password2) && $password!=''){
-                $sql = "INSERT INTO connectiontable (first_name, last_name, user_name, email, password) values ('$first_name', '$last_name', '$user_name', '$email', '$password') ";
+                $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
+                $sql = "INSERT INTO connectiontable (first_name, last_name, user_name, email, password) values ('$first_name', '$last_name', '$user_name', '$email', '$hashedPassword') ";
 
                 if ($conn->query($sql)) {
                     

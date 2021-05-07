@@ -14,14 +14,16 @@
         header("Refresh:0, url=../../view/login.php");
     }
     else{
-        $sql = "SELECT * FROM connectiontable where email='$email' AND password='$password' ";
+        $sql = "SELECT * FROM connectiontable where email='$email' ";
         $result = $conn->query($sql);
-
         if ($result->num_rows == 1) {
             $row = $result->fetch_assoc();
+            $validPassword = password_verify($password, $row['password']);
+            if($validPassword){
             echo "id: " . $row["user_id"]. " - Name: " . $row["first_name"]. " " . $row["last_name"]. "<br>";
             $_SESSION['user'] = $email;
             header("Location: ../../index.php");
+            }
         }
         else {
             header("Location: ../../view/login.php");
