@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 19, 2021 at 10:01 AM
+-- Generation Time: May 07, 2021 at 10:18 AM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 7.3.27
 
@@ -32,7 +32,7 @@ CREATE TABLE `connectiontable` (
   `first_name` varchar(100) NOT NULL,
   `last_name` varchar(100) NOT NULL,
   `user_name` varchar(100) NOT NULL,
-  `email` varchar(50) NOT NULL,
+  `email` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -41,9 +41,13 @@ CREATE TABLE `connectiontable` (
 --
 
 INSERT INTO `connectiontable` (`user_id`, `first_name`, `last_name`, `user_name`, `email`, `password`) VALUES
-(1, 'Malina', 'Benchea', 'malinaBenchea', 'malina16fnl@gmail.com', 'MalinaBenchea123'),
-(2, 'Ionut', 'Hristea', 'ionutHristea', 'hristeaionut72@gmail.com', 'IonutHristea123'),
-(3, 'Tudor', 'Neculau', 'tudorNeculau', 'neculautudor02@gmail.com', 'TudorNeculau123');
+(2, 'Ionut', 'Hristea', 'ionutHristea', 'hristeaionut72@gmail.com', 'HristeaIonut123'),
+(3, 'Tudor', 'Neculau', 'tudorNeculau', 'neculautudor02@gmail.com', 'NeculauTudor123'),
+(4, 'firstName', 'lastName', 'userName', 'email@email.com', 'password123'),
+(5, 'attempt2', 'att2_name', 'userName2', 'email2@email.com', 'password123'),
+(6, 'firstName1', 'lastName1', 'userName1', 'email1@email.com', 'password123'),
+(8, 'Malina', 'Benchea', 'MalinaBenchea', 'malina16fnl@gmail.com', '$2y$10$VHUdcb6H20gJ4L2TVEpZmexP9jJYidsDyu3y007iD8uRHfYBOkpqG'),
+(9, 'firstName', 'lastName', 'username123', 'email3@email.com', '$2y$10$0MxS80SaZy2mxGo4/FUsrex2m/bS2fIlqWtZJEx9/dnptzmQTQMRy');
 
 --
 -- Indexes for dumped tables
@@ -54,6 +58,16 @@ INSERT INTO `connectiontable` (`user_id`, `first_name`, `last_name`, `user_name`
 --
 ALTER TABLE `connectiontable`
   ADD PRIMARY KEY (`user_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `connectiontable`
+--
+ALTER TABLE `connectiontable`
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
