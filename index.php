@@ -4,12 +4,12 @@ define('SLASH', DIRECTORY_SEPARATOR);
 define('ROOT', dirname(__FILE__));
 
 require_once ROOT.SLASH."util".SLASH."autoload.php";
-
+require("res/constants.php")
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src='https://www.google.com/recaptcha/api.js' async defer ></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
     <link rel="stylesheet" href="view/styles.css">
     <script src="controller/scripts/script.js"></script>
@@ -94,9 +94,18 @@ require_once ROOT.SLASH."util".SLASH."autoload.php";
                         <input class="right-select" type="password" id="field-password" placeholder="Password"/>
                     </label></td>
             </tr>
+            <tr>
+                <td>
+                    <div class="captcha-wrapper">
+                        <div class="g-recaptcha" data-sitekey="<?php echo SITE_KEY; ?>"></div>
+                    </div>
+                </td>
+            </tr>
         </table>
+
         <br>
         <input type="submit" class="create-paste" name="submitCode" value="Create Paste" onclick="return emptyCode();"/>
+
     </form>
 </div>
 </body>
