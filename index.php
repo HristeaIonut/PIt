@@ -28,7 +28,7 @@ require("res/constants.php")
         <a class="home" href="index.php">PasteIt</a>
         <a class="contact" href="view/contact.php">Contact</a>
         <a class="how-to" href="view/how-to.php">How to use</a>
-        <a class="report" href="view/report.php">Report</a>
+        <a class="report" href="view/report.html">Report</a>
     </div>
     <div class="header-right">
         <a class="login" href="view/login.php">Login</a>
@@ -43,7 +43,6 @@ require("res/constants.php")
 <div class="textarea-container">
     <br>
     Paste here the code!<br>
-
     <form name="code" method="post" action="controller/getCode.php">
     <label class="left">
             <textarea name="codeArea" id="textarea" class="textarea" ></textarea>

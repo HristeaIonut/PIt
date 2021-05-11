@@ -18,10 +18,10 @@
             <a class="home" href="../index.php">PasteIt</a>
             <a class="contact" href="contact.php">Contact</a>
             <a class="how-to" href="how-to.php">How to use</a>
-            <a class="report" href="report.php">Report</a>
+            <a class="report" href="report.html">Report</a>
         </div>
         <div class="header-right">
-            <a class="login" href="../controller/connection/loginAccount.php">Login</a>
+            <a class="login" href="../loginAccount.php">Login</a>
             <a class="register" href="../controller/connection/createAccount.php">Register</a>
         </div>
     </div>

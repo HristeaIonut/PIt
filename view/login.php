@@ -16,8 +16,8 @@
     <div class="header">
         <div class="header-left">
             <a class="home" href="../index.php">PasteIt</a>
-            <a class="contact" href="contact.html">Contact</a>
-            <a class="how-to" href="how-to.html">How to use</a>
+            <a class="contact" href="contact.php">Contact</a>
+            <a class="how-to" href="how-to.php">How to use</a>
             <a class="report" href="report.html">Report</a>
         </div>
         <div class="header-right">
@@ -28,7 +28,7 @@
     <div class="footer">
         <a class=reportContent href="reportContent.html"> Report a post</a>
     </div>
-    <form class="form-style-report" name="form" action="../controller/connection/loginAccount.php" method="POST">
+    <form class="form-style-report" name="form" method="POST" action="../loginAccount.php" >
         <p>Login to your account!</p>
         <ul>
             <li>
@@ -40,6 +40,12 @@
                 <label id="password"> Insert your password:
                 <input type="password" name="password" class="field-style field-split align-right" placeholder="Password" />
                 </label>
+            </li>
+            <li>
+                <div class="field-group">
+                    <div><label for="remember"></label><input type="checkbox" name="remember" id="remember" <?php if(isset($_COOKIE["member_login"])) { ?> checked <?php } ?> />
+                        <label for="remember-me">Remember me</label>
+                    </div>
             </li>
             <li>
                 <input type="submit" value="Submit" class="button" />

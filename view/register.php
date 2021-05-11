@@ -17,8 +17,8 @@
 <div class="header">
     <div class="header-left">
         <a class="home" href="../index.php">PasteIt</a>
-        <a class="contact" href="contact.html">Contact</a>
-        <a class="how-to" href="how-to.html">How to use</a>
+        <a class="contact" href="contact.php">Contact</a>
+        <a class="how-to" href="how-to.php">How to use</a>
         <a class="report" href="report.html">Report</a>
     </div>
     <div class="header-right">
