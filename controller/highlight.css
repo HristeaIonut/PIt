@@ -1,39 +1,54 @@
-pre code{
-    color: white;
+pre code {
+  color: white;
 }
 
 pre code .string {
-    color:#A1E46D;
+  color: #a1e46d;
 }
 .special {
-    color:#D6665D;
+  color: #d6665d;
 }
 pre code .special-js {
-    color:#6DE4D1;
+  color: #6de4d1;
 }
 pre code .special-js-glob {
-    color:#A1E46D;
-    font-weight:bold;
+  color: #a1e46d;
+  font-weight: bold;
 }
-pre code .special-comment{
-    color:#aaa;
+pre code .special-comment {
+  color: #aaa;
 }
 pre code .special-js-meth {
-    color:#E46D8A;
+  color: #e46d8a;
 }
 pre code .special-html {
-    color:#E4D95F;
+  color: #e4d95f;
 }
 pre code .special-sql {
-    color:#1D968C;
+  color: #1d968c;
 }
-pre code .special-php{
-    color:#597EA7;
+pre code .special-php {
+  color: #597ea7;
+}
+pre code .special-C {
+  color: aqua;
+}
+pre code .include {
+  color: steelblue;
+}
+pre code .libraries {
+  color: purple;
+}
+pre code .variables {
+  color: royalblue;
+}
+pre code .Cfunctions {
+  color: greenyellow;
 }
 
-code{
-    margin-left: 10px;
-    padding: 5px;
-    display: inline-block;
-    background-color: #3b3b3b;
+code {
+  margin-left: 10px;
+  padding: 5px;
+  display: inline-block;
+  background-color: #3b3b3b;
 }

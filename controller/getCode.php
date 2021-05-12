@@ -31,7 +31,38 @@ if (isset($_POST)) {
         $text = str_replace("<", '&lt;', $text);
         $text = str_replace(">", '&gt;', $text);
         $text = $text."</code></pre>";
-        $text = $text. "<script src=\"../controller/scripts/syntaxHighlight.js\"></script>";
+        
+        if($_POST['syntax'] == "C"){
+            $text = $text. "<script src=\"../controller/scripts/syntaxHighlightC.js\"></script>";
+        }
+        if($_POST['syntax'] == "C#"){
+            $text = $text. "<script src=\"../controller/scripts/syntaxHighlightCSharp.js\"></script>";
+        }
+        if($_POST['syntax'] == "C++"){
+            $text = $text. "<script src=\"../controller/scripts/syntaxHighlightCpp.js\"></script>";
+        }
+        if($_POST['syntax'] == "HTML"){
+            $text = $text. "<script src=\"../controller/scripts/syntaxHighlightHTML.js\"></script>";
+        }
+        if($_POST['syntax'] == "CSS"){
+            $text = $text. "<script src=\"../controller/scripts/syntaxHighlightCSS.js\"></script>";
+        }
+        if($_POST['syntax'] == "JSON"){
+            $text = $text. "<script src=\"../controller/scripts/syntaxHighlightJSON.js\"></script>";
+        }
+        if($_POST['syntax'] == "Java"){
+            $text = $text. "<script src=\"../controller/scripts/syntaxHighlightJava.js\"></script>";
+        }
+        if($_POST['syntax'] == "JavaScript"){
+            $text = $text. "<script src=\"../controller/scripts/syntaxHighlightJavaScript.js\"></script>";
+        }
+        if($_POST['syntax'] == "Phyton"){
+            $text = $text. "<script src=\"../controller/scripts/syntaxHighlightPhyton.js\"></script>";
+        }
+        if($_POST['syntax'] == "Bash"){
+            $text = $text. "<script src=\"../controller/scripts/syntaxHighlightBash.js\"></script>";
+        }
+        
         file_put_contents($filename, $templateContent.$text);
         fclose($file);
         header("Location: ../Pastes/" . $filename);
