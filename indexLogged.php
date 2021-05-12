@@ -4,8 +4,9 @@ define('SLASH', DIRECTORY_SEPARATOR);
 define('ROOT', dirname(__FILE__));
 
 require_once ROOT.SLASH."util".SLASH."autoload.php";
-require("res/constants.php")
+require("res/constants.php");
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,17 +24,17 @@ require("res/constants.php")
 </head>
 
 <body>
-<p hidden id="checking" style="color:red;">This should be hidden</p>
+<p hidden id="checking" style="color:red;">This text should be hidden</p>
 <div class="header">
     <div class="header-left">
-        <a class="home" href="index.php">PasteIt</a>
-        <a class="contact" href="view/contact.php">Contact</a>
-        <a class="how-to" href="view/how-to.php">How to use</a>
-        <a class="report" href="view/report.html">Report</a>
+        <a class="home" href="indexLogged.php">PasteIt</a>
+        <a class="contact" href="view/contactLogged.php">Contact</a>
+        <a class="how-to" href="view/how-toLogged.php">How to use</a>
+        <a class="report" href="view/reportLogged.html">Report</a>
     </div>
     <div class="header-right">
-        <a class="login" href="view/login.php">Login</a>
-        <a class="register" href="view/register.php">Register</a>
+        <a class="login"> <?php session_start(); echo $_SESSION["username"]; ?> </a>
+        <a class="register" href="index.php">Log out</a>
     </div>
 
 </div>
@@ -44,7 +45,7 @@ require("res/constants.php")
 <div class="textarea-container">
     <br>
     Paste here the code!<br>
-    <form name="code" method="post" action="controller/getCode.php">
+    <form name="code" method="post" action="controller/getCodeLogged.php">
         <label class="left">
             <textarea name="codeArea" id="textarea" class="textarea" ></textarea>
         </label>

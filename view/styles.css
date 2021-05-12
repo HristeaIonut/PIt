@@ -51,6 +51,9 @@ ol {
   margin-left: 10%;
   margin-bottom: 50px;
 }
+.checking{
+color: red;
+}
 .header-left {
   width: 540px;
   float: left;
