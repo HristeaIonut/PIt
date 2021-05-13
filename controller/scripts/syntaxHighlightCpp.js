@@ -5,7 +5,7 @@ console.log(codeElements);
     doubleQuotesReg = /"(.*?)"/g,
     includeReg = /(include)/g,
     hashTagReg = /(#)/g,
-    specialReg = /\b(auto|case|continue|do|default|const|else|if|for|goto|return|static|switch|try|catch|class)(?=[^\w])/g,
+    specialReg = /\b(auto|case|continue|do|default|const|else|if|for|goto|return|static|switch|try|catch)(?=[^\w])/g,
     variableTypeReg = /\b(int|char|double|float|signed|unsigned|long|short|struct|union|void)(?=[^\w])/g,
     functionsReg = /\b(printf|scanf)/g,
     specialCommentReg = /\/\*(\*(?!\/)|[^*])*\*\//g,

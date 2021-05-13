@@ -2,8 +2,8 @@ let codeElements = document.getElementById("cod");
 console.log(codeElements);
 //TODO: solve multiline comments
 
-    //const singleQuotesReg = /'(.*?)'/g,
-    doubleQuotesReg = /"(.*?)"/g;
+    const singleQuotesReg = /'(.*?)'/g,
+    doubleQuotesReg = /"(.*?)"/g,
     specialReg = /\b(assert|break|byte|case|catch|const|continue|default|do|else|enum|extends|final|finally|for|goto|if|implements|import|instanceof|interface|while)(?=[^\w])/g,
     modifiersReg = /\b(abstract|private|public|protected)/g,
     variableTypeReg = /\b(main|boolean|char|double|float|int|native|String|true|root|new|args)(?=[^\w])/g,

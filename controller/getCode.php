@@ -31,37 +31,43 @@ if (isset($_POST)) {
         $text = str_replace("<", '&lt;', $text);
         $text = str_replace(">", '&gt;', $text);
         $text = $text."</code></pre>";
+        $languageType = $_POST['syntax'];
+        switch($languageType){
+            case "C":
+                $text = $text. "<script src=\"../controller/scripts/syntaxHighlightC.js\"></script>";
+                break;
+            case "C#":
+                $text = $text. "<script src=\"../controller/scripts/syntaxHighlightCSharp.js\"></script>";
+                break;
+            case "C++":
+                $text = $text. "<script src=\"../controller/scripts/syntaxHighlightCpp.js\"></script>";
+                break;
+            case "HTML":
+                $text = $text. "<script src=\"../controller/scripts/syntaxHighlightHTML.js\"></script>";
+                break;
+            case "CSS": 
+                $text = $text. "<script src=\"../controller/scripts/syntaxHighlightCSS.js\"></script>";
+                break;
+            case "JSON":
+                $text = $text. "<script src=\"../controller/scripts/syntaxHighlightJSON.js\"></script>";
+                break;
+            case "Python":
+                $text = $text. "<script src=\"../controller/scripts/syntaxHighlightPython.js\"></script>";
+                break;
+            case "Java":
+                $text = $text. "<script src=\"../controller/scripts/syntaxHighlightJava.js\"></script>";
+                break;
+            case "JavaScript":
+                $text = $text. "<script src=\"../controller/scripts/syntaxHighlightJavaScript.js\"></script>";
+                break;
+            case "Bash":
+                $text = $text. "<script src=\"../controller/scripts/syntaxHighlightBash.js\"></script>";
+                break;
+
+
+        }
         
-        if($_POST['syntax'] == "C"){
-            $text = $text. "<script src=\"../controller/scripts/syntaxHighlightC.js\"></script>";
-        }
-        if($_POST['syntax'] == "C#"){
-            $text = $text. "<script src=\"../controller/scripts/syntaxHighlightCSharp.js\"></script>";
-        }
-        if($_POST['syntax'] == "C++"){
-            $text = $text. "<script src=\"../controller/scripts/syntaxHighlightCpp.js\"></script>";
-        }
-        if($_POST['syntax'] == "HTML"){
-            $text = $text. "<script src=\"../controller/scripts/syntaxHighlightHTML.js\"></script>";
-        }
-        if($_POST['syntax'] == "CSS"){
-            $text = $text. "<script src=\"../controller/scripts/syntaxHighlightCSS.js\"></script>";
-        }
-        if($_POST['syntax'] == "JSON"){
-            $text = $text. "<script src=\"../controller/scripts/syntaxHighlightJSON.js\"></script>";
-        }
-        if($_POST['syntax'] == "Java"){
-            $text = $text. "<script src=\"../controller/scripts/syntaxHighlightJava.js\"></script>";
-        }
-        if($_POST['syntax'] == "JavaScript"){
-            $text = $text. "<script src=\"../controller/scripts/syntaxHighlightJavaScript.js\"></script>";
-        }
-        if($_POST['syntax'] == "Python"){
-            $text = $text. "<script src=\"../controller/scripts/syntaxHighlightPython.js\"></script>";
-        }
-        if($_POST['syntax'] == "Bash"){
-            $text = $text. "<script src=\"../controller/scripts/syntaxHighlightBash.js\"></script>";
-        }
+        
         
         file_put_contents($filename, $templateContent.$text);
         fclose($file);
