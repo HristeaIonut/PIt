@@ -3,7 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="formStyle.css">
     <link rel="icon"
           href="https://icons-for-free.com/iconfiles/png/512/clipboard+paste+task+icon-1320161389075402003.png">
     <meta charset="UTF-8">
@@ -23,26 +23,43 @@
     <div class="header-right">
         <a class="login" > <?php session_start(); echo $_SESSION["username"]; ?> </a>
         <a class="register" href="../logout.php">Log out</a>
+
     </div>
 </div>
 <div class="footer">
     <a class=reportContent href="reportContentLogged.php"> Report a post</a>
 </div>
-<div>
+<form class="form-style-report">
+    <ul>
+        <li>
+            <label>
+                <input type="text" name="field1" class="field-style field-split align-left" placeholder="Name" />
+            </label>
+            <label>
+                <input type="email" name="field2" class="field-style field-split align-right" placeholder="Email" />
+            </label>
 
-    <hr>
-    <p>If the information below is not helpful, feel free to contact us. Details in the <u class="email">Contact</u> tab above.</p>
-    <hr>
-    <h3>About</h3>
-    <p>The purpose of this site is to allow users to safely and conveniently send a text to another user.</p>
-    <h3>How do i use this webpage?</h3>
-    <ol>
-        <li>Paste the text in the Box</li>
-        <li>Click/tap the "Create Paste" button</li>
-        <li>Copy the link of the current page</li>
-        <li>Send the link to your friend</li>
-    </ol>
-</div>
+        </li>
+        <li>
+            <label>
+                <input type="text" name="field3" class="field-style field-full align-none" placeholder="Link" />
+            </label>
+        </li>
+        <li>
+            <label>
+                <input type="text" name="field3" class="field-style field-full align-none" placeholder="Subject" />
+            </label>
+        </li>
+        <li>
+            <label>
+                <textarea name="field5" class="field-style" placeholder="Message"></textarea>
+            </label>
+        </li>
+        <li>
+            <input type="submit" value="Send Message" />
+        </li>
+    </ul>
+</form>
 
 
 </body>

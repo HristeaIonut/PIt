@@ -40,7 +40,7 @@ require("res/constants.php");
 
 </div>
 <div class="footer">
-    <a class=reportContent href="view/reportContent.php"> Report a post</a>
+    <a class=reportContent href="view/reportContentLogged.php"> Report a post</a>
 </div>
 
 <div class="textarea-container">

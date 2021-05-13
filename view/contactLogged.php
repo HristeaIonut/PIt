@@ -19,11 +19,11 @@
     </div>
     <div class="header-right">
         <a class="login" > <?php session_start(); echo $_SESSION["username"]; ?> </a>
-        <a class="register" href="../index.php">Log out</a>
+        <a class="register" href="../logout.php">Log out</a>
     </div>
 </div>
 <div class="footer">
-    <a class=reportContent href="reportContent.php"> Report a paste</a>
+    <a class=reportContent href="reportContentLogged.php"> Report a paste</a>
 </div>
 <div>
     <h3>Contact Us</h3>
