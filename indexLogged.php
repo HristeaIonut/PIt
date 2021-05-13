@@ -34,10 +34,7 @@ require("res/constants.php");
     </div>
     <div class="header-right">
         <a class="login" > <?php session_start(); echo $_SESSION["username"]; ?> </a>
-        <!--<form name="code2" method="post" action="controller/removeCookie.php">
-            <input type="submit" class="register" name="Log Out" value="Log Out">
-        </form>-->
-        <a class="register" href="controller/logout.php">Log out</a>
+        <a class="register" href="logout.php">Log out</a>
 
     </div>
 
