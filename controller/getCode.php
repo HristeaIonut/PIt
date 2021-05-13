@@ -56,8 +56,8 @@ if (isset($_POST)) {
         if($_POST['syntax'] == "JavaScript"){
             $text = $text. "<script src=\"../controller/scripts/syntaxHighlightJavaScript.js\"></script>";
         }
-        if($_POST['syntax'] == "Phyton"){
-            $text = $text. "<script src=\"../controller/scripts/syntaxHighlightPhyton.js\"></script>";
+        if($_POST['syntax'] == "Python"){
+            $text = $text. "<script src=\"../controller/scripts/syntaxHighlightPython.js\"></script>";
         }
         if($_POST['syntax'] == "Bash"){
             $text = $text. "<script src=\"../controller/scripts/syntaxHighlightBash.js\"></script>";

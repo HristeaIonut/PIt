@@ -18,6 +18,9 @@ pre code .special-js-glob {
 pre code .special-comment {
   color: #aaa;
 }
+pre code .numbers {
+  color: rgb(86, 151, 151);
+}
 pre code .special-js-meth {
   color: #e46d8a;
 }
@@ -33,17 +36,20 @@ pre code .special-php {
 pre code .special-C {
   color: aqua;
 }
+pre code .special-Java{
+  color:rgb(11, 163, 74);
+}
 pre code .include {
   color: steelblue;
 }
 pre code .libraries {
-  color: purple;
+  color: rgb(206, 76, 206);
 }
 pre code .variables {
-  color: royalblue;
+  color: rgb(96, 130, 233);
 }
 pre code .Cfunctions {
-  color: greenyellow;
+  color: rgb(233, 51, 96);
 }
 
 code {
