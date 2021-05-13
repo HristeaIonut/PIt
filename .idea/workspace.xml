@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d5841e05-0585-45e7-9f30-a2cd2864e3d6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/controller/logout.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/templateLogged.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PIt.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f423a82c-e9a2-4261-a286-11ef959ce4a9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f423a82c-e9a2-4261-a286-11ef959ce4a9/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pastes/1186429627609d0bba7cf4f8.97938240.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pastes/1249115264609d0b467d0825.10431203.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pastes/163874071609d0b8ad97398.46867059.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pastes/1895059769609d0be56db341.84414002.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pastes/2005568364609d0d582dc2c7.92591795.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pastes/212110252609d0b5285d247.92669860.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pastes/332011720609d0b16238223.33570683.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pastes/369454858609d0a68acffd1.32630825.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pastes/457503098609d0d7e3e81f2.85755355.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pastes/554856363609bfeab7e6a06.48115357.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pastes/803931677609d0a34f12610.88652866.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/getCodeLogged.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/getCodeLogged.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/scripts/emptyCode.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/scripts/emptyCode.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/scripts/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/scripts/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/templateLogged.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indexLogged.php" beforeDir="false" afterPath="$PROJECT_DIR$/indexLogged.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginAccount.php" beforeDir="false" afterPath="$PROJECT_DIR$/loginAccount.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1sU0S3Y6CarXlPglqhOrhURu32V" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d5841e05-0585-45e7-9f30-a2cd2864e3d6" name="Default Changelist" comment="" />
+      <created>1620911857614</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1620911857614</updated>
+      <workItem from="1620911858909" duration="159000" />
+      <workItem from="1620912044199" duration="9000" />
+      <workItem from="1620912054395" duration="10996000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>

@@ -4,7 +4,9 @@ define('SLASH', DIRECTORY_SEPARATOR);
 define('ROOT', dirname(__FILE__));
 
 require_once ROOT.SLASH."util".SLASH."autoload.php";
-require("res/constants.php")
+require("res/constants.php");
+if(isset($_COOKIE["user_login"]))
+    header("Location: indexLogged.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">

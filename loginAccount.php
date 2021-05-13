@@ -32,4 +32,5 @@ $_SESSION["username"] = $row["user_name"];
             header("Refresh:0, url=view/login.php");
     }
 }
+
 ?>

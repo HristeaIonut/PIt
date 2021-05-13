@@ -12,3 +12,6 @@ function myFunction() {
 var captchaCheck = function(){
     document.getElementById("checking").style.color = "white";
 }
+
+
+

@@ -10,7 +10,7 @@ require("res/constants.php");
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src='https://www.google.com/recaptcha/api.js' async defer ></script>
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
     <link rel="stylesheet" href="view/styles.css">
     <script src="controller/scripts/script.js"></script>
@@ -24,7 +24,7 @@ require("res/constants.php");
 </head>
 
 <body>
-<p hidden id="checking" style="color:red;">This text should be hidden</p>
+<p hidden id="checking" style="color:white;">This text should be hidden</p>
 <div class="header">
     <div class="header-left">
         <a class="home" href="indexLogged.php">PasteIt</a>
@@ -33,8 +33,12 @@ require("res/constants.php");
         <a class="report" href="view/reportLogged.html">Report</a>
     </div>
     <div class="header-right">
-        <a class="login"> <?php session_start(); echo $_SESSION["username"]; ?> </a>
-        <a class="register" href="index.php">Log out</a>
+        <a class="login" > <?php session_start(); echo $_SESSION["username"]; ?> </a>
+        <!--<form name="code2" method="post" action="controller/removeCookie.php">
+            <input type="submit" class="register" name="Log Out" value="Log Out">
+        </form>-->
+        <a class="register" href="controller/logout.php">Log out</a>
+
     </div>
 
 </div>
@@ -98,7 +102,7 @@ require("res/constants.php");
             <tr>
                 <td>
                     <div class="captcha-wrapper">
-                        <div type="checkbox" class="g-recaptcha" data-callback="captchaCheck" data-sitekey="<?php echo SITE_KEY; ?>"></div>
+                        <div type="checkbox" class="g-recaptcha" data-callback="captchaCheck"></div>
                     </div>
                 </td>
             </tr>

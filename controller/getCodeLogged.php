@@ -7,22 +7,13 @@ if (isset($_POST)) {
         exit();
     }
 
-
-    $secret = SECRET_KEY;
-    $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$_POST['g-recaptcha-response']);
-    $responseData = json_decode($verifyResponse);
-
-    if(!$responseData->success){
-        echo '<script>alert("Go away BOT \u{1F922}")</script>';
-        header("Refresh:0, url=../indexLogged.php");    }
-
-    if ($_POST['submitCode'] == "Create Paste" && $responseData->success) {
-        $filename = '../Pastes/'.uniqid(rand(), true) . '.html';
+    if ($_POST['submitCode'] == "Create Paste") {
+        $filename = '../Pastes/'.uniqid(rand(), true) . '.php';
         if (!file_exists($filename)) {
             $file = tmpfile();
         }
 
-        $templateFile = fopen("template.html", "a+");
+        $templateFile = fopen("templateLogged.php", "a+");
         $templateContent = '';
 
         while (!feof($templateFile))
