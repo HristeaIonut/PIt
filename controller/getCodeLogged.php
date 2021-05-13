@@ -3,7 +3,7 @@
 if (isset($_POST)) {
     require("../res/constants.php");
     if(!strlen(trim($_POST['codeArea']))) {
-        header("Location: ../");
+        header("Location: ../indexLogged.php");
         exit();
     }
 
@@ -14,7 +14,7 @@ if (isset($_POST)) {
 
     if(!$responseData->success){
         echo '<script>alert("Go away BOT \u{1F922}")</script>';
-        header("Refresh:0, url=../index.php");    }
+        header("Refresh:0, url=../indexLogged.php");    }
 
     if ($_POST['submitCode'] == "Create Paste" && $responseData->success) {
         $filename = '../Pastes/'.uniqid(rand(), true) . '.html';
