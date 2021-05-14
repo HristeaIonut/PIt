@@ -44,8 +44,7 @@ if(isset($_COOKIE["user_login"]))
 </div>
 
 <div class="textarea-container">
-    <br>
-    Paste here the code!<br>
+    Paste here the code!
     <form name="code" method="post" action="controller/getCode.php">
         <label class="left">
             <textarea name="codeArea" id="textarea" class="textarea" ></textarea>
@@ -103,10 +102,13 @@ if(isset($_COOKIE["user_login"]))
                     </div>
                 </td>
             </tr>
+            <tr>
+                <td>
+                    <input type="submit" class="create-paste" name="submitCode" value="Create Paste" onclick="return emptyCode();"/>
+                </td>
+            </tr>
         </table>
 
-        <br>
-        <input type="submit" class="create-paste" name="submitCode" value="Create Paste" onclick="return emptyCode();"/>
 
     </form>
 </div>

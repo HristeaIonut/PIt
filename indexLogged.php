@@ -30,9 +30,10 @@ require("res/constants.php");
         <a class="contact" href="view/contactLogged.php">Contact</a>
         <a class="how-to" href="view/how-toLogged.php">How to use</a>
         <a class="report" href="view/reportLogged.html">Report</a>
+        <a class="contact" href="view/mypastes.php">My Pastes</a>
     </div>
     <div class="header-right">
-        <a class="login" > <?php session_start(); echo $_SESSION["username"];?> </a>
+        <a class="login" > <?php require ("controller/getUsername.php")?> </a>
         <a class="register" href="logout.php">Log out</a>
 
     </div>
@@ -96,10 +97,8 @@ require("res/constants.php");
                     </label></td>
             </tr>
             <tr>
-                <td>
-                    <div class="captcha-wrapper">
-                        <div type="checkbox" class="g-recaptcha" data-callback="captchaCheck"></div>
-                    </div>
+                <td class="captcha-wrapper">
+                        <div class="g-recaptcha" data-callback="captchaCheck"></div>
                 </td>
             </tr>
         </table>

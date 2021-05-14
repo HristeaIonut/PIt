@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5841e05-0585-45e7-9f30-a2cd2864e3d6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f423a82c-e9a2-4261-a286-11ef959ce4a9/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f423a82c-e9a2-4261-a286-11ef959ce4a9/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pastes/1237433509609d3887314189.00364906.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pastes/1412005597609d49f3b7a9f6.81634473.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pastes/2102187796609d3842e50cd0.70521248.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pastes/612313749609d38360d63e4.99672245.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/indexLogged.php" beforeDir="false" afterPath="$PROJECT_DIR$/indexLogged.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loginAccount.php" beforeDir="false" afterPath="$PROJECT_DIR$/loginAccount.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/logout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
