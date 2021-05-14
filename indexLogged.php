@@ -2,7 +2,6 @@
 <?php
 define('SLASH', DIRECTORY_SEPARATOR);
 define('ROOT', dirname(__FILE__));
-
 require_once ROOT.SLASH."util".SLASH."autoload.php";
 require("res/constants.php");
 ?>
@@ -33,7 +32,7 @@ require("res/constants.php");
         <a class="report" href="view/reportLogged.html">Report</a>
     </div>
     <div class="header-right">
-        <a class="login" > <?php session_start(); echo $_SESSION["username"]; ?> </a>
+        <a class="login" > <?php session_start(); echo $_SESSION["username"];?> </a>
         <a class="register" href="logout.php">Log out</a>
 
     </div>

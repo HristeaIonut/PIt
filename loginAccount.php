@@ -1,12 +1,15 @@
 <?php
 session_start();
 include 'controller/connection/connection.php';
+require 'controller/generatekeys.php';
+global $conn,$cipher,$key, $ivlen, $iv;
 $email = $_POST['email'];
 $password = $_POST['password'];
 $sql = "SELECT * FROM connectiontable where email='$email' ";
 $result = $conn->query($sql);
 $row = $result->fetch_assoc();
 $_SESSION["username"] = $row["user_name"];
+
     if (empty($email)) {
         echo '<script>alert("You haven\'t inserted an email, please do so.")</script>';
         header("Refresh:0, url=view/login.php");
@@ -14,11 +17,12 @@ $_SESSION["username"] = $row["user_name"];
         echo '<script>alert("Do you think you can trick me? Enter your password and stop playing.\u{1F643}")</script>';
         header("Refresh:0, url=view/login.php");
     } else {
-
         if ($result->num_rows == 1) {
 
-            if(!empty($_POST["remember"]))
-                setcookie('user_login', $row["user_id"], time() + (10 * 365 * 24 * 60 * 60));
+            if(!empty($_POST["remember"])){
+                $encryptedCookie = openssl_encrypt($row["user_id"], $cipher, $key, $options=0, $iv);
+                setcookie('user_login', $encryptedCookie, time() + (10 * 365 * 24 * 60 * 60));
+            }
             else
                 setcookie('user_login','', time() - 3600);
             $validPassword = password_verify($password, $row['password']);
@@ -33,4 +37,3 @@ $_SESSION["username"] = $row["user_name"];
     }
 }
 
-?>
