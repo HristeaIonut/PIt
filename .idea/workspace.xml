@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5841e05-0585-45e7-9f30-a2cd2864e3d6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/controller/scripts/loadPastes.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/scripts/loadPastes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/mypastes.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/mypastes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pastes/1089777298609fb3c97d3093.96216134.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pastes/1213434739609fb5cf476d22.85316090.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pastes/1462258806609fb3d21ef747.77945678.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pastes/1595215085609fb471126653.41605750.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pastes/1787477911609fb40576d810.89626083.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pastes/1962049579609fb382938494.09664517.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/getCode.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/getCode.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/getCodeLogged.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/getCodeLogged.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

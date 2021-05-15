@@ -64,13 +64,7 @@ if (isset($_POST)) {
                 break;
             case "Bash":
                 $text = $text. "<script src=\"../controller/scripts/syntaxHighlightBash.js\"></script>";
-                break;
-
-
         }
-        
-        
-        
         file_put_contents($filename, $templateContent.$text);
         fclose($file);
         header("Location: ../Pastes/" . $filename);
