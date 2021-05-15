@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5841e05-0585-45e7-9f30-a2cd2864e3d6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/template.html" beforeDir="false" afterPath="$PROJECT_DIR$/controller/template.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/templateLogged.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/templateLogged.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/scripts/loadPastes.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/scripts/loadPastes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/mypastes.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/mypastes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/styles.css" afterDir="false" />
     </list>
@@ -80,7 +78,7 @@
       <workItem from="1620912044199" duration="9000" />
       <workItem from="1620912054395" duration="10996000" />
       <workItem from="1621062923047" duration="13143000" />
-      <workItem from="1621077433472" duration="1709000" />
+      <workItem from="1621077433472" duration="2013000" />
     </task>
     <servers />
   </component>

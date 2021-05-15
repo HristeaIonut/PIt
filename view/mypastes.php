@@ -41,7 +41,9 @@ require("../res/constants.php");
     <a class=reportContent href="reportContentLogged.php"> Report a post</a>
 </div>
 
-<div id="pastes"></div>
+<table id="pastes">
+
+</table>
 </body>
 <script src="../controller/scripts/loadPastes.js"></script>
 

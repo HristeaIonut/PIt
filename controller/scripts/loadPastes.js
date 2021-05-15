@@ -11,12 +11,13 @@ function loadPaste(){
             var html = "";
             for(var i = pastes.length-1; i >= 0; i--){
                 var paste = pastes[i];
+                html += "<tr><td>"
                 html += "<a class=\"paste\" href=\"../Pastes/";
                 html += paste;
                 html += "\">";
                 paste = paste.replace('.html', '');
                 html += paste;
-                html += "</a> <br>";
+                html += "</a></tr></td>";
             }
             document.getElementById("pastes").innerHTML = html;
         }
