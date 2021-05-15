@@ -8,7 +8,9 @@ const strReg1 = /"(.*?)"/g,
     specialJsReg = /\b(getElementsBy(TagName|ClassName|Name)|getElementById|typeof|instanceof|return|const|var)(?=[^\w])/g,
     specialMathReg = /\b(indexOf|match|replace|toString|length)(?=[^\w])/g,
     specialPhpReg = /\b(define|echo|print_r|var_dump)(?=[^\w])/g,
-    specialCommentReg = /(\/\*.*\*\/)/g,
+    //match all special comments
+    specialCommentReg = /\*.*\*/g,
+    //match all inline comments
     inlineCommentReg = /(\/\/.*)/g;
 
 const htmlTagReg = /(&lt;[^\&]*&gt;)/g;
