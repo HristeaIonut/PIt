@@ -1,32 +1,34 @@
 
 <?php
+require("getUsername.php");
+include 'connection/connection.php';
+
+global $decryptedId, $conn;
 if (isset($_POST)) {
     require("../res/constants.php");
     if(!strlen(trim($_POST['codeArea']))) {
-        header("Location: ../");
+        header("Location: ../indexLogged.php");
         exit();
     }
 
-
-    $secret = SECRET_KEY;
-    $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$_POST['g-recaptcha-response']);
-    $responseData = json_decode($verifyResponse);
-
-    if(!$responseData->success){
-        echo '<script>alert("Go away BOT \u{1F922}")</script>';
-        header("Refresh:0, url=../index.php");    }
-
-    if ($_POST['submitCode'] == "Create Paste" && $responseData->success) {
-        $filename = '../Pastes/'.uniqid(rand(), true) . '.html';
+    if ($_POST['submitCode'] == "Create Paste") {
+        $filename = uniqid(rand(), true) . '.html';
         if (!file_exists($filename)) {
             $file = tmpfile();
         }
+        $stmt = $conn->prepare("INSERT INTO pastes(id, paste_name) VALUES (?, ?)");
+        $p1 = intval($decryptedId);
+        $p2 = $filename;
+        $stmt->bind_param("is", $p1, $p2);
+        $stmt->execute();
+        $filename = '../Pastes/'.$filename;
 
-        $templateFile = fopen("template.html", "a+");
+        $templateFile = fopen("templateLogged.php", "a+");
         $templateContent = '';
 
         while (!feof($templateFile))
             $templateContent = $templateContent . fgets($templateFile);
+
         $templateContent = $templateContent."<pre><code id='cod'>";
         $file = fopen($filename, "a+");
         $text = $_POST["codeArea"];

@@ -9,3 +9,9 @@ function myFunction() {
         y.style.display = "none";
     }
 }
+var captchaCheck = function(){
+    document.getElementById("checking").style.color = "white";
+}
+
+
+
