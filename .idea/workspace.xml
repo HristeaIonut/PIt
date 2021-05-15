@@ -3,9 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="d5841e05-0585-45e7-9f30-a2cd2864e3d6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pastes/1336965509609e78bebe5849.21996820.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/connectiontable.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/connection/createAccount.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/connection/createAccount.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/getCodeLogged.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/getCodeLogged.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/getUsername.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/getUsername.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/indexLogged.php" beforeDir="false" afterPath="$PROJECT_DIR$/indexLogged.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginAccount.php" beforeDir="false" afterPath="$PROJECT_DIR$/loginAccount.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/contactLogged.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/contactLogged.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/how-toLogged.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/how-toLogged.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/reportContentLogged.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/reportContentLogged.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webtechnologies.sql" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +24,13 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -37,10 +54,12 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/controller" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/model" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -51,6 +70,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\PIt\model" />
       <recent name="C:\xampp\htdocs\PIt\controller" />
     </key>
   </component>
@@ -65,6 +85,7 @@
       <workItem from="1620911858909" duration="159000" />
       <workItem from="1620912044199" duration="9000" />
       <workItem from="1620912054395" duration="10996000" />
+      <workItem from="1621062923047" duration="6109000" />
     </task>
     <servers />
   </component>

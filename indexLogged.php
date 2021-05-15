@@ -101,10 +101,14 @@ require("res/constants.php");
                         <div class="g-recaptcha" data-callback="captchaCheck"></div>
                 </td>
             </tr>
+            <tr>
+                <td>
+                    <input type="submit" class="create-paste" name="submitCode" value="Create Paste" onclick="return emptyCode();"/>
+                </td>
+            </tr>
         </table>
 
         <br>
-        <input type="submit" class="create-paste" name="submitCode" value="Create Paste" onclick="return emptyCode();"/>
 
     </form>
 </div>

@@ -97,11 +97,10 @@ if(isset($_COOKIE["user_login"]))
             </tr>
             <tr>
                 <td>
-                    <div class="captcha-wrapper">
-                        <div type="checkbox" class="g-recaptcha" data-callback="captchaCheck" data-sitekey="<?php echo SITE_KEY; ?>"></div>
-                    </div>
+                    <div class="g-recaptcha" data-callback="captchaCheck" data-sitekey="<?php echo SITE_KEY; ?>"></div>
                 </td>
             </tr>
+
             <tr>
                 <td>
                     <input type="submit" class="create-paste" name="submitCode" value="Create Paste" onclick="return emptyCode();"/>

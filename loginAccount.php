@@ -5,8 +5,11 @@ require 'controller/generatekeys.php';
 global $conn,$cipher,$key, $ivlen, $iv;
 $email = $_POST['email'];
 $password = $_POST['password'];
-$sql = "SELECT * FROM connectiontable where email='$email' ";
-$result = $conn->query($sql);
+$sql = "SELECT * FROM connectiontable where email=? ";
+$stmt = $conn->prepare($sql);
+$stmt -> bind_param("s", $email);
+$stmt -> execute();
+$result = $stmt->get_result();
 $row = $result->fetch_assoc();
 $_SESSION["username"] = $row["user_name"];
 
