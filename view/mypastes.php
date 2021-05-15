@@ -24,7 +24,7 @@ require("../res/constants.php");
 <p hidden id="checking" style="color:white;">This text should be hidden</p>
 <div class="header">
     <div class="header-left">
-        <a class="home" href="../indexLogged.php">PasteIt</a>
+        <a class="home" id="continut" href="../indexLogged.php">PasteIt</a>
         <a class="contact" href="contactLogged.php">Contact</a>
         <a class="how-to" href="how-toLogged.php">How to use</a>
         <a class="report" href="reportLogged.html">Report</a>
@@ -40,3 +40,9 @@ require("../res/constants.php");
 <div class="footer">
     <a class=reportContent href="reportContentLogged.php"> Report a post</a>
 </div>
+
+<div id="pastes"></div>
+</body>
+<script src="../controller/scripts/loadPastes.js"></script>
+
+</html>

@@ -3,19 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="d5841e05-0585-45e7-9f30-a2cd2864e3d6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pastes/1336965509609e78bebe5849.21996820.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/connectiontable.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/connection/createAccount.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/connection/createAccount.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/getCodeLogged.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/getCodeLogged.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/getUsername.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/getUsername.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/indexLogged.php" beforeDir="false" afterPath="$PROJECT_DIR$/indexLogged.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loginAccount.php" beforeDir="false" afterPath="$PROJECT_DIR$/loginAccount.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/contactLogged.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/contactLogged.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/how-toLogged.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/how-toLogged.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/reportContentLogged.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/reportContentLogged.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/template.html" beforeDir="false" afterPath="$PROJECT_DIR$/controller/template.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/templateLogged.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/templateLogged.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/mypastes.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/mypastes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webtechnologies.sql" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +20,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -66,6 +58,8 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="Template Data Languages" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -85,7 +79,8 @@
       <workItem from="1620911858909" duration="159000" />
       <workItem from="1620912044199" duration="9000" />
       <workItem from="1620912054395" duration="10996000" />
-      <workItem from="1621062923047" duration="6109000" />
+      <workItem from="1621062923047" duration="13143000" />
+      <workItem from="1621077433472" duration="1709000" />
     </task>
     <servers />
   </component>
@@ -103,5 +98,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

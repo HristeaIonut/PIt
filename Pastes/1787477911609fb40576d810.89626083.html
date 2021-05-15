@@ -29,3 +29,28 @@
     </div>
 </div>
 
+<pre><code id='cod'>var rows = prompt("How many rows for your multiplication table?");
+    var cols = prompt("How many columns for your multiplication table?");
+    if(rows == "" || rows == null)
+   		 rows = 10;
+    if(cols== "" || cols== null)
+   		 cols = 10;
+    createTable(rows, cols);
+    function createTable(rows, cols)
+    {
+      var j=1;
+      var output = "&lt;table border='1' width='500' cellspacing='0'cellpadding='5'&gt;";
+      for(i=1;i&lt;=rows;i++)
+      {
+    	output = output + "&lt;tr&gt;";
+        while(j&lt;=cols)
+        {
+  		  output = output + "&lt;td&gt;" + i*j + "&lt;/td&gt;";
+   		  j = j+1;
+   		}
+   		 output = output + "&lt;/tr&gt;";
+   		 j = 1;
+    }
+    output = output + "&lt;/table&gt;";
+    document.write(output);
+    }</code></pre><script src="../controller/scripts/syntaxHighlight.js"></script>
