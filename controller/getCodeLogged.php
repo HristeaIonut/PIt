@@ -12,7 +12,7 @@ if (isset($_POST)) {
         exit();
     }
     if ($_POST['submitCode'] == "Create Paste") {
-        $filename = uniqid(rand(), true) . '.html';
+        $filename = uniqid(rand(), true) . '.php';
         if (!file_exists($filename)) {
             $file = tmpfile();
         }
@@ -37,7 +37,7 @@ if (isset($_POST)) {
         
         
 
-        $templateFile = fopen("templateLogged.php", "a+");
+        $templateFile = fopen("templateLogged.html", "a+");
         $templateContent = '';
 
         while (!feof($templateFile))

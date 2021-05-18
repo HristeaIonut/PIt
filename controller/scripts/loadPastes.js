@@ -16,6 +16,7 @@ function loadPaste(){
                 html += paste;
                 html += "\">";
                 paste = paste.replace('.html', '');
+                paste = paste.replace('.php', '');
                 html += paste;
                 html += "</a></tr></td>";
             }

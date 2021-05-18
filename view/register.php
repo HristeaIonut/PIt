@@ -20,7 +20,6 @@
         <a class="contact" href="contact.php">Contact</a>
         <a class="how-to" href="how-to.php">How to use</a>
         <a class="report" href="report.html">Report</a>
-        <a class="contact" href="../view/findPaste.php">Find Pastes</a>
     </div>
     <div class="header-right">
         <a class="login" href="login.php">Login</a>

@@ -3,7 +3,8 @@ session_start();
 include 'controller/connection/connection.php';
 require 'controller/generatekeys.php';
 global $conn, $cipher, $key, $ivlen, $iv;
-
+$email = $_POST['email'];
+$password = $_POST['password'];
 
 if (empty($email)) {
     echo '<script>alert("You haven\'t inserted an email, please do so.")</script>';
@@ -12,8 +13,7 @@ if (empty($email)) {
     echo '<script>alert("Do you think you can trick me? Enter your password and stop playing.\u{1F643}")</script>';
     header("Refresh:0, url=view/login.php");
 } else {
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+
     $sql = "SELECT * FROM connectiontable where email=? ";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("s", $email);

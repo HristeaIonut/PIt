@@ -24,9 +24,9 @@
         <a class="contact" href="../view/mypastes.php">My Pastes</a>
     </div>
     <div class="header-right">
-        <a class="login" >  <?php require ("controller/getUsername.php")?> </a>
+        <a class="login" >  <?php require ("../controller/getUsername.php")?> </a>
         <a class="register" href="../logout.php">Log out</a>
     </div>
 </div>
 
-<pre><code id='cod'>fdjlkdjkg</code></pre><script src="../controller/scripts/syntaxHighlightC.js"></script>
+<pre><code id='cod'>gfdhfghj</code></pre><script src="../controller/scripts/syntaxHighlightC.js"></script>
