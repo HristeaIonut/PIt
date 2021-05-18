@@ -4,6 +4,6 @@ console.log(codeElements);
 
 
     codeElements = codeElements.innerHTML;
-    codeElements = codeElements.replace(doubleQuotesReg,'<span class="string">"$1"</span>');
+    codeElements = codeElements.replace(doubleQuotesReg,'<span id="quotes">"$1"</span>');
 
     document.getElementById("cod").innerHTML = codeElements;

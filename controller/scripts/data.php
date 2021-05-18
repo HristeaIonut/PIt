@@ -10,7 +10,9 @@ $stmt -> bind_param("s", $decryptedId);
 $stmt -> execute();
 $pasteName =  null;
 $pasteId = null;
-$stmt -> bind_result($pasteId, $pasteName);
+$password = null;
+$created_at = null;
+$stmt -> bind_result($pasteId, $pasteName, $password, $created_at);
 while($stmt -> fetch()){
     $pastes[] = $pasteName;
 }

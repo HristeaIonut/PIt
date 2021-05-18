@@ -17,6 +17,7 @@
         <a class="how-to" href="../view/how-toLogged.php">How to use</a>
         <a class="report" href="../view/reportLogged.html">Report</a>
         <a class="contact" href="../view/mypastes.php">My Pastes</a>
+        
     </div>
     <div class="header-right">
         <a class="login" > <?php session_start(); echo $_SESSION["username"]; ?> </a>

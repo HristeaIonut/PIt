@@ -8,10 +8,10 @@ console.log(codeElements);
 
 
     codeElements = codeElements.innerHTML;
-    codeElements = codeElements.replace(doubleQuotesReg,'<span class="string">"$1"</span>');
-    codeElements = codeElements.replace(specialReg,'<span class="special-C">$1</span>');
-    codeElements = codeElements.replace(commandsReg,'<span class="special-C">$1</span>');
-    codeElements = codeElements.replace(functionsReg, '<span class="Cfunctions">$1</span>');
-    codeElements = codeElements.replace(inlineCommentReg,'<span class="special-comment">$1</span>');
+    codeElements = codeElements.replace(doubleQuotesReg,'<span id="quotes">"$1"</span>');
+    codeElements = codeElements.replace(specialReg,'<span id="special-C">$1</span>');
+    codeElements = codeElements.replace(commandsReg,'<span id="special-C">$1</span>');
+    codeElements = codeElements.replace(functionsReg, '<span id="Cfunctions">$1</span>');
+    codeElements = codeElements.replace(inlineCommentReg,'<span id="special-comment">$1</span>');
 
     document.getElementById("cod").innerHTML = codeElements;

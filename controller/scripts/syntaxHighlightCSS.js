@@ -11,12 +11,12 @@ console.log(codeElements);
 
 
     codeElements = codeElements.innerHTML;
-    codeElements = codeElements.replace(doubleQuotesReg,'<span class="string">"$1"</span>');
-    codeElements = codeElements.replace(singleQuotesReg, "<span class=\"string\">'$1'</span>");
-    codeElements = codeElements.replace(specialReg,'<span class="special-C">$1</span>');
-    codeElements = codeElements.replace(variableTypeReg,'<span class="variables">$1</span>');
-    codeElements = codeElements.replace(otherReg,'<span class="special-C">$1</span>');
-    codeElements = codeElements.replace(specialCommentReg,'<span class="special-comment">$1</span>');
-    codeElements = codeElements.replace(inlineCommentReg,'<span class="special-comment">$1</span>');
+    codeElements = codeElements.replace(doubleQuotesReg,'<span id="quotes">"$1"</span>');
+    codeElements = codeElements.replace(singleQuotesReg, "<span id=\"quotes\">'$1'</span>");
+    codeElements = codeElements.replace(specialReg,'<span id="special-C">$1</span>');
+    codeElements = codeElements.replace(variableTypeReg,'<span id="variables">$1</span>');
+    codeElements = codeElements.replace(otherReg,'<span id="special-C">$1</span>');
+    codeElements = codeElements.replace(specialCommentReg,'<span id="special-comment">$1</span>');
+    codeElements = codeElements.replace(inlineCommentReg,'<span id="special-comment">$1</span>');
 
     document.getElementById("cod").innerHTML = codeElements;

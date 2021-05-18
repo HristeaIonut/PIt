@@ -2,6 +2,7 @@
 <?php
 require("getUsername.php");
 include 'connection/connection.php';
+include 'deleteFunctions.php';
 
 global $decryptedId, $conn;
 if (isset($_POST)) {
@@ -10,18 +11,31 @@ if (isset($_POST)) {
         header("Location: ../indexLogged.php");
         exit();
     }
-
     if ($_POST['submitCode'] == "Create Paste") {
         $filename = uniqid(rand(), true) . '.html';
         if (!file_exists($filename)) {
             $file = tmpfile();
         }
-        $stmt = $conn->prepare("INSERT INTO pastes(id, paste_name) VALUES (?, ?)");
-        $p1 = intval($decryptedId);
-        $p2 = $filename;
-        $stmt->bind_param("is", $p1, $p2);
-        $stmt->execute();
-        $filename = '../Pastes/'.$filename;
+        
+        $password = $_POST['password'];
+        $expiration = $_POST['expiration'];
+        if(!empty($password)){
+            $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
+            $stmt = $conn->prepare("INSERT INTO pastes(id, paste_name, password) VALUES (?, ?, ?)");
+            $p1 = intval($decryptedId);
+            $stmt->bind_param("iss", $p1, $filename, $hashedPassword);
+            $stmt->execute();
+            $filename = '../Pastes/'.$filename;
+        }
+        else{
+            $stmt = $conn->prepare("INSERT INTO pastes(id, paste_name) VALUES (?, ?)");
+            $p1 = intval($decryptedId);
+            $stmt->bind_param("is", $p1, $filename);
+            $stmt->execute();
+            $filename = '../Pastes/'.$filename;
+        }
+        
+        
 
         $templateFile = fopen("templateLogged.php", "a+");
         $templateContent = '';
@@ -66,9 +80,38 @@ if (isset($_POST)) {
                 break;
             case "Bash":
                 $text = $text. "<script src=\"../controller/scripts/syntaxHighlightBash.js\"></script>";
+                break;
         }
+        $directory = '../Pastes';
+        switch($expiration){
+            case "0":
+                break;
+            case "5":
+                delete_older_than($directory, 5 * 60);
+                break;
+            case "10":
+                delete_older_than($directory, 10 * 60);
+                break;
+            case "30":
+                delete_older_than($directory, 30 * 60);
+                break;
+            case "60":
+                delete_older_than($directory, 60 * 60);
+                break;
+            case "1440":
+                delete_older_than($directory, 1440 * 60);
+                break;
+            case "10080":
+                delete_older_than($directory, 10080 * 60);
+                break;
+            case "302400":
+                delete_older_than($directory, 302400 * 60);
+                break;
+         }
         file_put_contents($filename, $templateContent.$text);
         fclose($file);
         header("Location: ../Pastes/" . $filename);
+        
     }
+    
 }
