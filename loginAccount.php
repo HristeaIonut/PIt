@@ -24,7 +24,7 @@ $_SESSION["username"] = $row["user_name"];
 
             if(!empty($_POST["remember"])){
                 $encryptedCookie = openssl_encrypt($row["user_id"], $cipher, $key, $options=0, $iv);
-                setcookie('user_login', $encryptedCookie, time() + (10 * 365 * 24 * 60 * 60));
+                setcookie('user_login', $encryptedCookie, time() + (10 * 365 * 24 * 60 * 60),  "", "", false, true);
             }
             else
                 setcookie('user_login','', time() - 3600);

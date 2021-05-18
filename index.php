@@ -11,11 +11,11 @@ if(isset($_COOKIE["user_login"]))
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src='https://www.google.com/recaptcha/api.js' async defer ></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
     <link rel="stylesheet" href="view/styles.css">
     <script src="controller/scripts/script.js"></script>
     <script src="controller/scripts/emptyCode.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js' async defer ></script>
     <link rel="icon"
           href="https://icons-for-free.com/iconfiles/png/512/clipboard+paste+task+icon-1320161389075402003.png">
     <meta charset="UTF-8">

@@ -172,6 +172,9 @@ dd, dt{
 .paste{
   margin-left: 10%;
 }
+.g-recaptcha{
+  display: block;
+}
 
 
 
