@@ -85,13 +85,13 @@ if(isset($_COOKIE["user_login"]))
             <tr>
                 <td><label class="privacy">Public:</label></td>
                 <td><label>
-                        <input type="checkbox" class="right-select" onclick="myFunction()">
+                        <input type="checkbox" id="Checkbox" class="right-select" onclick="myFunction()">
                     </label></td>
             </tr>
             <tr>
                 <td><label id="insert-label" class="password">Insert password here:</label></td>
 
-                <td> <label for="field-password">
+                <td> <label for="insert-label">
                         <input class="right-select" type="password" id="field-password" placeholder="Password"/>
                     </label></td>
             </tr>

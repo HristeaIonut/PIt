@@ -44,6 +44,8 @@ require("../res/constants.php");
 <table id="pastes">
 
 </table>
+
+
 </body>
 <script src="../controller/scripts/loadPastes.js"></script>
 

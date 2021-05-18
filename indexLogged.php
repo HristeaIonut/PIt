@@ -72,14 +72,14 @@ require("res/constants.php");
                 <td><label class="expiration">Expiration time:</label></td>
                 <td><label>
                         <select class="right-select" name="expiration">
-                            <option value="Disabled">Disabled</option>
+                            <option value="0">Disabled</option>
                             <option value="5">5 minutes</option>
                             <option value="10">10 minutes</option>
                             <option value="30">30 minutes</option>
-                            <option value="1hr">1 hour</option>
-                            <option value="1day">1 day</option>
-                            <option value="1week">1 week</option>
-                            <option value="1month">1 month</option>
+                            <option value="60">1 hour</option>
+                            <option value="1440">1 day</option>
+                            <option value="10080">1 week</option>
+                            <option value="302400">1 month</option>
                         </select>
                     </label></td>
             </tr>
@@ -92,8 +92,8 @@ require("res/constants.php");
             <tr>
                 <td><label id="insert-label" class="password">Insert password here:</label></td>
 
-                <td> <label for="field-password">
-                        <input class="right-select" type="password" id="field-password" placeholder="Password"/>
+                <td> <label>
+                        <input type="password" class="right-select" name="password" id="field-password" placeholder="Password"/>
                     </label></td>
             </tr>
             <tr>

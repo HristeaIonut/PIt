@@ -2,10 +2,10 @@
 -- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
--- Gazdă: 127.0.0.1
--- Timp de generare: mai 15, 2021 la 10:58 AM
--- Versiune server: 10.4.18-MariaDB
--- Versiune PHP: 8.0.3
+-- Host: 127.0.0.1
+-- Generation Time: May 16, 2021 at 05:21 PM
+-- Server version: 10.4.18-MariaDB
+-- PHP Version: 7.3.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Bază de date: `webtechnologies`
+-- Database: `webtechnologies`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structură tabel pentru tabel `connectiontable`
+-- Table structure for table `connectiontable`
 --
 
 CREATE TABLE `connectiontable` (
@@ -37,7 +37,7 @@ CREATE TABLE `connectiontable` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Eliminarea datelor din tabel `connectiontable`
+-- Dumping data for table `connectiontable`
 --
 
 INSERT INTO `connectiontable` (`user_id`, `first_name`, `last_name`, `user_name`, `email`, `password`) VALUES
@@ -55,46 +55,56 @@ INSERT INTO `connectiontable` (`user_id`, `first_name`, `last_name`, `user_name`
 -- --------------------------------------------------------
 
 --
--- Structură tabel pentru tabel `pastes`
+-- Table structure for table `pastes`
 --
 
 CREATE TABLE `pastes` (
   `id` int(20) NOT NULL,
-  `paste_name` varchar(64) NOT NULL
+  `paste_name` varchar(64) NOT NULL,
+  `password` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Indexuri pentru tabele eliminate
+-- Dumping data for table `pastes`
+--
+
+INSERT INTO `pastes` (`id`, `paste_name`, `password`) VALUES
+(8, '61688584460a1353c54b5a7.23715522.html', ''),
+(8, '152808991560a13601ef7e04.12700425.html', ''),
+(8, '185919232560a137deac4c44.08712568.html', NULL);
+
+--
+-- Indexes for dumped tables
 --
 
 --
--- Indexuri pentru tabele `connectiontable`
+-- Indexes for table `connectiontable`
 --
 ALTER TABLE `connectiontable`
   ADD PRIMARY KEY (`user_id`);
 
 --
--- Indexuri pentru tabele `pastes`
+-- Indexes for table `pastes`
 --
 ALTER TABLE `pastes`
   ADD KEY `id_fk` (`id`);
 
 --
--- AUTO_INCREMENT pentru tabele eliminate
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT pentru tabele `connectiontable`
+-- AUTO_INCREMENT for table `connectiontable`
 --
 ALTER TABLE `connectiontable`
   MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- Constrângeri pentru tabele eliminate
+-- Constraints for dumped tables
 --
 
 --
--- Constrângeri pentru tabele `pastes`
+-- Constraints for table `pastes`
 --
 ALTER TABLE `pastes`
   ADD CONSTRAINT `id_fk` FOREIGN KEY (`id`) REFERENCES `connectiontable` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;

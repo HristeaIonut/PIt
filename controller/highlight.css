@@ -2,53 +2,53 @@ pre code {
   color: white;
 }
 
-pre code .string {
+pre code #quotes {
   color: #a1e46d;
 }
-.special {
+#special {
   color: #d6665d;
 }
-pre code .special-js {
+pre code #special-js {
   color: #6de4d1;
 }
-pre code .special-js-glob {
+pre code #special-js-glob {
   color: #a1e46d;
   font-weight: bold;
 }
-pre code .special-comment {
+pre code #special-comment {
   color: #aaa;
 }
-pre code .numbers {
+pre code #numbers {
   color: rgb(86, 151, 151);
 }
-pre code .special-js-meth {
+pre code #special-js-meth {
   color: #e46d8a;
 }
-pre code .special-html {
+pre code #special-html {
   color: #e4d95f;
 }
-pre code .special-sql {
+pre code #special-sql {
   color: #1d968c;
 }
-pre code .special-php {
+pre code #special-php {
   color: #597ea7;
 }
-pre code .special-C {
+pre code #special-C {
   color: aqua;
 }
-pre code .special-Java{
-  color:rgb(11, 163, 74);
+pre code #special-Java {
+  color: rgb(11, 163, 74);
 }
-pre code .include {
+pre code #include {
   color: steelblue;
 }
-pre code .libraries {
+pre code #libraries {
   color: rgb(206, 76, 206);
 }
-pre code .variables {
+pre code #variables {
   color: rgb(96, 130, 233);
 }
-pre code .Cfunctions {
+pre code #Cfunctions {
   color: rgb(233, 51, 96);
 }
 
