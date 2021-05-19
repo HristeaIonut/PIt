@@ -17,7 +17,7 @@ if (isset($_POST)) {
         header("Refresh:0, url=../index.php");    }
 
     if ($_POST['submitCode'] == "Create Paste" && $responseData->success) {
-        $filename = '../Pastes/'.uniqid(rand(), true) . '.html';
+        $filename = '../Pastes/'.uniqid(rand(), true) . '.php';
         if (!file_exists($filename)) {
             $file = tmpfile();
         }

@@ -37,7 +37,7 @@ if (isset($_POST)) {
         
         
 
-        $templateFile = fopen("templateLogged.html", "a+");
+        $templateFile = fopen("template.html", "a+");
         $templateContent = '';
 
         while (!feof($templateFile))

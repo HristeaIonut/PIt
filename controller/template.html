@@ -16,15 +16,34 @@
 
 <body>
 <div class="header">
-    <div class="header-left">
-        <a class="home" href="../index.php" id="past">PasteIt</a>
-        <a class="contact" href="../view/contact.php">Contact</a>
-        <a class="how-to" href="../view/how-to.php">How to use</a>
-        <a class="report" href="../view/report.html">Report</a>
-    </div>
-    <div class="header-right">
-        <a class="login" href="../view/login.php">Login</a>
-        <a class="register" href="../view/report.html">Register</a>
-    </div>
+    <?php
+        if(isset($_COOKIE["user_login"])){
+            echo'<div class="header-left">
+    <a class="home" href="../indexLogged.php">PasteIt</a>
+    <a class="contact" href="../view/contactLogged.php">Contact</a>
+    <a class="how-to" href="../view/how-toLogged.php">How to use</a>
+    <a class="report" href="../view/reportLogged.html">Report</a>
+    <a class="contact" href="../view/mypastes.php">My Pastes</a>
+</div>';
+echo'<div class="header-right">
+    <a class="login" >';
+        require ("../controller/getUsername.php");
+        echo '</a>
+    <a class="register" href="../logout.php">Log out</a>
+</div>';
+}
+else{
+echo '<div class="header-left">
+    <a class="home" href="../index.php" id="past">PasteIt</a>
+    <a class="contact" href="../view/contact.php">Contact</a>
+    <a class="how-to" href="../view/how-to.php">How to use</a>
+    <a class="report" href="../view/report.html">Report</a>
+</div>
+<div class="header-right">
+    <a class="login" href="../view/login.php">Login</a>
+    <a class="register" href="../view/report.html">Register</a>
+</div>';
+}
+?>
 </div>
 

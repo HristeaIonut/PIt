@@ -3,25 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="d5841e05-0585-45e7-9f30-a2cd2864e3d6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pastes/10676891260a408fb340e63.71187660.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pastes/130923878660a4067764bb30.51823645.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pastes/136093062660a3cbb53bcb47.01405790.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pastes/142077338960a3cb880e7d99.71153784.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pastes/160238153460a3cabc7337b7.62893996.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pastes/168116887160a40bbe2fd163.81531294.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pastes/196415806560a40791a927d4.21364833.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pastes/197133240060a40684be00b7.08845136.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pastes/214736399360a40814ade1a0.02145705.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pastes/21566220660a40bb7c5ea21.29788746.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pastes/66410481060a406779546f7.53950014.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pastes/6866030660a406fc234321.18798662.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pastes/81628834360a407130b38b5.59173623.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pastes/87966534560a40cb2b7cc97.83613312.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pastes/93608257360a3ca8fe312f1.33555903.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/getCode.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/getCode.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/getCodeLogged.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/getCodeLogged.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/templateLogged.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/templateLogged.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loginAccount.php" beforeDir="false" afterPath="$PROJECT_DIR$/loginAccount.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/template.html" beforeDir="false" afterPath="$PROJECT_DIR$/controller/template.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/templateLogged.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,6 +84,7 @@
       <workItem from="1621090580901" duration="21000" />
       <workItem from="1621169028696" duration="2283000" />
       <workItem from="1621320716963" duration="603000" />
+      <workItem from="1621408712992" duration="1987000" />
     </task>
     <servers />
   </component>
