@@ -92,7 +92,7 @@ if(isset($_COOKIE["user_login"]))
                 <td><label id="insert-label" class="password">Insert password here:</label></td>
 
                 <td> <label for="insert-label">
-                        <input class="right-select" type="password" id="field-password" placeholder="Password"/>
+                        <input class="right-select" type="password" id="field-password" name="paste_password" placeholder="Password"/>
                     </label></td>
             </tr>
             <tr>
