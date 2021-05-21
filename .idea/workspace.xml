@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d5841e05-0585-45e7-9f30-a2cd2864e3d6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controller/scripts/editPaste.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/getCodeLogged.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/getCodeLogged.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/highlight.css" beforeDir="false" afterPath="$PROJECT_DIR$/controller/highlight.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/template.html" beforeDir="false" afterPath="$PROJECT_DIR$/controller/template.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/styles.css" afterDir="false" />
-    </list>
+    <list default="true" id="d5841e05-0585-45e7-9f30-a2cd2864e3d6" name="Default Changelist" comment="" />
     <list id="fbd7d70b-13fc-4e81-9b23-ef0923e5a956" name="Changes by Ionut" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
