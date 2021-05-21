@@ -1,10 +1,23 @@
-
 <?php
 require("getUsername.php");
 include 'connection/connection.php';
 include 'deleteFunctions.php';
-
-global $decryptedId, $conn;
+include 'generatekeys.php';
+function cryptoJsAesEncrypt($passphrase, $value){
+    $salt = openssl_random_pseudo_bytes(8);
+    $salted = '';
+    $dx = '';
+    while (strlen($salted) < 48) {
+        $dx = md5($dx.$passphrase.$salt, true);
+        $salted .= $dx;
+    }
+    $key = substr($salted, 0, 32);
+    $iv  = substr($salted, 32,16);
+    $encrypted_data = openssl_encrypt(json_encode($value), 'aes-256-cbc', $key, true, $iv);
+    $data = array("ct" => base64_encode($encrypted_data), "iv" => bin2hex($iv), "s" => bin2hex($salt));
+    return json_encode($data);
+}
+global $decryptedId, $conn, $key;
 if (isset($_POST)) {
     require("../res/constants.php");
     if(!strlen(trim($_POST['codeArea']))) {
@@ -20,7 +33,7 @@ if (isset($_POST)) {
         $password = $_POST['password'];
         $expiration = $_POST['expiration'];
         if(!empty($password)){
-            $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
+            $hashedPassword = cryptoJsAesEncrypt($key, $password);
             $stmt = $conn->prepare("INSERT INTO pastes(id, paste_name, password) VALUES (?, ?, ?)");
             $p1 = intval($decryptedId);
             $stmt->bind_param("iss", $p1, $filename, $hashedPassword);

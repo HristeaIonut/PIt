@@ -2,11 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5841e05-0585-45e7-9f30-a2cd2864e3d6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/controller/scripts/cryptojs-aes-format.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/scripts/cryptojs-aes.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/getCode.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/getCode.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pastes/149321693660a414b4a6e904.53626058.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pastes/197302539560a41474bb4b56.51340069.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/getCodeLogged.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/getCodeLogged.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/template.html" beforeDir="false" afterPath="$PROJECT_DIR$/controller/template.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/templateLogged.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+    </list>
+    <list id="fbd7d70b-13fc-4e81-9b23-ef0923e5a956" name="Changes by Ionut" comment="">
+      <change beforePath="$PROJECT_DIR$/controller/template.html" beforeDir="false" afterPath="$PROJECT_DIR$/controller/template.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +47,21 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/controller/template.html">
+      <ranges>
+        <range start1="0" end1="1" start2="0" end2="0" changelist="d5841e05-0585-45e7-9f30-a2cd2864e3d6" />
+        <range start1="2" end1="2" start2="1" end2="45" changelist="d5841e05-0585-45e7-9f30-a2cd2864e3d6" />
+        <range start1="3" end1="4" start2="46" end2="47" changelist="d5841e05-0585-45e7-9f30-a2cd2864e3d6" />
+        <range start1="7" end1="8" start2="50" end2="51" changelist="fbd7d70b-13fc-4e81-9b23-ef0923e5a956" />
+        <range start1="13" end1="14" start2="56" end2="56" changelist="fbd7d70b-13fc-4e81-9b23-ef0923e5a956" />
+        <range start1="26" end1="29" start2="68" end2="73" changelist="fbd7d70b-13fc-4e81-9b23-ef0923e5a956" />
+        <range start1="32" end1="33" start2="76" end2="78" changelist="fbd7d70b-13fc-4e81-9b23-ef0923e5a956" />
+        <range start1="35" end1="36" start2="80" end2="82" changelist="fbd7d70b-13fc-4e81-9b23-ef0923e5a956" />
+        <range start1="44" end1="45" start2="90" end2="92" changelist="fbd7d70b-13fc-4e81-9b23-ef0923e5a956" />
+      </ranges>
+    </file>
+  </component>
   <component name="ProjectId" id="1sU0S3Y6CarXlPglqhOrhURu32V" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -50,7 +72,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/model" />
+    <property name="codeWithMe.voiceChat.enabledByDefault" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/controller/scripts" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -64,6 +87,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\PIt\controller\scripts" />
       <recent name="C:\xampp\htdocs\PIt\model" />
       <recent name="C:\xampp\htdocs\PIt\controller" />
     </key>
@@ -85,6 +109,7 @@
       <workItem from="1621169028696" duration="2283000" />
       <workItem from="1621320716963" duration="603000" />
       <workItem from="1621408712992" duration="1987000" />
+      <workItem from="1621521353132" duration="23358000" />
     </task>
     <servers />
   </component>
