@@ -104,6 +104,7 @@ color: red;
 }
 .textarea {
   display: block;
+  font-size: 2.5vh;
   float: left;
   resize: none;
   color: white;

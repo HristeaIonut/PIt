@@ -96,3 +96,12 @@ echo '
 </div>
 
 
+<div class='textarea-container'><pre><code id='cod'>&lt;div&gt;
+    &lt;div class="yourdiv"&gt;
+        content
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre><textarea id='edit' class='textarea' style='display: none'><div>
+    <div class="yourdiv">
+        content
+    </div>
+</div></textarea></div>Edit<input type='checkbox' id='Checkbox'  onclick='mySwitch()'><input type='submit' class='submit' id='submit' name='submit' value='Apply changes'/><script src="../controller/scripts/syntaxHighlightC.js"></script>

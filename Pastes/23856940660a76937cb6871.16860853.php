@@ -94,5 +94,14 @@ echo '
 }
 ?>
 </div>
+Edit<input type='checkbox' id='Checkbox'  onclick='mySwitch()'>
 
-
+<div class='textarea-container'><pre><code id='cod'>&lt;div&gt;
+    &lt;div class="yourdiv"&gt;
+        content
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre><textarea id='edit' class='textarea' style='display: none'><div>
+    <div class="yourdiv">
+        content
+    </div>
+</div></textarea></div><input type='submit' class='submit' id='submit' name='submit' value='Apply changes' style='display: none;'/><script src="../controller/scripts/syntaxHighlightHTML.js"></script>

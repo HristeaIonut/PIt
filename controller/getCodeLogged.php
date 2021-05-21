@@ -56,12 +56,15 @@ if (isset($_POST)) {
         while (!feof($templateFile))
             $templateContent = $templateContent . fgets($templateFile);
 
-        $templateContent = $templateContent."<pre><code id='cod'>";
+        $templateContent = $templateContent."<div class='textarea-container'><pre><code id='cod'>";
         $file = fopen($filename, "a+");
         $text = $_POST["codeArea"];
         $text = str_replace("<", '&lt;', $text);
         $text = str_replace(">", '&gt;', $text);
         $text = $text."</code></pre>";
+        $text = $text."<textarea id='edit' class='textarea' style='display: none'>".$_POST["codeArea"]."</textarea>";
+        $text = $text."Edit<input type='checkbox' id='Checkbox'  onclick='mySwitch()'>";
+        $text = $text."<input type='submit' class='submit' id='submit' name='submit' value='Apply changes' style='display: none'/></div>";
         $languageType = $_POST['syntax'];
         switch($languageType){
             case "C":
