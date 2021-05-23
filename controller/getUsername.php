@@ -3,7 +3,7 @@ session_start();
 require ("generatekeys.php");
 require ("connection/connection.php");
     global $cipher, $key, $iv, $tag, $conn;
-    if(isset($_COOKIE["user_loing"])){
+    if(isset($_COOKIE["user_login"])){
         $decryptedId = openssl_decrypt($_COOKIE["user_login"], $cipher, $key, $options = 0, $iv);
         $sql = "SELECT * FROM connectiontable where user_id=? ";
         $stmt = $conn->prepare($sql);
