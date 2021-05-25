@@ -2,12 +2,7 @@
 <script src="../controller/scripts/cryptojs-aes.min.js"></script>
 <script src="../controller/scripts/cryptojs-aes-format.js"></script>
 <?php
-include '../controller/insertValuestoDB.php';
 $basename = basename(__FILE__);
-$is_expired = false;
-if(!checkExpiration(getExpirationDate($basename))){
-    $is_expired = true;
-}
 include '../controller/connection/connection.php';
 require ("../controller/generatekeys.php");
 global $cipher, $key, $iv, $tag, $conn;
@@ -23,9 +18,8 @@ $pasteName =  null;
 $pasteId = null;
 $password = null;
 $created_at = null;
-$expiration_date = null;
 $is_creator = false;
-$stmt -> bind_result($pasteId, $pasteName, $password, $created_at, $expiration_date);
+$stmt -> bind_result($pasteId, $pasteName, $password, $created_at);
 while($stmt -> fetch()){
 if(isset($_COOKIE["user_login"]))
 if(($pasteId == $decryptedId)){
@@ -37,7 +31,6 @@ $is_creator = true;
 <script type="text/JavaScript">
 
     const thisIsCreator = "<?php echo $is_creator ?>";
-    const thisIsExpired = "<?php echo $is_expired ?>";
     var server_password = '<?php echo $password; ?>';
     var key = "<?php echo $key; ?>";
     if (server_password && !thisIsCreator) {
@@ -46,10 +39,6 @@ $is_creator = true;
         console.log(decrypted);
         if (!(input === decrypted))
             location.reload();
-    }
-    if(thisIsExpired){
-        alert('This paste is no longer available');    
-        location.reload();
     }
 
 </script>
@@ -105,3 +94,4 @@ echo '
 ?>
 </div>
 
+<pre><code id='cod'>hfjb</code></pre><script src="../controller/scripts/syntaxHighlightC.js"></script>

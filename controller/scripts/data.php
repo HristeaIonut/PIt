@@ -1,5 +1,6 @@
 <?php
 include '../connection/connection.php';
+include '../insertValuestoDB.php';
 require ("../generatekeys.php");
 global $cipher, $key, $iv, $tag, $conn;
 $decryptedId = openssl_decrypt($_COOKIE["user_login"], $cipher, $key, $options = 0, $iv);
@@ -12,8 +13,11 @@ $pasteName =  null;
 $pasteId = null;
 $password = null;
 $created_at = null;
-$stmt -> bind_result($pasteId, $pasteName, $password, $created_at);
+$expiration_date = null;
+$stmt -> bind_result($pasteId, $pasteName, $password, $created_at, $expiration_date);
 while($stmt -> fetch()){
-    $pastes[] = $pasteName;
+    if(checkExpiration(getExpirationDate($pasteName))){
+        $pastes[] = $pasteName;
+    }
 }
 echo json_encode($pastes);

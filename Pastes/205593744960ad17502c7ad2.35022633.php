@@ -105,3 +105,4 @@ echo '
 ?>
 </div>
 
+<pre><code id='cod'>jgg</code></pre><script src="../controller/scripts/syntaxHighlightC.js"></script>
