@@ -46,7 +46,19 @@ function getExpirationDate($pasteName){
 }
 function checkExpiration($expiration){
     $timeNow = date("Y-m-d h:i:s");
-    if($expiration > $timeNow){
+    include 'connection/connection.php';
+    $sql = "select current_timestamp;";
+    if($stmt = $conn->prepare($sql)){
+        $stmt->execute();
+        $stmt->store_result();
+        $date = null;
+        $result = null;
+        $stmt->bind_result($date);
+        while($stmt -> fetch()){
+            $result = $date;
+        }
+    }
+    if($expiration > $result){
         return true;
     }
     return false;
