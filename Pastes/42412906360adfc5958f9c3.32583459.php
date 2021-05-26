@@ -48,8 +48,8 @@ $is_creator = true;
             location.reload();
     }
     if(thisIsExpired){
-        alert('This paste is no longer available');    
-        location.reload();
+        //alert('This paste is no longer available');    
+        //location.reload();
     }
 
 </script>
@@ -105,4 +105,4 @@ echo '
 ?>
 </div>
 
-<pre><code id='cod'>vguyguhij</code></pre><script src="../controller/scripts/syntaxHighlightC.js"></script>
+<pre><code id='cod'>hhjbbhj</code></pre><script src="../controller/scripts/syntaxHighlightC.js"></script>

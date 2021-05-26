@@ -31,7 +31,7 @@ if (isset($_POST)) {
         }
         
         $password = $_POST['password'];
-        $expiration = $_POST['expiration'] * 100;
+        $expiration = $_POST['expiration'];
         $id = intval($decryptedId);
         if(!empty($password)){
             $hashedPassword = cryptoJsAesEncrypt($key, $password);
@@ -42,7 +42,14 @@ if (isset($_POST)) {
         if(empty($expiration)){
             insert_no_expiration($id, $filename, $hashedPassword);
         }else{
-            insert_into_db($id, $filename, $hashedPassword, $expiration);
+            switch($expiration){
+                case (302400):
+                    insert_into_db_month($id, $filename, $hashedPassword);
+                    break;
+                default:
+                    insert_into_db($id, $filename, $hashedPassword, $expiration);
+                    break;
+            }
         }
         
         

@@ -4,9 +4,18 @@ ini_set('display_errors', 1);
 
 function insert_into_db($id, $pasteName, $password, $expirationDate){
     include 'connection/connection.php';
-    $sql = "INSERT INTO pastes(id, paste_name, password, expiration_date) values(?, ?, ?, addtime(current_timestamp, (?)))";
+    $sql = "INSERT INTO pastes(id, paste_name, password, expiration_date) values(?, ?, ?, (CURRENT_TIMESTAMP + INTERVAL (?) MINUTE));";
     if($stmt = $conn->prepare($sql)){
         $stmt->bind_param("isss", $id, $pasteName, $password, $expirationDate);
+        $stmt->execute();
+    }
+    
+}
+function insert_into_db_month($id, $pasteName, $password){
+    include 'connection/connection.php';
+    $sql = "INSERT INTO pastes(id, paste_name, password, expiration_date) values(?, ?, ?, (CURRENT_TIMESTAMP + INTERVAL 1 MONTH));";
+    if($stmt = $conn->prepare($sql)){
+        $stmt->bind_param("iss", $id, $pasteName, $password);
         $stmt->execute();
     }
     
@@ -27,6 +36,7 @@ function getExpirationDate($pasteName){
         $stmt->execute();
         $stmt->store_result();
         $date = null;
+        $result = null;
         $stmt->bind_result($date);
         while($stmt -> fetch()){
             $result = $date;

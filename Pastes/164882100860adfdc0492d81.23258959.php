@@ -5,7 +5,7 @@
 include '../controller/insertValuestoDB.php';
 $basename = basename(__FILE__);
 $is_expired = false;
-if(!checkExpiration(getExpirationDate($basename))){
+if(checkExpiration(getExpirationDate($basename))){
     $is_expired = true;
 }
 include '../controller/connection/connection.php';
@@ -105,4 +105,4 @@ echo '
 ?>
 </div>
 
-<pre><code id='cod'>uhj,nj</code></pre><script src="../controller/scripts/syntaxHighlightC.js"></script>
+<pre><code id='cod'>ihhjbbhj</code></pre><script src="../controller/scripts/syntaxHighlightC.js"></script>

@@ -48,8 +48,8 @@ $is_creator = true;
             location.reload();
     }
     if(thisIsExpired){
-        alert('This paste is no longer available');    
-        location.reload();
+        //alert('This paste is no longer available');    
+        //location.reload();
     }
 
 </script>
@@ -105,4 +105,4 @@ echo '
 ?>
 </div>
 
-<pre><code id='cod'>gfhhj</code></pre><script src="../controller/scripts/syntaxHighlightC.js"></script>
+<pre><code id='cod'>INSERT INTO pastes(id, paste_name, password, expiration_date) values(1, "blabla", "pass", CURRENT_TIMESTAMP + INTERVAL 200 MINUTE;</code></pre><script src="../controller/scripts/syntaxHighlightC.js"></script>
