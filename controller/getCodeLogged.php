@@ -51,8 +51,8 @@ if (isset($_POST)) {
                     break;
             }
         }
-        
-        
+
+
 
         $templateFile = fopen("template.html", "a+");
         $templateContent = '';
@@ -61,7 +61,6 @@ if (isset($_POST)) {
             $templateContent = $templateContent . fgets($templateFile);
 
         $templateContent = $templateContent."<div class='textarea-container'><pre><code id='cod'>";
-        $templateContent = $templateContent."<pre><code id='cod'>";
         $filename = '../Pastes/'.$filename;
         $file = fopen($filename, "a+");
         $text = $_POST["codeArea"];
