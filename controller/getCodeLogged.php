@@ -1,7 +1,7 @@
 <?php
 require("getUsername.php");
 include 'connection/connection.php';
-include 'deleteFunctions.php';
+include 'insertValuestoDB.php';
 include 'generatekeys.php';
 function cryptoJsAesEncrypt($passphrase, $value){
     $salt = openssl_random_pseudo_bytes(8);
@@ -32,20 +32,24 @@ if (isset($_POST)) {
         
         $password = $_POST['password'];
         $expiration = $_POST['expiration'];
+        $id = intval($decryptedId);
         if(!empty($password)){
             $hashedPassword = cryptoJsAesEncrypt($key, $password);
-            $stmt = $conn->prepare("INSERT INTO pastes(id, paste_name, password) VALUES (?, ?, ?)");
-            $p1 = intval($decryptedId);
-            $stmt->bind_param("iss", $p1, $filename, $hashedPassword);
-            $stmt->execute();
-            $filename = '../Pastes/'.$filename;
         }
         else{
-            $stmt = $conn->prepare("INSERT INTO pastes(id, paste_name) VALUES (?, ?)");
-            $p1 = intval($decryptedId);
-            $stmt->bind_param("is", $p1, $filename);
-            $stmt->execute();
-            $filename = '../Pastes/'.$filename;
+            $hashedPassword = null;
+        }
+        if(empty($expiration)){
+            insert_no_expiration($id, $filename, $hashedPassword);
+        }else{
+            switch($expiration){
+                case (302400):
+                    insert_into_db_month($id, $filename, $hashedPassword);
+                    break;
+                default:
+                    insert_into_db($id, $filename, $hashedPassword, $expiration);
+                    break;
+            }
         }
         
         
@@ -57,6 +61,7 @@ if (isset($_POST)) {
             $templateContent = $templateContent . fgets($templateFile);
 
         $templateContent = $templateContent."<pre><code id='cod'>";
+        $filename = '../Pastes/'.$filename;
         $file = fopen($filename, "a+");
         $text = $_POST["codeArea"];
         $text = str_replace("<", '&lt;', $text);
@@ -95,32 +100,7 @@ if (isset($_POST)) {
                 $text = $text. "<script src=\"../controller/scripts/syntaxHighlightBash.js\"></script>";
                 break;
         }
-        $directory = '../Pastes';
-        switch($expiration){
-            case "0":
-                break;
-            case "5":
-                delete_older_than($directory, 5 * 60);
-                break;
-            case "10":
-                delete_older_than($directory, 10 * 60);
-                break;
-            case "30":
-                delete_older_than($directory, 30 * 60);
-                break;
-            case "60":
-                delete_older_than($directory, 60 * 60);
-                break;
-            case "1440":
-                delete_older_than($directory, 1440 * 60);
-                break;
-            case "10080":
-                delete_older_than($directory, 10080 * 60);
-                break;
-            case "302400":
-                delete_older_than($directory, 302400 * 60);
-                break;
-         }
+
         file_put_contents($filename, $templateContent.$text);
         fclose($file);
         header("Location: ../Pastes/" . $filename);

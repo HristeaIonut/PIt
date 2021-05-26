@@ -2,6 +2,7 @@
 define('SLASH', DIRECTORY_SEPARATOR);
 define('ROOT', dirname(__FILE__));
 require("../res/constants.php");
+
 ?>
 
 <!DOCTYPE html>

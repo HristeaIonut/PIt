@@ -2,19 +2,76 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5841e05-0585-45e7-9f30-a2cd2864e3d6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controller/scripts/cryptojs-aes-format.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/scripts/cryptojs-aes.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2a3d869b-29f7-4756-b1f5-22d38e99abde.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2a3d869b-29f7-4756-b1f5-22d38e99abde.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2a3d869b-29f7-4756-b1f5-22d38e99abde/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2a3d869b-29f7-4756-b1f5-22d38e99abde/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2a3d869b-29f7-4756-b1f5-22d38e99abde/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2a3d869b-29f7-4756-b1f5-22d38e99abde/storage_v2/_src_/schema/mysql.osA4Bg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2a3d869b-29f7-4756-b1f5-22d38e99abde/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2a3d869b-29f7-4756-b1f5-22d38e99abde/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pastes/149321693660a414b4a6e904.53626058.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pastes/197302539560a41474bb4b56.51340069.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PIt/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PIt/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PIt/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PIt/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pastes/133252401560ae00cb3808c3.42480739.php" beforeDir="false" afterPath="$PROJECT_DIR$/Pastes/133252401560ae00cb3808c3.42480739.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pastes/154356013860ae1c0d24d9f7.16649483.php" beforeDir="false" afterPath="$PROJECT_DIR$/Pastes/154356013860ae1c0d24d9f7.16649483.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pastes/214270990160ae01f11221e3.62901661.php" beforeDir="false" afterPath="$PROJECT_DIR$/Pastes/214270990160ae01f11221e3.62901661.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/connection/connection.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/connection/connection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/connection/createAccount.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/connection/createAccount.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/connection/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/connection/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/generatekeys.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/generatekeys.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/getCode.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/getCode.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/getCodeLogged.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/getCodeLogged.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/getUsername.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/getUsername.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/highlight.css" beforeDir="false" afterPath="$PROJECT_DIR$/controller/highlight.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/insertValuestoDB.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/insertValuestoDB.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/scripts/cryptojs-aes-format.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/scripts/cryptojs-aes-format.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/scripts/cryptojs-aes.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/scripts/cryptojs-aes.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/scripts/data.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/scripts/data.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/scripts/emptyCode.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/scripts/emptyCode.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/scripts/loadPastes.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/scripts/loadPastes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/scripts/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/scripts/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/scripts/syntaxHighlightBash.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/scripts/syntaxHighlightBash.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/scripts/syntaxHighlightC.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/scripts/syntaxHighlightC.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/scripts/syntaxHighlightCSS.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/scripts/syntaxHighlightCSS.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/scripts/syntaxHighlightCSharp.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/scripts/syntaxHighlightCSharp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/scripts/syntaxHighlightCpp.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/scripts/syntaxHighlightCpp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/scripts/syntaxHighlightHTML.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/scripts/syntaxHighlightHTML.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/scripts/syntaxHighlightJSON.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/scripts/syntaxHighlightJSON.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/scripts/syntaxHighlightJava.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/scripts/syntaxHighlightJava.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/scripts/syntaxHighlightJavaScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/scripts/syntaxHighlightJavaScript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/scripts/syntaxHighlightPython.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/scripts/syntaxHighlightPython.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/template.html" beforeDir="false" afterPath="$PROJECT_DIR$/controller/template.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/favicon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indexLogged.php" beforeDir="false" afterPath="$PROJECT_DIR$/indexLogged.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginAccount.php" beforeDir="false" afterPath="$PROJECT_DIR$/loginAccount.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/logout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/webtechnologies.sql" beforeDir="false" afterPath="$PROJECT_DIR$/model/webtechnologies.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/q" beforeDir="false" afterPath="$PROJECT_DIR$/q" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/constants.php" beforeDir="false" afterPath="$PROJECT_DIR$/res/constants.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/util/autoload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/Scholarly.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/Scholarly.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/contact.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/contactLogged.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/contactLogged.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/formStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/formStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/how-to.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/how-to.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/how-toLogged.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/how-toLogged.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/mypastes.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/mypastes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/reportContent.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/reportContent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/reportContent.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/reportContent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/reportContentLogged.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/reportContentLogged.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/reportLogged.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/reportLogged.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/unsuccesful_registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/unsuccesful_registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/user.php" afterDir="false" />
     </list>
-    <list id="fbd7d70b-13fc-4e81-9b23-ef0923e5a956" name="Changes by Ionut" comment="">
-      <change beforePath="$PROJECT_DIR$/controller/template.html" beforeDir="false" afterPath="$PROJECT_DIR$/controller/template.html" afterDir="false" />
-    </list>
+    <list id="fbd7d70b-13fc-4e81-9b23-ef0923e5a956" name="Changes by Ionut" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,20 +104,16 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/controller/template.html">
-      <ranges>
-        <range start1="0" end1="1" start2="0" end2="0" changelist="d5841e05-0585-45e7-9f30-a2cd2864e3d6" />
-        <range start1="2" end1="2" start2="1" end2="45" changelist="d5841e05-0585-45e7-9f30-a2cd2864e3d6" />
-        <range start1="3" end1="4" start2="46" end2="47" changelist="d5841e05-0585-45e7-9f30-a2cd2864e3d6" />
-        <range start1="7" end1="8" start2="50" end2="51" changelist="fbd7d70b-13fc-4e81-9b23-ef0923e5a956" />
-        <range start1="13" end1="14" start2="56" end2="56" changelist="fbd7d70b-13fc-4e81-9b23-ef0923e5a956" />
-        <range start1="26" end1="29" start2="68" end2="73" changelist="fbd7d70b-13fc-4e81-9b23-ef0923e5a956" />
-        <range start1="32" end1="33" start2="76" end2="78" changelist="fbd7d70b-13fc-4e81-9b23-ef0923e5a956" />
-        <range start1="35" end1="36" start2="80" end2="82" changelist="fbd7d70b-13fc-4e81-9b23-ef0923e5a956" />
-        <range start1="44" end1="45" start2="90" end2="92" changelist="fbd7d70b-13fc-4e81-9b23-ef0923e5a956" />
-      </ranges>
-    </file>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/model/webtechnologies.sql" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/controller/getCodeLogged.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/controller/scripts/syntaxHighlightBash.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/indexLogged.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Pastes/161158254460abf0dc1af633.14901930.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/controller/getCode.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/index.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/controller/template.html" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/controller/connection/createAccount.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1sU0S3Y6CarXlPglqhOrhURu32V" />
   <component name="ProjectViewState">

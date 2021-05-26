@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 18, 2021 at 08:50 PM
+-- Generation Time: May 26, 2021 at 10:23 AM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 7.3.27
 
@@ -62,18 +62,17 @@ CREATE TABLE `pastes` (
   `id` int(20) NOT NULL,
   `paste_name` varchar(64) NOT NULL,
   `password` varchar(100) DEFAULT NULL,
-  `created_at` datetime NOT NULL DEFAULT current_timestamp()
+  `created_at` datetime NOT NULL DEFAULT current_timestamp(),
+  `expiration_date` datetime DEFAULT '2100-01-01 00:00:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `pastes`
 --
 
-INSERT INTO `pastes` (`id`, `paste_name`, `password`, `created_at`) VALUES
-(8, '136093062660a3cbb53bcb47.01405790.html', NULL, '2021-05-18 17:14:13'),
-(8, '66410481060a406779546f7.53950014.html', NULL, '2021-05-18 21:24:55'),
-(8, '6866030660a406fc234321.18798662.html', NULL, '2021-05-18 21:27:08'),
-(8, '10676891260a408fb340e63.71187660.html', NULL, '2021-05-18 21:35:39');
+INSERT INTO `pastes` (`id`, `paste_name`, `password`, `created_at`, `expiration_date`) VALUES
+(8, '133252401560ae00cb3808c3.42480739.php', '', '2021-05-26 11:03:23', '2021-05-26 11:04:00'),
+(8, '214270990160ae01f11221e3.62901661.php', '', '2021-05-26 11:08:17', '2021-05-26 11:13:17');
 
 --
 -- Indexes for dumped tables
