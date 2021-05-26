@@ -5,10 +5,12 @@
 <?php
 include '../controller/insertValuestoDB.php';
 $basename = basename(__FILE__);
-$is_expired = false;
-if(!checkExpiration(getExpirationDate($basename))){
-    $is_expired = true;
-    header("Location: ../index.php");
+if(isset($_COOKIE["user_login"])){
+    $is_expired = false;
+    if(!checkExpiration(getExpirationDate($basename))){
+        $is_expired = true;
+        header("Location: ../index.php");
+    }
 }
 include '../controller/connection/connection.php';
 require ("../controller/generatekeys.php");

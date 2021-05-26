@@ -25,7 +25,12 @@ if (isset($_POST)) {
         exit();
     }
     if ($_POST['submitCode'] == "Create Paste") {
-        $filename = uniqid(rand(), true) . '.php';
+        $filename = "";
+        $chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        for($i=0;$i<5;$i++)
+            $filename.=substr($chars,random_int(0,strlen($chars)),1);
+
+        $filename .= '.php';
         if (!file_exists($filename)) {
             $file = tmpfile();
         }

@@ -17,10 +17,16 @@ if (isset($_POST)) {
         header("Refresh:0, url=../index.php");    }
 
     if ($_POST['submitCode'] == "Create Paste" && $responseData->success) {
-        $filename = '../Pastes/'.uniqid(rand(), true) . '.php';
+        $filename = "";
+        $chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        for($i=0;$i<5;$i++)
+            $filename.=substr($chars,random_int(0,strlen($chars)),1);
+
+        $filename .= '.php';
         if (!file_exists($filename)) {
             $file = tmpfile();
         }
+        echo $filename;
 
         $templateFile = fopen("template.html", "a+");
         $templateContent = '';
@@ -28,6 +34,8 @@ if (isset($_POST)) {
         while (!feof($templateFile))
             $templateContent = $templateContent . fgets($templateFile);
         $templateContent = $templateContent."<pre><code id='cod'>";
+        $filename = "../Pastes/".$filename;
+        echo $filename;
         $file = fopen($filename, "a+");
         $text = $_POST["codeArea"];
         $text = str_replace("<", '&lt;', $text);
