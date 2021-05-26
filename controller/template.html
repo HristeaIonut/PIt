@@ -7,6 +7,7 @@ $basename = basename(__FILE__);
 $is_expired = false;
 if(!checkExpiration(getExpirationDate($basename))){
     $is_expired = true;
+    header("Location: ../index.php");
 }
 include '../controller/connection/connection.php';
 require ("../controller/generatekeys.php");
@@ -46,9 +47,6 @@ $is_creator = true;
         console.log(decrypted);
         if (!(input === decrypted))
             location.reload();
-    }
-    if(thisIsExpired){
-        alert('This paste is no longer available');   
     }
 
 </script>
