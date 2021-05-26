@@ -107,3 +107,4 @@ echo '
 </div>
 
 
+<div class='textarea-container'><pre><code id='cod'>jyhjhggfd</code></pre><form method='post' action='../controller/editCode.php'><textarea name='codeArea' id='edit' class='textarea' style='display: none'>jyhjhggfd</textarea>Edit<input type='checkbox' id='Checkbox'  onclick='mySwitch()'><input type='hidden' name='fileName' value="<?php echo basename(__FILE__)?>"/><input type='submit' class='submit' id='submit' name='submit' value='Apply changes' style='display: none'/></form></div><script src="../controller/scripts/syntaxHighlightC.js"></script>

@@ -30,7 +30,7 @@ $created_at = null;
 $expiration_date = null;
 $burn_after_read = null;
 $is_creator = false;
-$stmt -> bind_result($pasteId, $pasteName, $password, $created_at, $expiration_date, $burn_after_read);
+$stmt -> bind_result($pasteId, $pasteName, $password, $created_at, $expiration_date, burn_after_read);
 while($stmt -> fetch()){
 if(isset($_COOKIE["user_login"]))
 if(($pasteId == $decryptedId)){
@@ -107,3 +107,4 @@ echo '
 </div>
 
 
+<div class='textarea-container'><pre><code id='cod'>jyhjhg</code></pre><form method='post' action='../controller/editCode.php'><textarea name='codeArea' id='edit' class='textarea' style='display: none'>jyhjhg</textarea>Edit<input type='checkbox' id='Checkbox'  onclick='mySwitch()'><input type='hidden' name='fileName' value="<?php echo basename(__FILE__)?>"/><input type='submit' class='submit' id='submit' name='submit' value='Apply changes' style='display: none'/></form></div><script src="../controller/scripts/syntaxHighlightC.js"></script>
