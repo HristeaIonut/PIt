@@ -176,6 +176,14 @@ dd, dt{
 .g-recaptcha{
   display: block;
 }
+.modified-pastes{
+  max-height: 25%;
+  overflow-y:auto;
+  right: 25%;
+  left: 25%;
+  position:absolute;
+  bottom: 0;
+}
 
 
 

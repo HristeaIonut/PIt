@@ -5,14 +5,16 @@
         include 'insertValuestoDB.php';
         $sql = "SELECT * FROM pastes WHERE paste_name = ?";
         $stmt = $conn->prepare($sql);
-        $stmt -> bind_param("s", $_POST["fileName"]);
+        $basename = substr($_POST["fileName"],0,5).".php";
+        $stmt -> bind_param("s", $basename);
         $stmt -> execute();
         $pasteName =  null;
         $pasteId = null;
         $pass = null;
         $created_at = null;
         $expiration_date = null;
-        $stmt -> bind_result($pasteId, $pasteName, $pass, $created_at, $expiration_date);
+        $burn_after_read = null;
+        $stmt -> bind_result($pasteId, $pasteName, $pass, $created_at, $expiration_date,$burn_after_read);
         $stmt -> fetch();
         $pasteName = str_replace(".php", "", $pasteName);
         $filename = $pasteName."_modified_at_".date("d-m-Y_H:i:s").".php";
@@ -41,11 +43,10 @@
         file_put_contents($filename, $templateContent.$text);
         fclose($file);
         include 'connection/connection.php';
-
-        $sql = "INSERT INTO pastes(id, paste_name, password, expiration_date) values(?, ?, ?, ?);";
+        
+        $sql = "INSERT INTO modified_pastes(paste_name, modified_paste_name) values(?, ?);";
         if($stmt = $conn->prepare($sql)){
-            echo $pass;
-            $stmt->bind_param("isss", $pasteId, $aux, $pass, $expiration_date);
+            $stmt->bind_param("ss", $basename, $aux);
             $stmt->execute();
         }
 
