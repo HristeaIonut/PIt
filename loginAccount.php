@@ -23,7 +23,6 @@ if (empty($email)) {
     $_SESSION["username"] = $row["user_name"];
 
     if ($result->num_rows == 1) {
-
         if (!empty($_POST["remember"])) {
             $encryptedCookie = openssl_encrypt($row["user_id"], $cipher, $key, $options = 0, $iv);
             setcookie('user_login', $encryptedCookie, time() + (10 * 365 * 24 * 60 * 60), "", "", false, true);
@@ -36,9 +35,10 @@ if (empty($email)) {
             $_SESSION['user'] = $email;
             header("Location: indexLogged.php");
         }
-    } else {
-        echo '<script>alert("Incorrect email or password")</script>';
-        header("Refresh:0, url=view/login.php");
+        else {
+            echo '<script>alert("Incorrect email or password")</script>';
+            header("Refresh:0, url=view/login.php");
+        }
     }
 }
 

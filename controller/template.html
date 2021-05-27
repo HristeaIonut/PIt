@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <script src="../controller/scripts/cryptojs-aes.min.js"></script>
 <script src="../controller/scripts/cryptojs-aes-format.js"></script>
+<script src="../controller/scripts/editPaste.js"></script>
 <?php
 include '../controller/insertValuestoDB.php';
 $basename = basename(__FILE__);
-$is_expired = false;
-if(!checkExpiration(getExpirationDate($basename))){
-    $is_expired = true;
-    header("Location: ../index.php");
-}
+if($basename>9)
+    $basename = substr($basename, 0, 5).".php";
+$_SESSION["basename"] = $basename;
+    $is_expired = false;
+    if(!checkExpiration(getExpirationDate($basename))){
+        $is_expired = true;
+        header("Location: ../index.php");
+    }
 include '../controller/connection/connection.php';
 require ("../controller/generatekeys.php");
 global $cipher, $key, $iv, $tag, $conn;
@@ -25,8 +29,9 @@ $pasteId = null;
 $password = null;
 $created_at = null;
 $expiration_date = null;
+$burn_after_read = null;
 $is_creator = false;
-$stmt -> bind_result($pasteId, $pasteName, $password, $created_at, $expiration_date);
+$stmt -> bind_result($pasteId, $pasteName, $password, $created_at, $expiration_date, $burn_after_read);
 while($stmt -> fetch()){
 if(isset($_COOKIE["user_login"]))
 if(($pasteId == $decryptedId)){
@@ -53,6 +58,7 @@ $is_creator = true;
 
 <html lang="en">
 <head id="this_paste">
+    <script src='../controller/scripts/loadModifiedPastes.js'></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
     <link rel="stylesheet" href="../view/styles.css">
     <link rel="stylesheet" href="../controller/highlight.css">
@@ -64,7 +70,7 @@ $is_creator = true;
     <title>PIt</title>
 </head>
 
-<body>
+<body onload="loadModifiedPaste('<?php echo basename(__FILE__);?>')">
 <div class="header">
     <?php
         if(isset($_COOKIE["user_login"])){
@@ -101,4 +107,7 @@ echo '
 }
 ?>
 </div>
+
+    <div class="modified-pastes">Other Versions<table id="modified-pastes"></table></div>
+
 

@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5841e05-0585-45e7-9f30-a2cd2864e3d6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Pastes/188314077360a76a65e18a59.90572832.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pastes/19589751660a76ae160d321.34238814.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pastes/202007968460a76a4627d875.30539713.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pastes/23856940660a76937cb6871.16860853.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pastes/53433927560a76968985339.67146904.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/2a3d869b-29f7-4756-b1f5-22d38e99abde.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2a3d869b-29f7-4756-b1f5-22d38e99abde.xml" afterDir="false" />
@@ -104,6 +109,8 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+<<<<<<< HEAD
+=======
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/model/webtechnologies.sql" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/controller/getCodeLogged.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
@@ -115,6 +122,7 @@
     <setting file="file://$PROJECT_DIR$/controller/template.html" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/controller/connection/createAccount.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
   </component>
+>>>>>>> main
   <component name="ProjectId" id="1sU0S3Y6CarXlPglqhOrhURu32V" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />

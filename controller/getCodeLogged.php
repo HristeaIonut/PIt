@@ -25,7 +25,12 @@ if (isset($_POST)) {
         exit();
     }
     if ($_POST['submitCode'] == "Create Paste") {
-        $filename = uniqid(rand(), true) . '.php';
+        $filename = "";
+        $chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        for($i=0;$i<5;$i++)
+            $filename.=substr($chars,random_int(0,strlen($chars)),1);
+
+        $filename .= '.php';
         if (!file_exists($filename)) {
             $file = tmpfile();
         }
@@ -33,6 +38,7 @@ if (isset($_POST)) {
         $password = $_POST['password'];
         $expiration = $_POST['expiration'];
         $id = intval($decryptedId);
+        echo $password;
         if(!empty($password)){
             $hashedPassword = cryptoJsAesEncrypt($key, $password);
         }
@@ -40,19 +46,33 @@ if (isset($_POST)) {
             $hashedPassword = null;
         }
         if(empty($expiration)){
-            insert_no_expiration($id, $filename, $hashedPassword);
+            include 'connection/connection.php';
+            $sql = "INSERT INTO pastes(id, paste_name, password) values(?, ?, ?)";
+            if($stmt = $conn->prepare($sql)){
+                $stmt->bind_param("iss", $id, $filename, $hashedPassword);
+                $stmt->execute();
+            }
         }else{
             switch($expiration){
                 case (302400):
-                    insert_into_db_month($id, $filename, $hashedPassword);
+                    include 'connection/connection.php';
+                    $sql = "INSERT INTO pastes(id, paste_name, password, expiration_date) values(?, ?, ?, (CURRENT_TIMESTAMP + INTERVAL 1 MONTH));";
+                    if($stmt = $conn->prepare($sql)){
+                        $stmt->bind_param("iss", $id, $filename, $hashedPassword);
+                        $stmt->execute();
+                    }
                     break;
                 default:
-                    insert_into_db($id, $filename, $hashedPassword, $expiration);
+                    include 'connection/connection.php';
+                    $sql = "INSERT INTO pastes(id, paste_name, password, expiration_date) values(?, ?, ?, (CURRENT_TIMESTAMP + INTERVAL (?) MINUTE));";
+                    if($stmt = $conn->prepare($sql)){
+                        $stmt->bind_param("isss", $id, $filename, $hashedPassword, $expiration);
+                        $stmt->execute();
+                    }
                     break;
             }
         }
-        
-        
+
 
         $templateFile = fopen("template.html", "a+");
         $templateContent = '';
@@ -60,13 +80,18 @@ if (isset($_POST)) {
         while (!feof($templateFile))
             $templateContent = $templateContent . fgets($templateFile);
 
-        $templateContent = $templateContent."<pre><code id='cod'>";
+        $templateContent = $templateContent."<div class='textarea-container'><pre><code id='cod'>";
         $filename = '../Pastes/'.$filename;
         $file = fopen($filename, "a+");
         $text = $_POST["codeArea"];
         $text = str_replace("<", '&lt;', $text);
         $text = str_replace(">", '&gt;', $text);
         $text = $text."</code></pre>";
+        $text = $text."<form method='post' action='../controller/editCode.php'>";
+        $text = $text."<textarea name='codeArea' id='edit' class='textarea' style='display: none'>".$_POST["codeArea"]."</textarea>";
+        $text = $text."Edit<input type='checkbox' id='Checkbox'  onclick='mySwitch()'>";
+        $text = $text."<input type='hidden' name='fileName' value=\"<?php echo basename(__FILE__)?>\"/>";
+        $text = $text."<input type='submit' class='submit' id='submit' name='submit' value='Apply changes' style='display: none'/></form></div>";
         $languageType = $_POST['syntax'];
         switch($languageType){
             case "C":

@@ -1,5 +1,6 @@
 pre code {
   color: white;
+  display: inline-block;
 }
 
 pre code #quotes {
@@ -56,5 +57,4 @@ code {
   margin-left: 10px;
   padding: 5px;
   display: inline-block;
-  background-color: #3b3b3b;
 }
