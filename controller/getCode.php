@@ -6,6 +6,8 @@ if (isset($_POST)) {
         header("Location: ../");
         exit();
     }
+    include 'connection/connection.php';
+
 
 
     $secret = SECRET_KEY;
@@ -26,7 +28,16 @@ if (isset($_POST)) {
         if (!file_exists($filename)) {
             $file = tmpfile();
         }
-        echo $filename;
+        include 'connection/connection.php';
+        $sql = "INSERT INTO pastes(id, paste_name) values(?, ?)";
+        if($stmt = $conn->prepare($sql)){
+            echo "da";
+            $id = 0;
+            echo $id;
+            echo $filename;
+            $stmt->bind_param("is", $id, $filename);
+            $stmt->execute();
+        }
 
         $templateFile = fopen("template.html", "a+");
         $templateContent = '';

@@ -8,13 +8,11 @@ $basename = basename(__FILE__);
 if($basename>9)
     $basename = substr($basename, 0, 5).".php";
 $_SESSION["basename"] = $basename;
-if(isset($_COOKIE["user_login"])){
     $is_expired = false;
     if(!checkExpiration(getExpirationDate($basename))){
         $is_expired = true;
         header("Location: ../index.php");
     }
-}
 include '../controller/connection/connection.php';
 require ("../controller/generatekeys.php");
 global $cipher, $key, $iv, $tag, $conn;
@@ -110,6 +108,6 @@ echo '
 ?>
 </div>
 
-    <div class="modified-pastes">Other Versions<table id="modified-pastes"></table></div>;
+    <div class="modified-pastes">Other Versions<table id="modified-pastes"></table></div>
 
 
