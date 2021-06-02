@@ -4,7 +4,9 @@ define('SLASH', DIRECTORY_SEPARATOR);
 define('ROOT', dirname(__FILE__));
 require_once ROOT.SLASH."util".SLASH."autoload.php";
 require("res/constants.php");
-if(!isset($_COOKIE["user_login"]))
+error_reporting(E_ALL & ~E_NOTICE);
+session_start();
+if(!isset($_COOKIE["user_login"]) && !isset($_SESSION["username"]))
     header("Location: index.php");
 ?>
 
@@ -89,6 +91,12 @@ if(!isset($_COOKIE["user_login"]))
                 <td><label class="privacy">Public:</label></td>
                 <td><label>
                         <input type="checkbox" class="right-select" onclick="myFunction()">
+                    </label></td>
+            </tr>
+            <tr>
+                <td><label class="Burn after read">Burn after read:</label></td>
+                <td><label>
+                        <input type="checkbox" name="BAR" id="BAR" class="right-select">
                     </label></td>
             </tr>
             <tr>

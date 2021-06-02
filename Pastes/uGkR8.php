@@ -3,7 +3,6 @@
 <script src="../controller/scripts/cryptojs-aes-format.js"></script>
 <script src="../controller/scripts/editPaste.js"></script>
 <?php
-mysqli_report(MYSQLI_REPORT_ALL);
 include '../controller/insertValuestoDB.php';
 $basename = basename(__FILE__);
 if($basename>9)
@@ -22,38 +21,30 @@ if(isset($_COOKIE["user_login"]))
     $decryptedId = openssl_decrypt($_COOKIE["user_login"], $cipher, $key, $options = 0, $iv);
 $pastes = array();
 $sql = "SELECT * FROM pastes WHERE paste_name = ?";
-
 $stmt = $conn->prepare($sql);
 $stmt -> bind_param("s", $basename);
 $stmt -> execute();
 $pasteName =  null;
 $pasteId = null;
-$pass = null;
+$password = null;
 $created_at = null;
 $expiration_date = null;
 $burn_after_read = null;
 $is_creator = false;
-$stmt -> bind_result($pasteId, $pasteName, $pass, $created_at, $expiration_date, $burn_after_read);
-while($stmt -> fetch())
-    if(isset($_COOKIE["user_login"]))
-        if(($pasteId == $decryptedId))
-            $is_creator = true;
-
-if($is_creator == false){
-    $sql_delete_paste = "DELETE FROM pastes WHERE paste_name = ?";
-    $stmt_delete = $conn->prepare($sql_delete_paste);
-    $stmt_delete -> bind_param("s", $basename);
-    $stmt_delete -> execute();
-    unlink(basename(__FILE__));
+$stmt -> bind_result($pasteId, $pasteName, $password, $created_at, $expiration_date, $burn_after_read);
+while($stmt -> fetch()){
+if(isset($_COOKIE["user_login"]))
+if(($pasteId == $decryptedId)){
+$is_creator = true;
 }
-
+}
 
 ?>
 <script type="text/JavaScript">
 
     const thisIsCreator = "<?php echo $is_creator ?>";
     const thisIsExpired = "<?php echo $is_expired ?>";
-    var server_password = '<?php echo $pass; ?>';
+    var server_password = '<?php echo $password; ?>';
     var key = "<?php echo $key; ?>";
     if (server_password && !thisIsCreator) {
         input = prompt("Please enter the password");
@@ -120,3 +111,4 @@ echo '
     <div class="modified-pastes">Other Versions<table id="modified-pastes"></table></div>
 
 
+<pre><code id='cod'>hththrthrthth</code></pre><script src="../controller/scripts/syntaxHighlightC.js"></script>
