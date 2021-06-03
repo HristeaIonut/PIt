@@ -23,16 +23,16 @@ if (empty($email)) {
     $_SESSION["username"] = $row["user_name"];
 
     if ($result->num_rows == 1) {
-        if (!empty($_POST["remember"])) {
-            $encryptedCookie = openssl_encrypt($row["user_id"], $cipher, $key, $options = 0, $iv);
+        $encryptedCookie = openssl_encrypt($row["user_id"], $cipher, $key, $options = 0, $iv);
+        if (!empty($_POST["remember"]))
             setcookie('user_login', $encryptedCookie, time() + (10 * 365 * 24 * 60 * 60), "", "", false, true);
-        } else
-            setcookie('user_login', '', time() - 3600);
+        else
+            setcookie('user_login', $encryptedCookie, time() + (10 * 60), "", "", false, true);
+
         $validPassword = password_verify($password, $row['password']);
 
         if ($validPassword) {
             echo "id: " . $row["user_id"] . " - Name: " . $row["first_name"] . " " . $row["last_name"] . "<br>";
-            $_SESSION['user'] = $email;
             header("Location: indexLogged.php");
         }
         else {

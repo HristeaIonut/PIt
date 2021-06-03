@@ -13,6 +13,3 @@ require ("connection/connection.php");
         $row = $result->fetch_assoc();
         echo $row["user_name"];
     }
-    else{
-        echo $_SESSION["username"];
-    }

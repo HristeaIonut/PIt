@@ -6,7 +6,7 @@ require_once ROOT.SLASH."util".SLASH."autoload.php";
 require("res/constants.php");
 error_reporting(E_ALL & ~E_NOTICE);
 session_start();
-if(!isset($_COOKIE["user_login"]) && !isset($_SESSION["username"]))
+if(!isset($_COOKIE["user_login"]))
     header("Location: index.php");
 ?>
 
