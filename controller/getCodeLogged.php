@@ -34,7 +34,10 @@ if (isset($_POST)) {
         if (!file_exists($filename)) {
             $file = tmpfile();
         }
-        
+        $checkedOrNot = 0;
+        if(isset($_POST['BAR']))
+            $checkedOrNot = 1;
+        /*$checkedOrNot = (int)'<script src=\"../controller/scripts/checkBurnAfterRead.js\" type="text/javascript">checkBurnAfterRead();</script>';*/
         $password = $_POST['password'];
         $expiration = $_POST['expiration'];
         $id = intval($decryptedId);
@@ -46,27 +49,28 @@ if (isset($_POST)) {
             $hashedPassword = null;
         }
         if(empty($expiration)){
+            echo $checkedOrNot;
             include 'connection/connection.php';
-            $sql = "INSERT INTO pastes(id, paste_name, password) values(?, ?, ?)";
+            $sql = "INSERT INTO pastes(id, paste_name, password, burn_ar) values(?, ?, ?, ?)";
             if($stmt = $conn->prepare($sql)){
-                $stmt->bind_param("iss", $id, $filename, $hashedPassword);
+                $stmt->bind_param("issi", $id, $filename, $hashedPassword, $checkedOrNot);
                 $stmt->execute();
             }
         }else{
             switch($expiration){
                 case (302400):
                     include 'connection/connection.php';
-                    $sql = "INSERT INTO pastes(id, paste_name, password, expiration_date) values(?, ?, ?, (CURRENT_TIMESTAMP + INTERVAL 1 MONTH));";
+                    $sql = "INSERT INTO pastes(id, paste_name, password, expiration_date, burn_ar) values(?, ?, ?, (CURRENT_TIMESTAMP + INTERVAL 1 MONTH), ?);";
                     if($stmt = $conn->prepare($sql)){
-                        $stmt->bind_param("iss", $id, $filename, $hashedPassword);
+                        $stmt->bind_param("issi", $id, $filename, $hashedPassword, $checkedOrNot);
                         $stmt->execute();
                     }
                     break;
                 default:
                     include 'connection/connection.php';
-                    $sql = "INSERT INTO pastes(id, paste_name, password, expiration_date) values(?, ?, ?, (CURRENT_TIMESTAMP + INTERVAL (?) MINUTE));";
+                    $sql = "INSERT INTO pastes(id, paste_name, password, expiration_date, burn_ar) values(?, ?, ?, (CURRENT_TIMESTAMP + INTERVAL (?) MINUTE), ?);";
                     if($stmt = $conn->prepare($sql)){
-                        $stmt->bind_param("isss", $id, $filename, $hashedPassword, $expiration);
+                        $stmt->bind_param("isssi", $id, $filename, $hashedPassword, $expiration, $checkedOrNot);
                         $stmt->execute();
                     }
                     break;

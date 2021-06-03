@@ -122,7 +122,8 @@ ALTER TABLE `pastes`
 --
 -- Constrângeri pentru tabele eliminate
 --
-
+ALTER TABLE `connectiontable`
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- Constrângeri pentru tabele `modified_pastes`
 --
