@@ -17,7 +17,7 @@
         $stmt -> bind_result($pasteId, $pasteName, $pass, $created_at, $expiration_date,$burn_after_read);
         $stmt -> fetch();
         $pasteName = str_replace(".php", "", $pasteName);
-        $filename = $pasteName."_modified_at_".date("d-m-Y_H:i:s").".php";
+        $filename = $pasteName."_modified_at_".date("d-m-Y_H-i-s").".php";
         $aux = $filename;
         if(!file_exists($filename)) {
             $file = tmpfile();
@@ -30,6 +30,7 @@
 
         $templateContent = $templateContent."<div class='textarea-container'><pre><code id='cod'>";
         $filename = '../Pastes/'.$filename;
+        echo $filename;
         $file = fopen($filename, "a+");
         $text = $_POST["codeArea"];
         $text = str_replace("<", '&lt;', $text);

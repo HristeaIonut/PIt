@@ -46,7 +46,6 @@ if (isset($_POST)) {
             $templateContent = $templateContent . fgets($templateFile);
         $templateContent = $templateContent."<pre><code id='cod'>";
         $filename = "../Pastes/".$filename;
-        echo $filename;
         $file = fopen($filename, "a+");
         $text = $_POST["codeArea"];
         $text = str_replace("<", '&lt;', $text);
