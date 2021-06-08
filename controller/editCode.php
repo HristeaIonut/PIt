@@ -1,5 +1,19 @@
 <?php
-    if(isset($_POST)){
+mysqli_report(MYSQLI_REPORT_ALL);
+if($_POST['deletePaste'] == 'Delete Paste'){
+    session_start();
+    echo $_SESSION["basename"];
+    include 'connection/connection.php';
+    global $conn;
+    $sql_delete_paste = "DELETE FROM pastes WHERE paste_name = ?";
+    $stmt_delete = $conn->prepare($sql_delete_paste);
+    $stmt_delete -> bind_param("s", $_SESSION["basename"]);
+    $stmt_delete -> execute();
+    unlink('../Pastes/'.$_SESSION["basename"]);
+    header("Location: ../index.php");
+
+}
+   else if(isset($_POST)){
         if($_POST["submit"] == "Apply changes")
         include 'connection/connection.php';
         include 'insertValuestoDB.php';
