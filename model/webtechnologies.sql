@@ -2,10 +2,10 @@
 -- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
--- Gazdă: localhost
--- Timp de generare: mai 27, 2021 la 10:12 AM
--- Versiune server: 10.4.19-MariaDB
--- Versiune PHP: 8.0.6
+-- Host: 127.0.0.1
+-- Generation Time: Jun 08, 2021 at 12:22 PM
+-- Server version: 10.4.19-MariaDB
+-- PHP Version: 8.0.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Bază de date: `webtechnologies`
+-- Database: `webtechnologies`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structură tabel pentru tabel `connectiontable`
+-- Table structure for table `connectiontable`
 --
 
 CREATE TABLE `connectiontable` (
@@ -37,7 +37,7 @@ CREATE TABLE `connectiontable` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Eliminarea datelor din tabel `connectiontable`
+-- Dumping data for table `connectiontable`
 --
 
 INSERT INTO `connectiontable` (`user_id`, `first_name`, `last_name`, `user_name`, `email`, `password`) VALUES
@@ -51,12 +51,13 @@ INSERT INTO `connectiontable` (`user_id`, `first_name`, `last_name`, `user_name`
 (9, 'firstName', 'lastName', 'username123', 'email3@email.com', '$2y$10$0MxS80SaZy2mxGo4/FUsrex2m/bS2fIlqWtZJEx9/dnptzmQTQMRy'),
 (10, 'mere', 'pere', 'merepere', 'merepere@gmail.com', '$2y$10$KxenVHhYkFoXcTIVZJjxgO4KlQklBJTk1SeCj4ctgrJQKp.fdfxOi'),
 (11, 'mere', 'pere', 'peremere', '1@gmail.com', '$2y$10$dA0JeubesOA.d1X.ctUsj.LbqBldin3/UqKxZqKLmE0fBJ8.eXjk.'),
-(12, 'mere', 'pere', 'peremere', 'fdsfd@gmail.com', '$2y$10$pLAts0nPunVoCp9InXMgEuAqEDjS9wL9K8MWE/i2N6wsKXZJu9eo2');
+(12, 'mere', 'pere', 'peremere', 'fdsfd@gmail.com', '$2y$10$pLAts0nPunVoCp9InXMgEuAqEDjS9wL9K8MWE/i2N6wsKXZJu9eo2'),
+(13, 'gfdg', 'gfdg', 'gfdgfd', 'hristeagfdgionut72@gmail.com', '$2y$10$6rfIHjQUY3hZnCxCzbQTy.kCa2ekVKbdM7MI2O9ocexqzoR5dtbEC');
 
 -- --------------------------------------------------------
 
 --
--- Structură tabel pentru tabel `modified_pastes`
+-- Table structure for table `modified_pastes`
 --
 
 CREATE TABLE `modified_pastes` (
@@ -65,16 +66,23 @@ CREATE TABLE `modified_pastes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Eliminarea datelor din tabel `modified_pastes`
+-- Dumping data for table `modified_pastes`
 --
 
 INSERT INTO `modified_pastes` (`paste_name`, `modified_paste_name`) VALUES
-('Evg7M.php', 'Evg7M_modified_at_27-05-2021_09:42:39.php');
+('dvIG0.php', 'dvIG0_modified_at_08-06-2021_10-08-06.php'),
+('dvIG0.php', 'dvIG0_modified_at_08-06-2021_10-10-16.php'),
+('OECWP.php', 'OECWP_modified_at_08-06-2021_10-14-16.php'),
+('jvB28.php', 'jvB28_modified_at_08-06-2021_10-15-50.php'),
+('ZdZKw.php', 'ZdZKw_modified_at_08-06-2021_10-16-52.php'),
+('3g4Ad.php', '3g4Ad_modified_at_08-06-2021_10-19-12.php'),
+('c3SVf.php', 'c3SVf_modified_at_08-06-2021_10-20-30.php'),
+('JNh9H.php', 'JNh9H_modified_at_08-06-2021_10-21-10.php');
 
 -- --------------------------------------------------------
 
 --
--- Structură tabel pentru tabel `pastes`
+-- Table structure for table `pastes`
 --
 
 CREATE TABLE `pastes` (
@@ -83,55 +91,64 @@ CREATE TABLE `pastes` (
   `password` varchar(128) DEFAULT NULL,
   `created_at` datetime NOT NULL DEFAULT current_timestamp(),
   `expiration_date` datetime DEFAULT '2100-01-01 00:00:00',
-  `burn_ar` tinyint(1) NOT NULL DEFAULT 0
+  `burn_ar` tinyint(1) NOT NULL DEFAULT 0,
+  `public_edit` tinyint(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Eliminarea datelor din tabel `pastes`
+-- Dumping data for table `pastes`
 --
 
-INSERT INTO `pastes` (`id`, `paste_name`, `password`, `created_at`, `expiration_date`, `burn_ar`) VALUES
-(0, '4xLxI.php', NULL, '2021-05-27 11:11:28', '2100-01-01 00:00:00', 0),
-(2, 'cqBC1.php', NULL, '2021-05-27 11:05:21', '2100-01-01 00:00:00', 0),
-(10, 'Evg7M.php', '{\"ct\":\"52VQMcSpSHNEnPRNYTh4mA==\",\"iv\":\"2402c1fa82221510c5c3bae4d93cda3a\",\"s\":\"b16de1ebfb951ca1\"}', '2021-05-27 10:42:35', '2100-01-01 00:00:00', 0),
-(10, 'UudFK.php', '{\"ct\":\"ckZQW6FtycG\\/doaqfFThOQ==\",\"iv\":\"83f5dc0e14119e08508be346c08bd177\",\"s\":\"bb74c3cb81b535a8\"}', '2021-05-27 10:50:04', '2100-01-01 00:00:00', 0);
+INSERT INTO `pastes` (`id`, `paste_name`, `password`, `created_at`, `expiration_date`, `burn_ar`, `public_edit`) VALUES
+(10, 'c3SVf.php', NULL, '2021-06-08 11:20:26', '2100-01-01 00:00:00', 0, 0),
+(10, 'JNh9H.php', NULL, '2021-06-08 11:21:01', '2100-01-01 00:00:00', 0, 1),
+(10, 'VAVRA.php', NULL, '2021-06-08 13:16:29', '2100-01-01 00:00:00', 0, 0);
 
 --
--- Indexuri pentru tabele eliminate
+-- Indexes for dumped tables
 --
 
 --
--- Indexuri pentru tabele `connectiontable`
+-- Indexes for table `connectiontable`
 --
 ALTER TABLE `connectiontable`
   ADD PRIMARY KEY (`user_id`);
 
 --
--- Indexuri pentru tabele `modified_pastes`
+-- Indexes for table `modified_pastes`
 --
 ALTER TABLE `modified_pastes`
   ADD KEY `modified_paste_fk` (`paste_name`);
 
 --
--- Indexuri pentru tabele `pastes`
+-- Indexes for table `pastes`
 --
 ALTER TABLE `pastes`
   ADD PRIMARY KEY (`paste_name`),
   ADD KEY `id_fk` (`id`);
 
 --
--- Constrângeri pentru tabele eliminate
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `connectiontable`
 --
 ALTER TABLE `connectiontable`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
 --
--- Constrângeri pentru tabele `modified_pastes`
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `modified_pastes`
 --
 ALTER TABLE `modified_pastes`
   ADD CONSTRAINT `modified_paste_fk` FOREIGN KEY (`paste_name`) REFERENCES `pastes` (`paste_name`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constrângeri pentru tabele `pastes`
+-- Constraints for table `pastes`
 --
 ALTER TABLE `pastes`
   ADD CONSTRAINT `id_fk` FOREIGN KEY (`id`) REFERENCES `connectiontable` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
