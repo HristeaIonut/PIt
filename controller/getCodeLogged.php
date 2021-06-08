@@ -84,6 +84,7 @@ if (isset($_POST)) {
         while (!feof($templateFile))
             $templateContent = $templateContent . fgets($templateFile);
 
+        $templateContent = $templateContent."<div class='modified-pastes'>Other Versions<table id='modified-pastes'></table></div>";
         $templateContent = $templateContent."<div class='textarea-container'><pre><code id='cod'>";
         $filename = '../Pastes/'.$filename;
         $file = fopen($filename, "a+");

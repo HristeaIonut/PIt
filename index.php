@@ -83,12 +83,6 @@ if(isset($_COOKIE["user_login"]))
                     </label></td>
             </tr>
             <tr>
-                <td><label class="privacy">Public:</label></td>
-                <td><label>
-                        <input type="checkbox" id="Checkbox" class="right-select" onclick="myFunction()">
-                    </label></td>
-            </tr>
-            <tr>
                 <td><label id="insert-label" class="password">Insert password here:</label></td>
 
                 <td> <label for="insert-label">

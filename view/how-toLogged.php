@@ -23,7 +23,7 @@
 
     </div>
     <div class="header-right">
-        <a class="login" > <?php session_start(); echo $_SESSION["username"]; ?> </a>
+        <a class="login" > <?php require ("../controller/getUsername.php")?> </a>
         <a class="register" href="../logout.php">Log out</a>
     </div>
 </div>

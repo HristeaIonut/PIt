@@ -39,7 +39,7 @@ while($stmt -> fetch())
         if(($pasteId == $decryptedId))
             $is_creator = true;
 
-if($is_creator == false){
+if($is_creator == false && $burn_after_read == 1){
     $sql_delete_paste = "DELETE FROM pastes WHERE paste_name = ?";
     $stmt_delete = $conn->prepare($sql_delete_paste);
     $stmt_delete -> bind_param("s", $basename);
@@ -117,6 +117,5 @@ echo '
 ?>
 </div>
 
-    <div class="modified-pastes">Other Versions<table id="modified-pastes"></table></div>
 
 

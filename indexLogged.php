@@ -88,7 +88,7 @@ if(!isset($_COOKIE["user_login"]))
                     </label></td>
             </tr>
             <tr>
-                <td><label class="privacy">Public:</label></td>
+                <td><label class="privacy">Public edit:</label></td>
                 <td><label>
                         <input type="checkbox" class="right-select" onclick="myFunction()">
                     </label></td>
