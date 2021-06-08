@@ -6,9 +6,25 @@ if (isset($_POST)) {
         header("Location: ../");
         exit();
     }
+    mysqli_report(MYSQLI_REPORT_ALL);
+
     include 'connection/connection.php';
+    include 'generatekeys.php';
 
-
+    function cryptoJsAesEncrypt($passphrase, $value){
+        $salt = openssl_random_pseudo_bytes(8);
+        $salted = '';
+        $dx = '';
+        while (strlen($salted) < 48) {
+            $dx = md5($dx.$passphrase.$salt, true);
+            $salted .= $dx;
+        }
+        $key = substr($salted, 0, 32);
+        $iv  = substr($salted, 32,16);
+        $encrypted_data = openssl_encrypt(json_encode($value), 'aes-256-cbc', $key, true, $iv);
+        $data = array("ct" => base64_encode($encrypted_data), "iv" => bin2hex($iv), "s" => bin2hex($salt));
+        return json_encode($data);
+    }
 
     $secret = SECRET_KEY;
     $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$_POST['g-recaptcha-response']);
@@ -16,7 +32,8 @@ if (isset($_POST)) {
 
     if(!$responseData->success){
         echo '<script>alert("Go away BOT \u{1F922}")</script>';
-        header("Refresh:0, url=../index.php");    }
+        header("Refresh:0, url=../index.php");    
+    }
 
     if ($_POST['submitCode'] == "Create Paste" && $responseData->success) {
         $filename = "";
@@ -28,16 +45,43 @@ if (isset($_POST)) {
         if (!file_exists($filename)) {
             $file = tmpfile();
         }
-        include 'connection/connection.php';
-        $sql = "INSERT INTO pastes(id, paste_name) values(?, ?)";
-        if($stmt = $conn->prepare($sql)){
-            echo "da";
-            $id = 0;
-            echo $id;
-            echo $filename;
-            $stmt->bind_param("is", $id, $filename);
-            $stmt->execute();
-        }
+        $password = $_POST['password'];
+        $expiration = $_POST['expiration'];
+        if(!empty($password))
+            $hashedPassword = cryptoJsAesEncrypt($key, $password);
+        else
+            $hashedPassword = null;
+
+        if(empty($expiration)){
+            include 'connection/connection.php';
+            $sql = "INSERT INTO pastes(id, paste_name, password) values(?, ?, ?)";
+            if($stmt = $conn->prepare($sql)){
+                $id = 0;
+                $stmt->bind_param("iss", $id, $filename, $hashedPassword);
+                $stmt->execute();
+            }
+            }else{
+                switch($expiration){
+                    case (302400):
+                        include 'connection/connection.php';
+                        $sql = "INSERT INTO pastes(id, paste_name, password, expiration_date) values(?, ?, ?, (CURRENT_TIMESTAMP + INTERVAL 1 MONTH));";
+                        if($stmt = $conn->prepare($sql)){
+                            $id = 0;
+                            $stmt->bind_param("iss", $id, $filename, $hashedPassword);
+                            $stmt->execute();
+                        }
+                        break;
+                    default:
+                        include 'connection/connection.php';
+                        $sql = "INSERT INTO pastes(id, paste_name, password, expiration_date) values(?, ?, ?, (CURRENT_TIMESTAMP + INTERVAL (?) MINUTE));";
+                        if($stmt = $conn->prepare($sql)){
+                            $id = 0;
+                            $stmt->bind_param("isss", $id, $filename, $hashedPassword, $expiration);
+                            $stmt->execute();
+                        }
+                        break;
+                }
+            }
 
         $templateFile = fopen("template.html", "a+");
         $templateContent = '';
