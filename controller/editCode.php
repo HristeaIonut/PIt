@@ -14,7 +14,8 @@
         $created_at = null;
         $expiration_date = null;
         $burn_after_read = null;
-        $stmt -> bind_result($pasteId, $pasteName, $pass, $created_at, $expiration_date,$burn_after_read);
+        $publicEdit = 0;
+        $stmt -> bind_result($pasteId, $pasteName, $pass, $created_at, $expiration_date,$burn_after_read, $publicEdit);
         $stmt -> fetch();
         $pasteName = str_replace(".php", "", $pasteName);
         $filename = $pasteName."_modified_at_".date("d-m-Y_H-i-s").".php";
@@ -38,9 +39,13 @@
         $text = $text."</code></pre>";
         $text = $text."<form method='post' action='../controller/editCode.php'>";
         $text = $text."<textarea name='codeArea' id='edit' class='textarea' style='display: none'>".$_POST["codeArea"]."</textarea>";
-        $text = $text."Edit<input type='checkbox' id='Checkbox'  onclick='mySwitch()'>";
+        $text = $text."<div id='checkbox-div'>Edit<input type='checkbox' id='Checkbox'  onclick='mySwitch()'></div>";
         $text = $text."<input type='hidden' name='fileName' value=\"<?php echo basename(__FILE__)?>\"/>";
         $text = $text."<input type='submit' class='submit' id='submit' name='submit' value='Apply changes' style='display: none'/></form></div>";
+        $text = $text.'<script type = "text/JavaScript">
+        if(!(thisIsCreator || public == 1))
+            document.getElementById("checkbox-div").style.visibility = "hidden";
+        </script>';
         file_put_contents($filename, $templateContent.$text);
         fclose($file);
         include 'connection/connection.php';

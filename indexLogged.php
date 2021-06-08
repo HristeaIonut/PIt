@@ -16,7 +16,6 @@ if(!isset($_COOKIE["user_login"]))
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
     <link rel="stylesheet" href="view/styles.css">
-    <script src="controller/scripts/script.js"></script>
     <script src="controller/scripts/emptyCode.js"></script>
     <link rel="icon"
           href="https://icons-for-free.com/iconfiles/png/512/clipboard+paste+task+icon-1320161389075402003.png">
@@ -90,7 +89,7 @@ if(!isset($_COOKIE["user_login"]))
             <tr>
                 <td><label class="privacy">Public edit:</label></td>
                 <td><label>
-                        <input type="checkbox" class="right-select" onclick="myFunction()">
+                        <input type="checkbox" name="publicEdit" class="right-select">
                     </label></td>
             </tr>
             <tr>
