@@ -33,7 +33,8 @@ $created_at = null;
 $expiration_date = null;
 $burn_after_read = null;
 $is_creator = false;
-$stmt -> bind_result($pasteId, $pasteName, $pass, $created_at, $expiration_date, $burn_after_read);
+$publicEdit = 0;
+$stmt -> bind_result($pasteId, $pasteName, $pass, $created_at, $expiration_date, $burn_after_read, $publicEdit);
 while($stmt -> fetch())
     if(isset($_COOKIE["user_login"]))
         if(($pasteId == $decryptedId))
@@ -53,6 +54,7 @@ if($is_creator == false && $burn_after_read == 1){
 
     const thisIsCreator = "<?php echo $is_creator ?>";
     const thisIsExpired = "<?php echo $is_expired ?>";
+    const public = "<?php echo $publicEdit?>";
     var server_password = '<?php echo $pass; ?>';
     var key = "<?php echo $key; ?>";
     if (server_password && !thisIsCreator) {
@@ -62,6 +64,7 @@ if($is_creator == false && $burn_after_read == 1){
         if (!(input === decrypted))
             location.reload();
     }
+
 
 </script>
 

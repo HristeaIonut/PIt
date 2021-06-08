@@ -20,7 +20,7 @@ if (empty($email)) {
     $stmt->execute();
     $result = $stmt->get_result();
     $row = $result->fetch_assoc();
-    $_SESSION["username"] = $row["user_name"];
+    print_r($row);
 
     if ($result->num_rows == 1) {
         $encryptedCookie = openssl_encrypt($row["user_id"], $cipher, $key, $options = 0, $iv);
@@ -39,6 +39,10 @@ if (empty($email)) {
             echo '<script>alert("Incorrect email or password")</script>';
             header("Refresh:0, url=view/login.php");
         }
+    }
+    else{
+        echo '<script>alert("Incorrect email or password")</script>';
+        header("Refresh:0, url=view/login.php");
     }
 }
 
