@@ -71,7 +71,6 @@ if(isset($_COOKIE["user_login"]))
                 <td><label class="expiration">Expiration time:</label></td>
                 <td><label>
                         <select class="right-select" name="expiration">
-                            <option value="Disabled">Disabled</option>
                             <option value="5">5 minutes</option>
                             <option value="10">10 minutes</option>
                             <option value="30">30 minutes</option>
