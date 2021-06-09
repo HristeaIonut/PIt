@@ -1,15 +1,16 @@
 <?php
 mysqli_report(MYSQLI_REPORT_ALL);
-if($_POST['deletePaste'] == 'Delete Paste'){
+if(isset($_POST['deletePaste'])){
     session_start();
-    echo $_SESSION["basename"];
+    echo $_POST['filename'];
     include 'connection/connection.php';
     global $conn;
+
     $sql_delete_paste = "DELETE FROM pastes WHERE paste_name = ?";
     $stmt_delete = $conn->prepare($sql_delete_paste);
-    $stmt_delete -> bind_param("s", $_SESSION["basename"]);
+    $stmt_delete -> bind_param("s", $_POST['filename']);
     $stmt_delete -> execute();
-    unlink('../Pastes/'.$_SESSION["basename"]);
+    unlink('../Pastes/'.$_POST['filename']);
     header("Location: ../index.php");
 
 }
@@ -55,11 +56,13 @@ if($_POST['deletePaste'] == 'Delete Paste'){
         $text = $text."<textarea name='codeArea' id='edit' class='textarea' style='display: none'>".$_POST["codeArea"]."</textarea>";
         $text = $text."<div id='checkbox-div'>Edit<input type='checkbox' id='Checkbox'  onclick='mySwitch()'></div>";
         $text = $text."<input type='hidden' name='fileName' value=\"<?php echo basename(__FILE__)?>\"/>";
+        $text = $text."<input type='hidden' name='script' value='".$_POST["script"]."'/>";
         $text = $text."<input type='submit' class='submit' id='submit' name='submit' value='Apply changes' style='display: none'/></form></div>";
         $text = $text.'<script type = "text/JavaScript">
         if(!(thisIsCreator || public == 1))
             document.getElementById("checkbox-div").style.visibility = "hidden";
         </script>';
+        $text .= $_POST["script"];
         file_put_contents($filename, $templateContent.$text);
         fclose($file);
         include 'connection/connection.php';

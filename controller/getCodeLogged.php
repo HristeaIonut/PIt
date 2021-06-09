@@ -94,9 +94,46 @@ if (isset($_POST)) {
         while (!feof($templateFile))
             $templateContent = $templateContent . fgets($templateFile);
 
+
+        $languageType = $_POST['syntax'];
+        $langScript = '';
+        switch($languageType){
+            case "C":
+                $langScript = "<script src=\"../controller/scripts/syntaxHighlightC.js\"></script>";
+                break;
+            case "C#":
+                $langScript = "<script src=\"../controller/scripts/syntaxHighlightCSharp.js\"></script>";
+                break;
+            case "C++":
+                $langScript = "<script src=\"../controller/scripts/syntaxHighlightCpp.js\"></script>";
+                break;
+            case "HTML":
+                $langScript = "<script src=\"../controller/scripts/syntaxHighlightHTML.js\"></script>";
+                break;
+            case "CSS":
+                $langScript = "<script src=\"../controller/scripts/syntaxHighlightCSS.js\"></script>";
+                break;
+            case "JSON":
+                $langScript = "<script src=\"../controller/scripts/syntaxHighlightJSON.js\"></script>";
+                break;
+            case "Python":
+                $langScript = "<script src=\"../controller/scripts/syntaxHighlightPython.js\"></script>";
+                break;
+            case "Java":
+                $langScript = "<script src=\"../controller/scripts/syntaxHighlightJava.js\"></script>";
+                break;
+            case "JavaScript":
+                $langScript = "<script src=\"../controller/scripts/syntaxHighlightJavaScript.js\"></script>";
+                break;
+            case "Bash":
+                $langScript = "<script src=\"../controller/scripts/syntaxHighlightBash.js\"></script>";
+                break;
+            }
+
         $templateContent = $templateContent."<div class='modified-pastes'>Other Versions<table id='modified-pastes'></table></div>";
         $templateContent = $templateContent."<div class='textarea-container'><pre><code id='cod'>";
         $_SESSION['basename'] = $filename;
+        $fname = $filename;
         $filename = '../Pastes/'.$filename;
         $file = fopen($filename, "a+");
         $text = $_POST["codeArea"];
@@ -108,45 +145,16 @@ if (isset($_POST)) {
         $text = $text."<div id='checkbox-div'>Edit<input type='checkbox' id='Checkbox'  onclick='mySwitch()'></div>";
         $text = $text."<input type='hidden' name='fileName' value=\"<?php echo basename(__FILE__)?>\"/>";
         $text = $text."<input type='submit' class='submit' name='deletePaste' value='Delete Paste'/>";
+        $text = $text."<input type='hidden' name='filename' value='".$fname."'/>";
+        $text = $text."<input type='hidden' name='script' value='".$langScript."'/>";
+
         $text = $text."<input type='submit' class='submit' id='submit' name='submit' value='Apply changes' style='display: none'/></form></div>";
         $text = $text.'<script type = "text/JavaScript">
 
         if(!(thisIsCreator || public == 1))
             document.getElementById("checkbox-div").style.visibility = "hidden";
         </script>';
-        $languageType = $_POST['syntax'];
-        switch($languageType){
-            case "C":
-                $text = $text. "<script src=\"../controller/scripts/syntaxHighlightC.js\"></script>";
-                break;
-            case "C#":
-                $text = $text. "<script src=\"../controller/scripts/syntaxHighlightCSharp.js\"></script>";
-                break;
-            case "C++":
-                $text = $text. "<script src=\"../controller/scripts/syntaxHighlightCpp.js\"></script>";
-                break;
-            case "HTML":
-                $text = $text. "<script src=\"../controller/scripts/syntaxHighlightHTML.js\"></script>";
-                break;
-            case "CSS":
-                $text = $text. "<script src=\"../controller/scripts/syntaxHighlightCSS.js\"></script>";
-                break;
-            case "JSON":
-                $text = $text. "<script src=\"../controller/scripts/syntaxHighlightJSON.js\"></script>";
-                break;
-            case "Python":
-                $text = $text. "<script src=\"../controller/scripts/syntaxHighlightPython.js\"></script>";
-                break;
-            case "Java":
-                $text = $text. "<script src=\"../controller/scripts/syntaxHighlightJava.js\"></script>";
-                break;
-            case "JavaScript":
-                $text = $text. "<script src=\"../controller/scripts/syntaxHighlightJavaScript.js\"></script>";
-                break;
-            case "Bash":
-                $text = $text. "<script src=\"../controller/scripts/syntaxHighlightBash.js\"></script>";
-                break;
-        }
+        $text .= $langScript;
 
         file_put_contents($filename, $templateContent.$text);
         fclose($file);
