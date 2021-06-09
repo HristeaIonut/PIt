@@ -63,24 +63,25 @@
                     You can create a paste as a guest, if you're not logged in.<br>
                     Remember that the link to a paste you created is not saved <br>
                     anywhere so make sure that you save it somewhere. <br>
-                    Also pastes remain on our servers for maximum a month <br>
+                    Also pastes remain on our servers for at most a month <br>
                     You should also be able to complete a simple captcha. <br>
-                    If you don't want your paste to be available for a month <br>
-                    you can select another duration from the "Expiration time" <br>
+                    If you don't want your paste to be available for a month, <br>
+                    you can select another duration from the "Expiration time". <br>
                     You can also select a syntax highlight for your code, <br>
                     based on the language your code is written in. <br>
-                    If your privacy is important for you, you can also <br>
-                    set a password for your paste.
+                    If your privacy is important for you, a password can also be <br>
+                    added for your paste.
                 </li>
                 <li>
-                    You can create an account by entering the required fields. <br>
+                    You can create an account by entering the required fields <br>
+                    in the registration page. <br>
                     We won't be able to retrieve your password, so make sure <br>
                     you don't forget it.    
                 </li>
                 <li>
                     You can login once you have an account created. If you <br>
-                    plan to use our site on a daily basis, make sure that <br>
-                    you check the checkbox so we can remember you :). This <br>
+                    plan to use our site on a daily basis, make sure to <br>
+                    check the box so that we can remember you :). This <br>
                     way, you'll stay logged in for a maximum of ten years.
                 </li>
                 <li>
@@ -95,7 +96,7 @@
         </section>
         <br>
         <section typeof="schema:Guide" id="logged">
-            <h3>As a logged in user you have a couple of advantages</h3>
+            <h3>As a logged in user you have a couple of advantages.</h3>
             <ul>
             <li>
                 If you are a logged in user, we can keep your paste as long <br>
@@ -107,10 +108,10 @@
             </li>
             <li>
                 From the "My Pastes" page, you can view all your existing pastes. <br>
-                From there you can select one to view it, edit it or delete it. <br>
+                From there you can select one to view, edit or delete. <br>
             </li>
             <li>
-                On the bottom page of a paste, you have every version of a paste. <br>
+                On the bottom page of a paste, you have every past version of it. <br>
                 Editing a paste creates a new version and both edited original pastes <br>
                 and edited edited pastes appear on the page of the original paste. <br>
             </li>
