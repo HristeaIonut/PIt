@@ -88,13 +88,13 @@ if (isset($_POST)) {
 
         while (!feof($templateFile))
             $templateContent = $templateContent . fgets($templateFile);
-        $templateContent = $templateContent."<pre><code id='cod'>";
+        $templateContent = $templateContent."<div class='textarea-container'><pre><code id='cod'>";
         $filename = "../Pastes/".$filename;
         $file = fopen($filename, "a+");
         $text = $_POST["codeArea"];
         $text = str_replace("<", '&lt;', $text);
         $text = str_replace(">", '&gt;', $text);
-        $text = $text."</code></pre>";
+        $text = $text."</code></pre></div>";
         $languageType = $_POST['syntax'];
         switch($languageType){
             case "C":

@@ -35,11 +35,12 @@ h3 {
   height: 80%;
   color: grey;
 }
-ol {
+ol, ul {
   background-color: rgb(45, 45, 45);
   height: 40%;
   color: white;
 }
+
 .home::before {
   content: "\1F4CB \ ";
   display: inline;
