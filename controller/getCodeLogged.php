@@ -28,7 +28,7 @@ if (isset($_POST)) {
         $filename = "";
         $chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
         for($i=0;$i<5;$i++)
-            $filename.=substr($chars,random_int(0,strlen($chars)),1);
+            $filename.=substr($chars,random_int(0,strlen($chars)-1),1);
 
         $filename .= '.php';
         if (!file_exists($filename)) {
