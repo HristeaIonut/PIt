@@ -44,7 +44,7 @@
                 </ol>
             </li>
             <li>
-                <a href="#functionalities">
+                <a href="#stages">
                     <span>3 </span>Materials and Methods
                 </a>
                 <ol role="directory">
@@ -191,12 +191,12 @@
         </p>
     </section>
 
-    <section typeof="sa:MaterialsAndMethods" id="functionalities" role="document">
-        <h2><span>3.1 </span>Functionalities</h2>
+    <section typeof="sa:MaterialsAndMethods" id="stages" role="document">
+        <h2><span>3.1 </span>Project development stages</h2>
         <p>
             <ol>
-                <li>Users will paste a code in the container area;</li>
-                <li>They may select one out of the 10 available programming languages in order to highlight the code's syntax:</li>
+                <li>Users will paste a code in the container area by pasting it; afterwards, we check if the box was left empty when selecting the option "Create paste"; if that is the case, we let the user know through an alert</li>
+                <li>They may select a programming language in order to highlight the code's syntax; we did that by creating javascript files for each language, where we used regex in order to select the words which rewuired highlighting. The available languages to highlight are the following:</li>
                 <ul>
                     <li>C</li>
                     <li>C#</li>
@@ -209,7 +209,7 @@
                     <li>Python</li>
                     <li>Bash</li>
                 </ul>
-                <li>They can select an expiration time for their paste(which is, by default, disabled). The user will have the following options:</li>
+                <li>They can select an expiration time for their paste(which is, by default, disabled). This is then added in our database, in a column named "expiration_date"(by adding the selected time to the current timestamp). Whenever a user loads a paste via a link or through his own page "My pastes", the code checks wether or not that time has already passed, for each paste; if it did, those pastes will not be shown or accessible to the user, even though they do remain in the database. The user will have the following options:</li>
                 <ul>
                     <li>5 minutes</li>
                     <li>10 minutes</li>
@@ -219,9 +219,9 @@
                     <li>1 week</li>
                     <li>1 month</li>
                 </ul>
-                <li>The author may also choose wether or not the document can be edited by any other user or not;</li>
-                <li>There will be an option to "burn after read", which means that if the person who was intended to read the document will have read it, the document will be erased;</li>
-                <li>The option to insert a password as a security measurment, so that only users who have it can view the document;</li>
+                <li>The author may also choose wether or not the document can be edited by any other user or not; If they select this, then any other user who accesses the paste will have the option to edit it and then rollback to previous versions. If this box will not be ticked, then only the author can make changes to the paste. The rollback will work in the exact same way. </li>
+                <li>There will be an option to "burn after read", which means that if the person who was intended to read the document will have read it, it will be erased. </li>
+                <li>The option to insert a password as a security measurment, so that only users who have it can view the document. The password is then inserted into the database in a hashed version, which is being checked whenever someone wiches to have access to the paste. If it is wrong, clearly, they won't.</li>
             </ol>
         </p>
     </section>
