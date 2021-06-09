@@ -13,6 +13,7 @@ require("../res/constants.php");
     <link rel="stylesheet" href="../view/styles.css">
     <script src="../controller/scripts/script.js"></script>
     <script src="../controller/scripts/emptyCode.js"></script>
+    <script src="../controller/scripts/loadPastes.js"></script>
     <link rel="icon"
           href="https://icons-for-free.com/iconfiles/png/512/clipboard+paste+task+icon-1320161389075402003.png">
     <meta charset="UTF-8">
@@ -48,6 +49,6 @@ require("../res/constants.php");
 
 
 </body>
-<script src="../controller/scripts/loadPastes.js"></script>
+
 
 </html>

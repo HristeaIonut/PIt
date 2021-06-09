@@ -157,6 +157,7 @@ if (isset($_POST)) {
             document.getElementById("deletePaste").style.visibility = "hidden";
         </script>';
         $text .= $langScript;
+        $text .= "</html>";
 
         file_put_contents($filename, $templateContent.$text);
         fclose($file);

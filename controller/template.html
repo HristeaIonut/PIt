@@ -1,7 +1,23 @@
 <!DOCTYPE html>
-<script src="../controller/scripts/cryptojs-aes.min.js"></script>
-<script src="../controller/scripts/cryptojs-aes-format.js"></script>
-<script src="../controller/scripts/editPaste.js"></script>
+<html lang="en">
+
+    <head id="this_paste">
+        <script src='../controller/scripts/loadModifiedPastes.js'></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+        <link rel="stylesheet" href="../view/styles.css">
+        <link rel="stylesheet" href="../controller/highlight.css">
+        <link rel="icon"
+              href="https://icons-for-free.com/iconfiles/png/512/clipboard+paste+task+icon-1320161389075402003.png">
+        <script src="../controller/scripts/cryptojs-aes.min.js"></script>
+        <script src="../controller/scripts/cryptojs-aes-format.js"></script>
+        <script src="../controller/scripts/editPaste.js"></script>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PIt</title>
+    </head>
+
+
 <?php
 mysqli_report(MYSQLI_REPORT_ALL);
 include '../controller/insertValuestoDB.php';
@@ -67,20 +83,6 @@ if($is_creator == false && $burn_after_read == 1){
 
 
 </script>
-
-<html lang="en">
-<head id="this_paste">
-    <script src='../controller/scripts/loadModifiedPastes.js'></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
-    <link rel="stylesheet" href="../view/styles.css">
-    <link rel="stylesheet" href="../controller/highlight.css">
-    <link rel="icon"
-          href="https://icons-for-free.com/iconfiles/png/512/clipboard+paste+task+icon-1320161389075402003.png">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PIt</title>
-</head>
 
 <body onload="loadModifiedPaste('<?php echo basename(__FILE__);?>')">
 <div class="header">

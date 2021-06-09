@@ -92,11 +92,15 @@ if(isset($_COOKIE["user_login"]))
                 <td>
                     <div class="g-recaptcha" data-callback="captchaCheck" data-sitekey="<?php echo SITE_KEY; ?>"></div>
                 </td>
+                <td>
+                </td>
             </tr>
 
             <tr>
                 <td>
                     <input type="submit" class="create-paste" name="submitCode" value="Create Paste" onclick="return emptyCode();"/>
+                </td>
+                <td>
                 </td>
             </tr>
         </table>
