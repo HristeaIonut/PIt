@@ -122,3 +122,8 @@ echo '
 
 
 
+<div class='modified-pastes'>Other Versions<table id='modified-pastes'></table></div><div class='textarea-container'><pre><code id='cod'>asdasdas</code></pre><form method='post' action='../controller/editCode.php'><textarea name='codeArea' id='edit' class='textarea' style='display: none'>asdasdas</textarea><div id='checkbox-div'>Edit<input type='checkbox' id='Checkbox'  onclick='mySwitch()'></div><input type='hidden' name='fileName' value="<?php echo basename(__FILE__)?>"/><input type='submit' class='submit' name='deletePaste' value='Delete Paste'/><input type='submit' class='submit' id='submit' name='submit' value='Apply changes' style='display: none'/></form></div><script type = "text/JavaScript">
+
+        if(!(thisIsCreator || public == 1))
+            document.getElementById("checkbox-div").style.visibility = "hidden";
+        </script><script src="../controller/scripts/syntaxHighlightC.js"></script>

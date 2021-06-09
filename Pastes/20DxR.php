@@ -2,6 +2,7 @@
 <script src="../controller/scripts/cryptojs-aes.min.js"></script>
 <script src="../controller/scripts/cryptojs-aes-format.js"></script>
 <script src="../controller/scripts/editPaste.js"></script>
+<script src="../controller/scripts/deletePaste.js"></script>
 <?php
 mysqli_report(MYSQLI_REPORT_ALL);
 include '../controller/insertValuestoDB.php';
@@ -122,3 +123,8 @@ echo '
 
 
 
+<div class='modified-pastes'>Other Versions<table id='modified-pastes'></table></div><div class='textarea-container'><pre><code id='cod'>adfadfadf</code></pre><form method='post' action='../controller/editCode.php'><textarea name='codeArea' id='edit' class='textarea' style='display: none'>adfadfadf</textarea><div id='checkbox-div'>Edit<input type='checkbox' id='Checkbox'  onclick='mySwitch()'></div><input type='hidden' name='fileName' value="<?php echo basename(__FILE__)?>"/><input type='submit' class='submit' name='deletePaste' value='Delete Paste'/><input type='submit' class='submit' id='submit' name='submit' value='Apply changes' style='display: none'/></form></div><button onclick="deletePaste()">Delete</button><script type = "text/JavaScript">
+
+        if(!(thisIsCreator || public == 1))
+            document.getElementById("checkbox-div").style.visibility = "hidden";
+        </script><script src="../controller/scripts/syntaxHighlightC.js"></script>

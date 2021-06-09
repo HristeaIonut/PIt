@@ -3,6 +3,9 @@ require("getUsername.php");
 include 'connection/connection.php';
 include 'insertValuestoDB.php';
 include 'generatekeys.php';
+mysqli_report(MYSQLI_REPORT_ALL);
+session_start();
+
 function cryptoJsAesEncrypt($passphrase, $value){
     $salt = openssl_random_pseudo_bytes(8);
     $salted = '';
@@ -41,7 +44,6 @@ if (isset($_POST)) {
         $password = $_POST['password'];
         $expiration = $_POST['expiration'];
         $id = intval($decryptedId);
-        echo $password;
         if(!empty($password)){
             $hashedPassword = cryptoJsAesEncrypt($key, $password);
         }
@@ -49,7 +51,6 @@ if (isset($_POST)) {
             $hashedPassword = null;
         }
         if(empty($expiration)){
-            echo $checkedOrNot;
             include 'connection/connection.php';
             $sql = "INSERT INTO pastes(id, paste_name, password, burn_ar) values(?, ?, ?, ?)";
             if($stmt = $conn->prepare($sql)){
@@ -76,7 +77,16 @@ if (isset($_POST)) {
                     break;
             }
         }
-
+        if(isset($_POST["publicEdit"])){
+            echo "mere";
+            $update = "UPDATE pastes SET public_edit = ? WHERE paste_name = ?";
+            if($stmt = $conn->prepare($update)){
+                $editable = 1;
+                $stmt->bind_param("is", $editable, $filename);
+                $stmt->execute();
+            }
+        }
+            
 
         $templateFile = fopen("template.html", "a+");
         $templateContent = '';
@@ -86,6 +96,7 @@ if (isset($_POST)) {
 
         $templateContent = $templateContent."<div class='modified-pastes'>Other Versions<table id='modified-pastes'></table></div>";
         $templateContent = $templateContent."<div class='textarea-container'><pre><code id='cod'>";
+        $_SESSION['basename'] = $filename;
         $filename = '../Pastes/'.$filename;
         $file = fopen($filename, "a+");
         $text = $_POST["codeArea"];
@@ -94,9 +105,15 @@ if (isset($_POST)) {
         $text = $text."</code></pre>";
         $text = $text."<form method='post' action='../controller/editCode.php'>";
         $text = $text."<textarea name='codeArea' id='edit' class='textarea' style='display: none'>".$_POST["codeArea"]."</textarea>";
-        $text = $text."Edit<input type='checkbox' id='Checkbox'  onclick='mySwitch()'>";
+        $text = $text."<div id='checkbox-div'>Edit<input type='checkbox' id='Checkbox'  onclick='mySwitch()'></div>";
         $text = $text."<input type='hidden' name='fileName' value=\"<?php echo basename(__FILE__)?>\"/>";
+        $text = $text."<input type='submit' class='submit' name='deletePaste' value='Delete Paste'/>";
         $text = $text."<input type='submit' class='submit' id='submit' name='submit' value='Apply changes' style='display: none'/></form></div>";
+        $text = $text.'<script type = "text/JavaScript">
+
+        if(!(thisIsCreator || public == 1))
+            document.getElementById("checkbox-div").style.visibility = "hidden";
+        </script>';
         $languageType = $_POST['syntax'];
         switch($languageType){
             case "C":

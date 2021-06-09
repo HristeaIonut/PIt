@@ -15,7 +15,8 @@ $password = null;
 $created_at = null;
 $expiration_date = null;
 $burn_after_read = null;
-$stmt -> bind_result($pasteId, $pasteName, $password, $created_at, $expiration_date, $burn_after_read);
+$publicEdit = 0;
+$stmt -> bind_result($pasteId, $pasteName, $password, $created_at, $expiration_date, $burn_after_read, $publicEdit);
 while($stmt -> fetch()){
     if(checkExpiration(getExpirationDate($pasteName))){
         $pastes[] = $pasteName;
