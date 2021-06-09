@@ -18,7 +18,7 @@
         <a class="home" href="../indexLogged.php">PasteIt</a>
         <a class="contact" href="../view/contactLogged.php">Contact</a>
         <a class="how-to" href="../view/how-toLogged.php">How to use</a>
-        <a class="report" href="../view/reportLogged.html">Report</a>
+        <a class="report" href="../view/report.html">Report</a>
         <a class="contact" href="../view/mypastes.php">My Pastes</a>
     </div>
     <div class="header-right">

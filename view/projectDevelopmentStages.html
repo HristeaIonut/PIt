@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="stylesheet" href="Scholarly.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon"
+        href="https://icons-for-free.com/iconfiles/png/512/clipboard+paste+task+icon-1320161389075402003.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIt</title>
+</head>
+
+<body prefix="schema: http://schema.org">
+    <div class="header">
+        <div class="header-left">
+            <a class="home" href="../index.php">PasteIt</a>
+        </div>
+    </div>
+    <div role="contentinfo">
+        <ol role="directory">
+            <li>
+                <a href="#frontend">
+                    <span>1 </span>Frontend
+                </a>
+            </li>
+            <li>
+                <a href="#backend">
+                    <span>2 </span>Backend
+                </a>
+            </li>
+            
+        </ol>
+
+        <section typeof="sa:AuthorsList">
+            <h2>Authors</h2>
+            <ul>
+                <li typeof="sa:ContributorRole" property="schema:author">
+                    <span typeof="schema:Person" property="schema:author" resource="https://github.com/HristeaIonut">
+                        <a property="sa:roleAffiliation" href="https://github.com/HristeaIonut">
+                            <meta property="schema:givenName" content="Ionut">
+                            <meta property="schema:additionalName" content="Alexandru">
+                            <meta property="schema:familyName" content="Hristea">
+                            <span property="schema:name">Ionut A. Hristea</span>
+                        </a>
+                    </span>
+                </li>
+                <li property="schema:roleContactPoint" typeof="schema:ContactPoint">Mail:
+                    <a href="mailto:hristeaionut72@gmail.com" property="schema:email">hristeaionut72@gmail.com</a>
+                </li>
+
+                <li typeof="sa:ContributorRole" property="schema:author">
+                    <span typeof="schema:Person" property="schema:author"
+                        resource="https://github.com/LauraMalinaBenchea">
+                        <a property="sa:roleAffiliation" href="https://github.com/LauraMalinaBenchea">
+                            <meta property="schema:givenName" content="Malina">
+                            <meta property="schema:additionalName" content="Laura">
+                            <meta property="schema:familyName" content="Benchea">
+                            <span property="schema:name">Malina L. Benchea</span>
+                        </a>
+                    </span>
+                </li>
+                <li property="schema:roleContactPoint" typeof="schema:ContactPoint">Mail:
+                    <a property="schema:email" href="mailto:malina16fnl@gmail.com"
+                        title="Mail">malina16fnl@gmail.com</a>
+                </li>
+
+                <li typeof="sa:ContributorRole" property="schema:author">
+                    <span typeof="schema:Person" property="schema:author" resource="https://github.com/neculautudor">
+                        <a property="sa:roleAffiliation" href="https://github.com/neculautudor">
+                            <meta property="schema:givenName" content="Tudor">
+                            <meta property="schema:familyName" content="Neculau">
+                            <span property="schema:name">Tudor Neculau</span>
+                        </a>
+                    </span>
+                </li>
+                <li property="schema:roleContactPoint" typeof="schema:ContactPoint">Mail:
+                    <a property="schema:email" href="mailto:neculautudor02@gmail.com"
+                        title="Mail">neculautudor02@gmail.com</a>
+                </li>
+            </ul>
+        </section>
+
+    </div>
+    <section typeof="sa:Abstract" id="frontend" role="doc-prologue">
+        <h2><span>1 </span>Frontend</h2>
+                <p>We started the page by looking out for different styles, selecting the fonts and representative images; We consulted each other it order to make sure everything is clear on the decisions and that we all agree on specified themes.</p>
+                <p>The first page was the main one. There were no functionalities yet, but we tried to make it as attractive as possible.</p>
+                <p>We chose a dark theme, as lately more users are starting to incline towards it. It is not as tiring for the eyes as a light one.</p>
+                <p>Next up, we created the other pages: Contact, How to use, Report.</p>
+                <p>After we started working on the backend as well, we noticed that we needed to add a new page, called "My Pastes"</p>
+                <p>We also created different html files for when a user is logged in, so that his username appears on the right upper side of the screen, as well as the option to log out.</p>
+           
+    </section>
+    <section typeof="sa:Abstract" id="backend" role="doc-introduction">
+        <h2><span>2 </span>Backend</h2>
+        <p>
+            The first thing we did when we started working on the backend side was to take the code inserted by the user and create a new file using it; The user is then redirected to a newly created page containing his code. We did that by creating a template, which will be filled every time with information provided by the user.
+        </p>
+        <p>
+            Next up, we made the database where we would add user accounts, containing their name, email adress, username and password. We added the php script which connects our code to the database in order to collect information added by the user. Afterwards, we handled the login page, where an user can add hid already existing information in order to enter his account.
+        </p>
+        <p>
+            Once we were done with this, our main goal was to work on the functionalities of our website. The first thing was the syntax highlighting, for which we worked in javascript and used regex to select words that we wanted highlighted, as provided by each programming language.
+        </p>
+        <p>Afterwards, we created the option to insert a password while creating a paste. This information is also added to the database and it will be asked for from any person trying to access the code, except for the author.</p>
+        <p>While two of us were focused on these main functionalities, a third person was designing the different pages for authenticated and non-authenticated users and adding the required options there as well. </p>
+        <p>The next step was to add the "burn after read" option, which would erase a paste after a single read. The code will delete the paste as soon as the person reading it will exit the page.</p>
+        <P>The last option we added to the code was to edit it. During the creation process, a user decides wether or not he should be the only one with access to edit the paste. After that, any person who has this right will be able to bring as many changes as he wants, and will alwasy be able to tollback to the previous 3 versions.</P>
+
+    </section>
+
+   
+
+</body>
+
+</html>

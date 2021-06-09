@@ -29,7 +29,7 @@ require("../res/constants.php");
         <a class="home" id="continut" href="../indexLogged.php">PasteIt</a>
         <a class="contact" href="contactLogged.php">Contact</a>
         <a class="how-to" href="how-toLogged.php">How to use</a>
-        <a class="report" href="reportLogged.html">Report</a>
+        <a class="report" href="report.html">Report</a>
         <a class="contact" href="">My Pastes</a>
     </div>
     <div class="header-right">
